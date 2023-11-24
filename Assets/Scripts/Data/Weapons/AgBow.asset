@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fbde833c88c014393786a17eb5da90, type: 3}
+  m_Name: AgBow
+  m_EditorClassIdentifier: 
+  attackDetails:
+  - attackName: Shoot
+    moveSpeed: 0
+    damageAmount: 15
+    projectileSpeed: 30
+    distance: 8
+    nrPorjectiles: 1
+    knockbackStrength: 10
+    knockbackAngle: {x: 2, y: 3}
+  projectile: {fileID: 3364874618729338299, guid: 237b39f643a539c4fb6b71a25ee28d87, type: 3}

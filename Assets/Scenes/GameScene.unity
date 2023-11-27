@@ -67934,6 +67934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 275686546}
+  - component: {fileID: 275686547}
   m_Layer: 0
   m_Name: CollisionSenses
   m_TagString: Untagged
@@ -67959,6 +67960,28 @@ Transform:
   m_Father: {fileID: 123130216}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &275686547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275686545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e88fe33bf5b1f4e8de4e20669d68e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 1473123088}
+  wallCheck: {fileID: 688692955}
+  ledgeCheckHorizontal: {fileID: 0}
+  ledgeCheckVertical: {fileID: 451663608}
+  ceilingCheck: {fileID: 0}
+  groundCheckRadius: 0.5
+  wallCheckDistance: 0.5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &288304868
 GameObject:
   m_ObjectHideFlags: 0
@@ -97765,7 +97788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1748204991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97940,7 +97963,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1748204990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f1b29df55465b4d84278c0bb2ac7d5, type: 3}
+  m_Script: {fileID: 11500000, guid: b752e060a123e5e4f9e0cd65e22d96a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: 7c2a0a63349507040ada5bc4faf5e026, type: 2}
@@ -97948,6 +97971,7 @@ MonoBehaviour:
   ledgeCheck: {fileID: 451663608}
   playerCheck: {fileID: 1777756543}
   groundCheck: {fileID: 1473123088}
+  idleStateData: {fileID: 11400000, guid: 26b1444d8184c974aae2a33a8c83d225, type: 2}
 --- !u!1 &1758014586
 GameObject:
   m_ObjectHideFlags: 0
@@ -98029,7 +98053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777756542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.026, y: 0, z: 0}
+  m_LocalPosition: {x: 0.386, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

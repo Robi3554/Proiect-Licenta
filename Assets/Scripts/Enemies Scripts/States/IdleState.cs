@@ -5,10 +5,8 @@ using UnityEngine;
 public class IdleState : State
 {
     private Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
-    private CollisionSenses CollisionSenses { get => collisionSenses ??= core.GetCoreComponent<CollisionSenses>(); }
 
     private Movement movement;
-    private CollisionSenses collisionSenses;
 
     protected D_IdleState stateData;
 

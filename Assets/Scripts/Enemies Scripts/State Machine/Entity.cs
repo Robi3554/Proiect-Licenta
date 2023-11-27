@@ -38,7 +38,6 @@ public class Entity : MonoBehaviour
     {
         core  = GetComponentInChildren<Core>();
 
-        //currentHealth = entityData.maxHealth;
         currentStunResistance = entityData.stunResistance;
 
         anim = GetComponent <Animator>();
@@ -92,38 +91,6 @@ public class Entity : MonoBehaviour
         isStunned = false;
         currentStunResistance = entityData.stunResistance;
     }
-
-    //public virtual void Damage(AttackDetails attackDetails)
-    //{
-    //    lastDamageTIme = Time.time;
-
-    //    currentHealth -= attackDetails.damageAmount;
-    //    currentStunResistance -= attackDetails.stunDamageAmount;
-
-    //    DamageHop(entityData.damageHopSpeed);
-
-    //    Instantiate(entityData.hitParticle, transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
-
-    //    if (attackDetails.position.x > transform.position.x) 
-    //    {
-    //        lastDamageDir = -1;
-    //    }
-    //    else
-    //    {
-    //        lastDamageDir = 1;
-    //    }
-
-    //    if(currentStunResistance <= 0)
-    //    {
-    //        isStunned = true;
-    //    }
-
-
-    //    if(currentHealth <= 0)
-    //    {
-    //        isDead = true;
-    //    }
-    //}
 
     public virtual void OnDrawGizmos()
     {

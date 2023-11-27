@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newEntityData", menuName = "Data/Entity Data/Base Data")]
 public class D_Entity : ScriptableObject
 {
-    public float maxHealth = 30f;
+    //public float maxHealth = 30f;
     public float damageHopSpeed = 3f;
 
     public float wallCheckDistance = 0.2f;

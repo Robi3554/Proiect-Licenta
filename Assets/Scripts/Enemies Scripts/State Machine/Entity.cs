@@ -29,7 +29,7 @@ public class Entity : MonoBehaviour
 
     private float currentHealth;
     private float currentStunResistance;
-    private float lastDamageTIme;
+    private float lastDamageTime;
 
     protected bool isStunned;
     protected bool isDead;
@@ -38,7 +38,7 @@ public class Entity : MonoBehaviour
     {
         core  = GetComponentInChildren<Core>();
 
-        currentHealth = entityData.maxHealth;
+        //currentHealth = entityData.maxHealth;
         currentStunResistance = entityData.stunResistance;
 
         anim = GetComponent <Animator>();
@@ -53,7 +53,7 @@ public class Entity : MonoBehaviour
 
         stateMachine.currentState.LogicUpdate();
 
-        if(Time.time >= lastDamageTIme + entityData.stunRecoveryTime)
+        if(Time.time >= lastDamageTime + entityData.stunRecoveryTime)
         {
             ResetStunResistance();
         }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909fa1ade12bf934e9d3defc1fbe8851, type: 3}
   m_Name: Exec_Base_Data
   m_EditorClassIdentifier: 
-  damageHopSpeed: 0
+  damageHopSpeed: 0.001
   wallCheckDistance: 0.2
   ledgeCheckDistance: 0.4
   groundCheckRadius: 0.3

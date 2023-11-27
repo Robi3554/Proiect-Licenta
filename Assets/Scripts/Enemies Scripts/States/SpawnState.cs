@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Exec_Idle_State : IdleState
+public class SpawnState : State
 {
-    private Executioner exec;
+    protected D_SpawnState stateData;
 
-    public Exec_Idle_State(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_IdleState stateData, Executioner exec) : base(stateMachine, entity, animBoolName, stateData)
+    protected bool isPlayerInMinAggroRange;
+
+    public SpawnState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_SpawnState stateData) : base(stateMachine, entity, animBoolName)
     {
-        this.exec = exec;
+        this.stateData = stateData;
     }
 
     public override void DoChecks()
     {
         base.DoChecks();
+
+        isPlayerInMinAggroRange = entity.CheckPlayerInMinAggroRange();
     }
 
     public override void Enter()
@@ -29,11 +33,6 @@ public class Exec_Idle_State : IdleState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-
-        if (isPlayerInMinAggroRange && Time.time > stateData.maxIdleTime)
-        {
-            stateMachine.ChangeState(exec.spawnState);
-        }
     }
 
     public override void PhysicsUpdate()

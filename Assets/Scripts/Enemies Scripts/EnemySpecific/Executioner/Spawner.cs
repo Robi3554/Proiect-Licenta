@@ -6,10 +6,9 @@ public class Spawner : MonoBehaviour
 {
     Vector2 originPoint;
 
-    [SerializeField]
-    private GameObject enemyPrefab;
-    [SerializeField] 
-    private GameObject spawner;
+    public GameObject enemyPrefab;
+
+    public GameObject spawner;
 
     private int spawnRadius = 4;
 
@@ -23,6 +22,8 @@ public class Spawner : MonoBehaviour
         Vector2 point = Point(spawnRadius, originPoint);
 
         Instantiate(enemyPrefab, point, Quaternion.identity);
+
+        Debug.Log("Instantiated!!");
     }
 
     public Vector2 Point(int spawnradius, Vector2 origin)

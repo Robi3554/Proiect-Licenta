@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class Exec_Spawn_State : SpawnState
@@ -29,7 +30,9 @@ public class Exec_Spawn_State : SpawnState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
         
+
         if (count >= stateData.numberToSpawn)
         {
             stateMachine.ChangeState(exec.idleState);

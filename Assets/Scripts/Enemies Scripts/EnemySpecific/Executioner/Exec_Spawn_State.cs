@@ -5,15 +5,9 @@ using UnityEngine;
 
 public class Exec_Spawn_State : SpawnState
 {
-    protected Spawner spawner;
-
     private Executioner exec;
 
     public GameObject prefabToCount;
-
-    private float spawnRate = 10f;
-
-    private int count = 0;
 
     public Exec_Spawn_State(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_SpawnState stateData, Executioner exec) : base(stateMachine, entity, animBoolName, stateData)
     {
@@ -40,14 +34,8 @@ public class Exec_Spawn_State : SpawnState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-
-        GameObject[] instances = GameObject.FindObjectsOfType<GameObject>();
-
-        if (count > stateData.numberToSpawn)
-        {
-            spawner.Spawn();
-        }
-        else if (count >= stateData.numberToSpawn)
+        
+        if (count >= stateData.numberToSpawn)
         {
             stateMachine.ChangeState(exec.idleState);
         }
@@ -56,5 +44,10 @@ public class Exec_Spawn_State : SpawnState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+    }
+
+    public override void ToSpawn()
+    {
+        base.ToSpawn();
     }
 }

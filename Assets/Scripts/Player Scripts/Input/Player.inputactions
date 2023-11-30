@@ -60,15 +60,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SecondaryAttack",
-                    "type": "Button",
-                    "id": "cbe55415-43c0-42cb-9485-a486a9b45930",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "f21b9dc3-5cce-49fd-b4b3-587bf3f26683",
@@ -252,28 +243,6 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "PrimaryAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b0234cce-c34c-4248-8603-d2d060a84e39",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "SecondaryAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c0c0a337-a49c-445f-bc55-2a0451d9920d",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "SecondaryAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

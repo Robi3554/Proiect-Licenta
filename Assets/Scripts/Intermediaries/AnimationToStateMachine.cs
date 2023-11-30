@@ -6,6 +6,8 @@ public class AnimationToStateMachine : MonoBehaviour
 {
     public AttackState attackState;
 
+    public Exec_Spawn_State spawnState;
+
     private void TriggerAttack()
     {
         attackState.TriggerAttack();
@@ -14,5 +16,10 @@ public class AnimationToStateMachine : MonoBehaviour
     private void FinishAttack()
     {
         attackState.FinishAttack();
+    }
+
+    private void ToSpawn()
+    {
+        spawnState.ToSpawn();
     }
 }

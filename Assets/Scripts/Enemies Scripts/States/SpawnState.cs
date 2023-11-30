@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class SpawnState : State
 {
+    protected Spawner spawner;
+
     protected D_SpawnState stateData;
 
     protected bool isPlayerInMinAggroRange;
+
+    protected int count;
 
     public SpawnState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_SpawnState stateData) : base(stateMachine, entity, animBoolName)
     {
@@ -38,5 +42,12 @@ public class SpawnState : State
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+    }
+
+    public virtual void ToSpawn()
+    {
+
+        spawner.Spawn();
+        count++;
     }
 }

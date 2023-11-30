@@ -1,13 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class Exec_Spawn_State : SpawnState
 {
     private Executioner exec;
-
-    public GameObject prefabToCount;
 
     public Exec_Spawn_State(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_SpawnState stateData, Executioner exec) : base(stateMachine, entity, animBoolName, stateData)
     {

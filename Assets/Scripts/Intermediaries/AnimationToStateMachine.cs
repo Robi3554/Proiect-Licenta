@@ -6,7 +6,7 @@ public class AnimationToStateMachine : MonoBehaviour
 {
     public AttackState attackState;
 
-    public Exec_Spawn_State spawnState;
+    public SpawnState spawnState;
 
     private void TriggerAttack()
     {
@@ -20,6 +20,13 @@ public class AnimationToStateMachine : MonoBehaviour
 
     private void ToSpawn()
     {
-        spawnState.ToSpawn();
+        if (spawnState != null)
+        {
+            spawnState.ToSpawn();
+        }
+        else
+        {
+            Debug.LogError("spawnState is null. Make sure it's properly initialized.");
+        }
     }
 }

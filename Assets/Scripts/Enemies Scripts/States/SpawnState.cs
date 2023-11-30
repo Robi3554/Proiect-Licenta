@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class SpawnState : State
 {
     protected Spawner spawner;
@@ -9,6 +5,7 @@ public class SpawnState : State
     protected D_SpawnState stateData;
 
     protected bool isPlayerInMinAggroRange;
+    protected bool isAnimationFinished;
 
     protected int count;
 
@@ -27,6 +24,9 @@ public class SpawnState : State
     public override void Enter()
     {
         base.Enter();
+
+        isAnimationFinished = false;
+        entity.atsm.spawnState = this;
     }
 
     public override void Exit()
@@ -46,7 +46,6 @@ public class SpawnState : State
 
     public virtual void ToSpawn()
     {
-
         spawner.Spawn();
         count++;
     }

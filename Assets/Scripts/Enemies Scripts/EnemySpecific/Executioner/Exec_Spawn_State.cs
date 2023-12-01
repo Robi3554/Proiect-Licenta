@@ -5,6 +5,8 @@ public class Exec_Spawn_State : SpawnState
 {
     private Executioner exec;
 
+    protected int count;
+
     public Exec_Spawn_State(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_SpawnState stateData, Executioner exec) : base(stateMachine, entity, animBoolName, stateData)
     {
         this.exec = exec;
@@ -31,11 +33,10 @@ public class Exec_Spawn_State : SpawnState
     {
         base.LogicUpdate();
 
-        
-
         if (count >= stateData.numberToSpawn)
         {
             stateMachine.ChangeState(exec.idleState);
+            count = 0;
         }
     }
 
@@ -47,5 +48,6 @@ public class Exec_Spawn_State : SpawnState
     public override void ToSpawn()
     {
         base.ToSpawn();
+        count++;
     }
 }

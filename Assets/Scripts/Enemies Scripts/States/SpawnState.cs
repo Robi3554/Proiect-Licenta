@@ -7,8 +7,6 @@ public class SpawnState : State
     protected bool isPlayerInMinAggroRange;
     protected bool isAnimationFinished;
 
-    protected int count;
-
     public SpawnState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_SpawnState stateData) : base(stateMachine, entity, animBoolName)
     {
         this.stateData = stateData;
@@ -47,6 +45,5 @@ public class SpawnState : State
     public virtual void ToSpawn()
     {
         spawner.Spawn();
-        count++;
     }
 }

@@ -67367,37 +67367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e26e8b581f04644bd1f15f133f9e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &138672999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 138673000}
-  m_Layer: 7
-  m_Name: MeleeAttackPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &138673000
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138672999}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1748204996}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &179445379
 GameObject:
   m_ObjectHideFlags: 0
@@ -94128,6 +94097,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17251039, y: 0.34312683}
   m_EdgeRadius: 0
+--- !u!1 &1390239817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1390239818}
+  m_Layer: 7
+  m_Name: Attack Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1390239818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390239817}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.245, y: 0.289, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1748204996}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1397926098
 GameObject:
   m_ObjectHideFlags: 0
@@ -97916,7 +97916,7 @@ Transform:
   m_Children:
   - {fileID: 123130216}
   - {fileID: 1777756543}
-  - {fileID: 138673000}
+  - {fileID: 1390239818}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -97953,6 +97953,8 @@ MonoBehaviour:
   groundCheck: {fileID: 1473123088}
   idleStateData: {fileID: 11400000, guid: 26b1444d8184c974aae2a33a8c83d225, type: 2}
   spawnStateData: {fileID: 11400000, guid: 1b15144d3c32df24ea714c14af8f1d8a, type: 2}
+  attackStateData: {fileID: 11400000, guid: a10b6961e6a158b4aa59106097b59116, type: 2}
+  attackPos: {fileID: 1390239818}
 --- !u!1 &1758014586
 GameObject:
   m_ObjectHideFlags: 0
@@ -98034,7 +98036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777756542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.386, y: -0.54, z: 0}
+  m_LocalPosition: {x: 0.374, y: -0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99634,8 +99636,52 @@ MonoBehaviour:
     m_ActionName: Gameplay/PrimaryAttack[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: cbe55415-43c0-42cb-9485-a486a9b45930
-    m_ActionName: Gameplay/SecondaryAttack[/Mouse/rightButton]
+    m_ActionId: f21b9dc3-5cce-49fd-b4b3-587bf3f26683
+    m_ActionName: Gameplay/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f8f71306-65dc-40ae-8245-51df3e552442
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7346a024-f2f6-4009-9e1f-eb52659e8478
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b5391dc7-d88f-4724-a1b5-621ba0727a64
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2ca10972-d07a-4ce2-8876-001709e59541
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a1c03b41-a447-41fd-b00a-af639ed19ffd
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 62edcc01-e929-4612-b504-b3c871f82370
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ee9ab5a5-37da-4bdb-bc9e-e9cbbe2517ab
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b5a969e4-5dd9-40c7-a3d9-c52ffc5e459a
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0d6a6436-2d1d-42c6-ad64-16a1d732e53b
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: beddb1ea-df96-45b9-b018-85c75df94b4f
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f696569-d3f5-4fbc-bca7-3a46a32892a9
+    m_ActionName: UI/OnPause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -100581,6 +100627,10 @@ PrefabInstance:
     - target: {fileID: 8706217526112706007, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_ActionEvents.Array.data[18].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706217526349685882, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
+      propertyPath: maxHealth
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9071e315133f63247af4898a7b490f8b, type: 3}

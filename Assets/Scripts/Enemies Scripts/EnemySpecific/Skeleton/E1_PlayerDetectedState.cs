@@ -11,6 +11,11 @@ public class E1_PlayerDetectedState : PlayerDetectedState
         this.skele = skele;
     }
 
+    public override void DoChecks()
+    {
+        base.DoChecks();
+    }
+
     public override void Enter()
     {
         base.Enter();

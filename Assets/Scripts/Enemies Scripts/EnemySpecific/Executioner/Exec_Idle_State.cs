@@ -10,6 +10,8 @@ public class Exec_Idle_State : IdleState
 
     private int spawnCount;
 
+    protected bool performCloseRangeAction;
+
     public Exec_Idle_State(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_IdleState stateData, Executioner exec) : base(stateMachine, entity, animBoolName, stateData)
     {
         this.exec = exec;
@@ -18,6 +20,8 @@ public class Exec_Idle_State : IdleState
     public override void DoChecks()
     {
         base.DoChecks();
+
+        performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
     }
 
     public override void Enter()
@@ -34,7 +38,11 @@ public class Exec_Idle_State : IdleState
     {
         base.LogicUpdate();
 
-        if (isPlayerInMinAggroRange && Time.time > stateData.maxIdleTime && spawnCount < 2)
+        if (performCloseRangeAction)
+        {
+            stateMachine.ChangeState(exec.attackState);
+        }
+        else if (isPlayerInMinAggroRange && Time.time > stateData.maxIdleTime && spawnCount < 2)
         {
             stateMachine.ChangeState(exec.spawnState);
             spawnCount++;

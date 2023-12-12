@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d86a8e36975e8774281f35ea8778afa5, type: 3}
-  m_Name: Exec_Idle_Data
+  m_Script: {fileID: 11500000, guid: deca18fdc35650e4491f9284258a1d9b, type: 3}
+  m_Name: Exec_Teleport_Data
   m_EditorClassIdentifier: 
-  minIdleTime: 3
-  maxIdleTime: 4
+  teleportTime: 0

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class IdleState : State
 {
-    private Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
+    protected Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
 
-    private Movement movement;
+    protected Movement movement;
 
     protected D_IdleState stateData;
 

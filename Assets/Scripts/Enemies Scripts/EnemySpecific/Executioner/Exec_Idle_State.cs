@@ -42,7 +42,7 @@ public class Exec_Idle_State : IdleState
         {
             stateMachine.ChangeState(exec.attackState);
         }
-        else if (isPlayerInMinAggroRange && Time.time > stateData.maxIdleTime && spawnCount < 2)
+        else if (isPlayerInMinAggroRange && isIdleTimeOver && spawnCount < 2)
         {
             stateMachine.ChangeState(exec.spawnState);
             spawnCount++;

@@ -19,7 +19,7 @@ public class Entity : MonoBehaviour
     public Core core { get; private set; }
 
     [SerializeField]
-    private Transform
+    protected Transform
         wallCheck,
         ledgeCheck,
         playerCheck,

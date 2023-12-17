@@ -25,6 +25,7 @@ public class ExecSpawn : MonoBehaviour, IDamageable
     protected Rigidbody2D rb;
     protected Animator anim;
     protected SpriteRenderer sr;
+    protected DealDamage dd;
     #endregion
 
     private void Awake()
@@ -33,6 +34,7 @@ public class ExecSpawn : MonoBehaviour, IDamageable
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        dd = GetComponent<DealDamage>();
         homePos = gameObject.transform.position;
 
         anim.SetBool("idle", true);
@@ -87,7 +89,6 @@ public class ExecSpawn : MonoBehaviour, IDamageable
         {
             currentHealth = 0;
 
-            Debug.Log("Health is 0!");
             SetDeath();
         }
     }
@@ -98,6 +99,8 @@ public class ExecSpawn : MonoBehaviour, IDamageable
         anim.SetBool("idle", false);
 
         rb.velocity = new Vector2(0f, 0f);
+
+        dd.enabled = false;
 
         Destroy(gameObject, 0.75f);
     }

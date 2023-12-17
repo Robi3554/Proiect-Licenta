@@ -31,7 +31,7 @@ public class Exec_Attack_State : MeleeAttackState
 
     public override void FinishAttack()
     {
-        base.FinishAttack();
+        //base.FinishAttack();
         if(count >= 2)
         {
             isAnimationFinnished = true;
@@ -57,6 +57,7 @@ public class Exec_Attack_State : MeleeAttackState
     public override void TriggerAttack()
     {
         base.TriggerAttack();
+        
         count++;
     }
 }

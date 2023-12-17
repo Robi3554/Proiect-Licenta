@@ -38,7 +38,7 @@ public class Exec_Idle_State : IdleState
     {
         base.LogicUpdate();
 
-        if (performCloseRangeAction)
+        if (performCloseRangeAction && isIdleTimeOver)
         {
             stateMachine.ChangeState(exec.attackState);
         }

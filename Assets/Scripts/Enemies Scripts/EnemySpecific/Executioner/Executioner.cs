@@ -49,6 +49,7 @@ public class Executioner : Entity
 
         Gizmos.DrawWireSphere(transform.position, entityData.minAggroRange);
         Gizmos.DrawWireSphere(transform.position, entityData.maxAggroRange);
+        Gizmos.DrawWireSphere(transform.position, entityData.closeRangeActionDistance);
 
         Gizmos.DrawWireCube(playerCheck.position, new Vector2(20f, 20f));
     }
@@ -78,10 +79,10 @@ public class Executioner : Entity
         return Physics2D.CircleCast(transform.position, entityData.maxAggroRange, transform.right, entityData.maxAggroRange,entityData.whatIsPlayer);
     }
 
-    //public bool CheckPlayer()
-    //{
-    //    return Physics2D.Raycast(playerCheck.position, transform.right, distance, entityData.whatIsPlayer);
-    //}
+    public override bool CheckPlayerInCloseRangeAction()
+    {
+        return Physics2D.CircleCast(transform.position, entityData.closeRangeActionDistance, transform.right, entityData.closeRangeActionDistance, entityData.whatIsPlayer);
+    }
 
     public bool CheckPlayer()
     {

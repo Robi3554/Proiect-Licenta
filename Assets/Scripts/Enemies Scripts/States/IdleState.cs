@@ -13,6 +13,7 @@ public class IdleState : State
     protected bool flipAfterIdle;
     protected bool isIdleTimeOver;
     protected bool isPlayerInMinAggroRange;
+    protected bool isPlayerInMaxAggroRange;
 
     protected float idleTime;
 
@@ -26,6 +27,7 @@ public class IdleState : State
         base.DoChecks();
 
         isPlayerInMinAggroRange = entity.CheckPlayerInMinAggroRange();
+        isPlayerInMaxAggroRange = entity.CheckPlayerInMaxAggroRange();
     }
 
     public override void Enter()

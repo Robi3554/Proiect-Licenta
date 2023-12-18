@@ -6,6 +6,8 @@ public class Exec_Teleport_State : TeleportState
 {
     private Executioner exec;
 
+    protected bool isTeleportFinished;
+
     public Exec_Teleport_State(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_TeleportState stateData, Executioner exec) : base(stateMachine, entity, animBoolName, stateData)
     {
         this.exec = exec;
@@ -19,6 +21,8 @@ public class Exec_Teleport_State : TeleportState
     public override void Enter()
     {
         base.Enter();
+
+        entity.atsm.teleportState = this;
     }
 
     public override void Exit()
@@ -34,5 +38,17 @@ public class Exec_Teleport_State : TeleportState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+
+        if (isTeleportFinished)
+        {
+            stateMachine.ChangeState(exec.idleState);
+        }
+    }
+
+    public void ToTeleport()
+    {
+        exec.transform.position = exec.GetComponent<Executioner>().TeleportPosition().position;
+
+        isTeleportFinished = true;
     }
 }

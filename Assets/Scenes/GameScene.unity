@@ -67309,7 +67309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1f3be73d6b0284ea7c8b37094a8ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 300
 --- !u!1 &123130215
 GameObject:
   m_ObjectHideFlags: 0
@@ -97783,6 +97783,7 @@ MonoBehaviour:
   attackStateData: {fileID: 11400000, guid: a10b6961e6a158b4aa59106097b59116, type: 2}
   teleportStateData: {fileID: 11400000, guid: a6b2edf4898900e46907c35c7cb36060, type: 2}
   attackPos: {fileID: 1390239818}
+  teleportPos: {fileID: 1008117325}
 --- !u!1 &1758014586
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class AnimationToStateMachine : MonoBehaviour
 
     public SpawnState spawnState;
 
+    public Exec_Teleport_State teleportState;
+
     private void TriggerAttack()
     {
         attackState.TriggerAttack();
@@ -27,6 +29,18 @@ public class AnimationToStateMachine : MonoBehaviour
         else
         {
             Debug.LogError("spawnState is null. Make sure it's properly initialized.");
+        }
+    }
+
+    private void ToTeleport()
+    {
+        if(teleportState != null)
+        {
+            teleportState.ToTeleport();
+        }
+        else
+        {
+            Debug.LogError("TeleportState is null!");
         }
     }
 }

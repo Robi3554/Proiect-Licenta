@@ -20,7 +20,9 @@ public class Executioner : Entity
     private D_TeleportState teleportStateData;
 
     [SerializeField]
-    private Transform attackPos;
+    private Transform
+        attackPos,
+        teleportPos;
 
     private Vector2 size = new Vector2(20f, 20f);
 
@@ -87,6 +89,11 @@ public class Executioner : Entity
     public bool CheckPlayer()
     {
         return Physics2D.BoxCast(playerCheck.position, size, 0f, transform.right, 8f, entityData.whatIsPlayer);
+    }
+
+    public Transform TeleportPosition()
+    {
+        return teleportPos;
     }
 
 }

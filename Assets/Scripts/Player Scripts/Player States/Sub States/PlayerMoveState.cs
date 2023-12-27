@@ -31,17 +31,12 @@ public class PlayerMoveState : PlayerGroundedState
 
         Movement?.SetVelocityX(playerData.moveVelocity * xInput);
 
-        if (!isExitingState)
+
+        if (xInput == 0)
         {
-            if (xInput == 0)
-            {
-                stateMachine.ChangeState(player.idleState);
-            }
-            else if (yInput == -1)
-            {
-                stateMachine.ChangeState(player.crouchMoveState);
-            }
+            stateMachine.ChangeState(player.idleState);
         }
+
     }
 
     public override void PhysicsUpdate()

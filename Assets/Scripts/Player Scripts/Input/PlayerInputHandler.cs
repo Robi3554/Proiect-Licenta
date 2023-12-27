@@ -9,6 +9,11 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerInput playerInput;
     private Camera cam;
 
+    private GameObject currentOneWayPlatform;
+
+    [SerializeField]
+    private BoxCollider2D bc;
+
     public Vector2 rawMoveInput { get; private set; }
     public Vector2 rawDashDirectionInput { get; private set; }
     public Vector2Int dashDirectionInput { get; private set; }
@@ -58,44 +63,18 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
-    public void OnSecondaryAttackInput(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            attackInputs[(int)CombatInputs.secondary] = true;
-        }
-
-        if (context.canceled)
-        {
-            attackInputs[(int)CombatInputs.secondary] = false;
-        }
-    }
-
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         rawMoveInput = context.ReadValue<Vector2>();
 
-        //if(Mathf.Abs(rawMoveInput.x) > 0.5f)
-        //{
-        //    normalizedInputX = (int)(rawMoveInput * Vector2.right).normalized.x;
-        //}
-        //else
-        //{
-        //    normalizedInputX = 0;
-        //}
-
-        //if (Mathf.Abs(rawMoveInput.y) > 0.5f)
-        //{
-        //    normalizedInputY = (int)(rawMoveInput * Vector2.up).normalized.y;
-        //}
-        //else
-        //{
-        //    normalizedInputY = 0;
-        //}
-
         normalizedInputX = Mathf.RoundToInt(rawMoveInput.x);
 
         normalizedInputY = Mathf.RoundToInt(rawMoveInput.y);
+
+        if(currentOneWayPlatform != null && Keyboard.current.sKey.wasPressedThisFrame)
+        {
+            StartCoroutine(DisableCollision());
+        }
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
@@ -169,6 +148,27 @@ public class PlayerInputHandler : MonoBehaviour
         {
             dashInput = false;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("OneWayPlatform"))
+            currentOneWayPlatform = col.gameObject;
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("OneWayPlatform"))
+            currentOneWayPlatform = null;
+    }
+
+    private IEnumerator DisableCollision()
+    {
+        BoxCollider2D platformCol = currentOneWayPlatform.GetComponent<BoxCollider2D>();
+
+        Physics2D.IgnoreCollision(bc, platformCol);
+        yield return new WaitForSeconds(0.5f);
+        Physics2D.IgnoreCollision(bc, platformCol, false);
     }
 }
 

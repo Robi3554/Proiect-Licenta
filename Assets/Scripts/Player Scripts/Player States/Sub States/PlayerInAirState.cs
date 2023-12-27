@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerInAirState : PlayerState
 {
     #region Input
-    private bool grabInput;
     private bool jumpInput;
     private bool jumpInputStop;
     private bool dashInput;
@@ -89,7 +88,6 @@ public class PlayerInAirState : PlayerState
         xInput = player.inputHandler.normalizedInputX;
         jumpInput = player.inputHandler.jumpInput;
         jumpInputStop = player.inputHandler.jumpInputStop;
-        grabInput = player.inputHandler.grabInput;
         dashInput = player.inputHandler.dashInput;
 
         CheckJumpMultiplier();
@@ -97,10 +95,6 @@ public class PlayerInAirState : PlayerState
         if (player.inputHandler.attackInputs[(int)CombatInputs.primary])
         {
             stateMachine.ChangeState(player.primaryAttackState);
-        }
-        else if (player.inputHandler.attackInputs[(int)CombatInputs.secondary])
-        {
-            stateMachine.ChangeState(player.secondaryAttackState);
         }
         else if (isGrounded && Movement?.currentVelocity.y < 0.01f)
         {

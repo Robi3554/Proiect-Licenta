@@ -16,10 +16,7 @@ public class Player : MonoBehaviour
     public PlayerWallSlideState wallSlideState { get; private set; }
     public PlayerWallJumpState wallJumpState { get; private set; }
     public PlayerDashState dashState { get; private set; }
-    public PlayerCrouchIdleState crouchIdleState { get; private set; }
-    public PlayerCrouchMoveState crouchMoveState { get; private set; }
     public PlayerAttackState primaryAttackState { get; private set; }
-    public PlayerAttackState secondaryAttackState { get; private set; }
 
     [SerializeField]
     private PlayerData playerData;
@@ -63,10 +60,7 @@ public class Player : MonoBehaviour
         wallSlideState = new PlayerWallSlideState(this, stateMachine, playerData, "wallSlide");
         wallJumpState = new PlayerWallJumpState(this, stateMachine, playerData, "inAir");
         dashState = new PlayerDashState(this, stateMachine, playerData, "dash");
-        crouchIdleState = new PlayerCrouchIdleState(this, stateMachine, playerData, "crouchIdle");
-        crouchMoveState = new PlayerCrouchMoveState(this, stateMachine, playerData, "crouchMove");
         primaryAttackState = new PlayerAttackState(this, stateMachine, playerData, "attack");
-        secondaryAttackState = new PlayerAttackState(this, stateMachine, playerData, "attack");
     }
 
     private void Start()
@@ -84,8 +78,6 @@ public class Player : MonoBehaviour
         dashDirectionIndicator = transform.Find("DashDirectionIndicator");
 
         primaryAttackState.SetWeapon(inventory.weapons[(int)CombatInputs.primary]);
-        //secondaryAttackState.SetWeapon(inventory.weapons[(int)CombatInputs.secondary]);
-
 
         stateMachine.Initialize(idleState);
     }

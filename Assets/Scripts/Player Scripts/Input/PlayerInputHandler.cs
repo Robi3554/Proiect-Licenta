@@ -164,7 +164,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private IEnumerator DisableCollision()
     {
-        BoxCollider2D platformCol = currentOneWayPlatform.GetComponent<BoxCollider2D>();
+        CompositeCollider2D platformCol = currentOneWayPlatform.GetComponent<CompositeCollider2D>();
 
         Physics2D.IgnoreCollision(bc, platformCol);
         yield return new WaitForSeconds(0.5f);

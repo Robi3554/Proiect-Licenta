@@ -8,11 +8,6 @@ public class PlayerData : ScriptableObject
     [Header("Move State")]
     public float moveVelocity = 10f;
 
-    [Header("Crouch States")]
-    public float crouchMoveVelocity = 5f;
-    public float crouchColliderHeight = 0.8f;
-    public float standColliderHeight = 1.744321f;
-
     [Header("Jump State")]
     public float jumpVelocity = 15f;
     public int ammountOfJumps = 1;
@@ -28,13 +23,6 @@ public class PlayerData : ScriptableObject
 
     [Header("Wall Slide State")]
     public float wallSlideVelocity = 3f;
-
-    [Header("Wall Climb State")]
-    public float wallClimbVelocity = 3f;
-
-    [Header("Ledge Climb State")]
-    public Vector2 startOffset;
-    public Vector2 stopOffset;
 
     [Header("Dash State")]
     public float dashCooldown = 0.5f;

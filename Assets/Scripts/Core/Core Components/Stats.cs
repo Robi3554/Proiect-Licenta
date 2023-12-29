@@ -7,8 +7,10 @@ public class Stats : CoreComponent
 {
     public event Action OnHealthZero;
 
-    [SerializeField]
-    private float maxHealth;
+    //[SerializeField]
+    //private float maxHealth;
+
+    public float maxHealth;
 
     private float currentHealth;
 

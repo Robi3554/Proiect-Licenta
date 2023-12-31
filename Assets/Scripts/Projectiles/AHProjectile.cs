@@ -38,6 +38,8 @@ public class AHProjectile : MonoBehaviour
         rb.gravityScale = 0.0f;
         rb.velocity = transform.right * speed;
 
+        xStartPos = transform.position.x;
+
         isGravityOn = false;
     }
 
@@ -66,6 +68,7 @@ public class AHProjectile : MonoBehaviour
                 hasHitGround = true;
                 rb.gravityScale = 0.0f;
                 rb.velocity = Vector2.zero;
+                Destroy(gameObject, 3);
             }
             else if (Mathf.Abs(xStartPos - transform.position.x) >= travelDistance && !isGravityOn)
             {

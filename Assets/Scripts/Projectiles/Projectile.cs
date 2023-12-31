@@ -99,7 +99,6 @@ public class Projectile : MonoBehaviour
     {
         this.speed = speed;
         this.travelDistance = travelDistance;
-        //attackDetails.damageAmount = damage;
         this.damage = damage;
     }
 }

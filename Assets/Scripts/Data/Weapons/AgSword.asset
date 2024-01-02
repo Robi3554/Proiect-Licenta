@@ -15,16 +15,17 @@ MonoBehaviour:
   attackDetails:
   - attackName: Up Slash
     moveSpeed: 3
-    damageAmount: 35
+    damageAmount: 10
     knockbackStrength: 10
     knockbackAngle: {x: 1, y: 3}
   - attackName: Down Slash
     moveSpeed: 4
-    damageAmount: 40
+    damageAmount: 15
     knockbackStrength: 15
     knockbackAngle: {x: 1, y: 1}
   - attackName: Back Slash
     moveSpeed: 5
-    damageAmount: 45
+    damageAmount: 20
     knockbackStrength: 20
     knockbackAngle: {x: 2, y: 2}
+  _revert: 1

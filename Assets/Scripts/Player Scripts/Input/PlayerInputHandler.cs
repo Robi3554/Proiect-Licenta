@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2 rawMoveInput { get; private set; }
     public Vector2 rawDashDirectionInput { get; private set; }
     public Vector2Int dashDirectionInput { get; private set; }
+
+    public float moveInput;
 
     public int normalizedInputX { get; private set; }
     public int normalizedInputY { get; private set; }
@@ -65,13 +68,27 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
-        rawMoveInput = context.ReadValue<Vector2>();
+        string currentScheme = playerInput.currentControlScheme;
 
-        normalizedInputX = Mathf.RoundToInt(rawMoveInput.x);
 
-        normalizedInputY = Mathf.RoundToInt(rawMoveInput.y);
+        if(currentScheme == "Keyboard")
+        {
+            moveInput = context.ReadValue<float>();
 
-        if(currentOneWayPlatform != null && Keyboard.current.sKey.wasPressedThisFrame)
+            normalizedInputX = Mathf.RoundToInt(moveInput);
+        }
+        else if(currentScheme == "Gamepad")
+        {
+            rawMoveInput = context.ReadValue<Vector2>();
+
+            normalizedInputX = Mathf.RoundToInt(rawMoveInput.x);
+        }
+
+    }
+
+    public void OnDropInput(InputAction.CallbackContext context)
+    {
+        if(context.started && currentOneWayPlatform != null)
         {
             StartCoroutine(DisableCollision());
         }

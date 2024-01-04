@@ -234,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePos: {fileID: 51057085723641081}
   projectile: {fileID: 0}
-  canFire: 0
+  player: {fileID: 0}
 --- !u!1 &8706217525040558489
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +695,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  whatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &8706217526112706001
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}
+  canFire: 0
 --- !u!114 &8706217526112706000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,6 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bc: {fileID: 0}
+  moveInput: 0
   inputHoldTime: 0.2
 --- !u!114 &8706217526112705992
 MonoBehaviour:

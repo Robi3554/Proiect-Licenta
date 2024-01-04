@@ -441,6 +441,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  whatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &6580390149310666639
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,8 +453,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6580390149310666636}
-  - component: {fileID: 6580390149310666634}
   - component: {fileID: 6580390149310666637}
+  - component: {fileID: 9054690626214782717}
   m_Layer: 7
   m_Name: Combat
   m_TagString: Untagged
@@ -474,20 +477,6 @@ Transform:
   m_Father: {fileID: 6580390147902804621}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6580390149310666634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580390149310666639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1ea00bab8100648b881871216a52ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
-  maxKncockbackTime: 0.3
 --- !u!61 &6580390149310666637
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -514,6 +503,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4062934, y: 0.92188084}
   m_EdgeRadius: 0
+--- !u!114 &9054690626214782717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580390149310666639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1ea00bab8100648b881871216a52ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
+  co2D: {fileID: 6580390149310666637}
+  maxKncockbackTime: 0.5
 --- !u!1 &6580390149347138175
 GameObject:
   m_ObjectHideFlags: 0

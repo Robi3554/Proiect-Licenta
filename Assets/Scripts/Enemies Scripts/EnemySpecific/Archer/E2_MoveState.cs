@@ -34,7 +34,7 @@ public class E2_MoveState : MoveState
         {
             stateMachine.ChangeState(archer.playerDetectedState);
         }
-        else if(isDetectingWall || !isDetectingLedge)
+        else if(isDetectingWall || (!isDetectingLedge && !isDetectingLedgeP))
         {
             archer.idleState.SetFlipAfterIdle(true);
             stateMachine.ChangeState(archer.idleState);

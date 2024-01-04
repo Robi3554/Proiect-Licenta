@@ -644,6 +644,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  whatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &6685853114077791297
 GameObject:
   m_ObjectHideFlags: 0

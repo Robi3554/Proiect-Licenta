@@ -6,6 +6,9 @@ public class CombatNoKnockback : CoreComponent, IDamageable
 {
     [SerializeField]
     private GameObject damageParticles;
+
+    [SerializeField]
+    protected Collider2D co2D;
     private Stats Stats => stats ? stats : core.GetCoreComponent<Stats>();
     private ParticleManager ParticleManager => particleManager ? particleManager : core.GetCoreComponent<ParticleManager>();
 

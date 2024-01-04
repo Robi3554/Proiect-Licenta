@@ -5,30 +5,32 @@ using UnityEngine;
 public class Combat : CoreComponent, IDamageable, IKnockbackable
 {
     [SerializeField]
-    private GameObject damageParticles;
+    protected GameObject damageParticles;
 
-    private Movement Movement => movement ? movement : core.GetCoreComponent<Movement>();
-    private CollisionSenses CollisionSenses => collisionSenses ? collisionSenses : core.GetCoreComponent<CollisionSenses>(); 
-    private Stats Stats => stats ? stats : core.GetCoreComponent<Stats>();
-    private ParticleManager ParticleManager => particleManager ? particleManager : core.GetCoreComponent<ParticleManager>();
-    private Movement movement;
-    private CollisionSenses collisionSenses;
-    private Stats stats;
-    private ParticleManager particleManager;
+    protected Movement Movement => movement ? movement : core.GetCoreComponent<Movement>();
+    protected CollisionSenses CollisionSenses => collisionSenses ? collisionSenses : core.GetCoreComponent<CollisionSenses>(); 
+    protected Stats Stats => stats ? stats : core.GetCoreComponent<Stats>();
+    protected ParticleManager ParticleManager => particleManager ? particleManager : core.GetCoreComponent<ParticleManager>();
+    protected Movement movement;
+    protected CollisionSenses collisionSenses;
+    protected Stats stats;
+    protected ParticleManager particleManager;
 
     [SerializeField]
-    private float maxKncockbackTime = 0.5f;
+    protected float maxKncockbackTime = 0.5f;
 
-    private bool isKnockbackActive;
+    protected bool isKnockbackActive;
 
-    private float knockbackStartTime;
+    protected float knockbackStartTime;
+
+    protected bool hitByWave = false;
 
     public override void LogicUpdate()
     {
         CheckKnockback();
     }
 
-    public void Damage(float amount)
+    public virtual void Damage(float amount)
     {
         Debug.Log(core.transform.parent.name + " damaged!");
         Stats?.DecreaseHealth(amount);
@@ -36,7 +38,7 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
         ParticleManager?.StartParticlesWithRandomRotation(damageParticles);
     }
 
-    public void Knockback(Vector2 angle, float strength, int direction)
+    public virtual void Knockback(Vector2 angle, float strength, int direction)
     {
         Movement?.SetVelocity(strength, angle, direction);
 
@@ -52,6 +54,26 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
         {
             isKnockbackActive = false;
             Movement.canSetVelocity = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (!hitByWave)
+        {
+            if (col.CompareTag("SwordWave"))
+            {
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), col, true);
+                hitByWave = true;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("SwordWave"))
+        {
+            hitByWave = false;
         }
     }
 }

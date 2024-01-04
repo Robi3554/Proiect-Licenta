@@ -14,11 +14,13 @@ public class PlayerInAirState : PlayerState
 
     #region Checks
     private bool isGrounded;
+    private bool isOnPlatform;
     private bool isTouchingWall;
     private bool isTouchingWallBack;
     private bool oldIsTouchingWall;
     private bool oldIsTouchingWallBack;
     private bool isTouchingLedge;
+    private bool isJumping;
     #endregion
 
     protected Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
@@ -29,7 +31,6 @@ public class PlayerInAirState : PlayerState
 
     private bool coyoteTime;
     private bool wallJumpCoyoteTime;
-    private bool isJumping;
 
     private float startWallJumpCoyoteTime;
 
@@ -47,15 +48,11 @@ public class PlayerInAirState : PlayerState
         if (CollisionSenses)
         {
             isGrounded = CollisionSenses.Ground;
+            isOnPlatform = CollisionSenses.Platform;
             isTouchingWall = CollisionSenses.WallFront;
             isTouchingWallBack = CollisionSenses.WallBack;
             isTouchingLedge = CollisionSenses.LedgeHorizontal;
         }
-        
-        //if(isTouchingWall && !isTouchingLedge)
-        //{
-        //    player.ledgeClimbState.SetDetectedPosition(player.transform.position);
-        //}
 
         if (!wallJumpCoyoteTime && !isTouchingWall && !isTouchingWallBack && (oldIsTouchingWall || oldIsTouchingWallBack))
         {
@@ -96,14 +93,10 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.primaryAttackState);
         }
-        else if (isGrounded && Movement?.currentVelocity.y < 0.01f)
+        else if ((isGrounded || isOnPlatform) && Movement?.currentVelocity.y < 0.01f)
         {
             stateMachine.ChangeState(player.landState);
         }
-        //else if (isTouchingWall && !isTouchingLedge && !isGrounded)
-        //{
-        //    stateMachine.ChangeState(player.ledgeClimbState);
-        //}
         else if(jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime))
         {
             StoptWallJumpCoyoteTime();

@@ -14,6 +14,7 @@ public class MoveState : State
 
     protected bool isDetectingWall;
     protected bool isDetectingLedge;
+    protected bool isDetectingLedgeP;
     protected bool isPlayerInMinAggroRange;
 
     public MoveState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_MoveState stateData) : base(stateMachine, entity, animBoolName)
@@ -26,6 +27,7 @@ public class MoveState : State
         base.DoChecks();
 
         isDetectingLedge = CollisionSenses.LedgeVertical;
+        isDetectingLedgeP = CollisionSenses.LedgeVerticalP;
         isDetectingWall = CollisionSenses.WallFront;
         isPlayerInMinAggroRange = entity.CheckPlayerInMinAggroRange();
     }

@@ -18,4 +18,9 @@ public class FiniteStateMachine
         currentState = newState;
         currentState.Enter();
     }
+
+    public string GetCurrentStateAsString()
+    {
+        return currentState.ToString();
+    }
 }

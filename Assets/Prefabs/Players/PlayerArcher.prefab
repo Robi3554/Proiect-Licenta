@@ -102,6 +102,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  whatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &7884976939644660854
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 528567266a22eeb46a392ca354906398, type: 2}
+  canFire: 0
 --- !u!114 &7884976940769599051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,6 +724,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9089666bb2e62f243a4a1ae6791ccb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bc: {fileID: 0}
+  moveInput: 0
   inputHoldTime: 0.2
 --- !u!114 &7884976940769599050
 MonoBehaviour:

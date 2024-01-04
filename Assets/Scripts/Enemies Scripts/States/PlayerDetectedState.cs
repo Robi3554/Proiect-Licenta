@@ -16,7 +16,8 @@ public class PlayerDetectedState : State
     protected bool isPlayerInMaxAggroRange;
     protected bool performLongRangeAction;
     protected bool performCloseRangeAction;
-    protected bool isDetectingLEdge;
+    protected bool isDetectingLedge;
+    protected bool isDetectingLedgeP;
 
     public PlayerDetectedState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_PlayerDetected stateData) : base(stateMachine, entity, animBoolName)
     {
@@ -29,7 +30,8 @@ public class PlayerDetectedState : State
 
         isPlayerInMinAggroRange = entity.CheckPlayerInMinAggroRange();
         isPlayerInMaxAggroRange = entity.CheckPlayerInMaxAggroRange();
-        isDetectingLEdge = CollisionSenses.LedgeVertical;
+        isDetectingLedge = CollisionSenses.LedgeVertical;
+        isDetectingLedgeP = CollisionSenses.LedgeVerticalP;
 
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
     }

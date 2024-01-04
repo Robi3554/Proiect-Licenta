@@ -42,7 +42,7 @@ public class E1_PlayerDetectedState : PlayerDetectedState
         {
             stateMachine.ChangeState(skele.lookForPlayerState);
         }
-        else if (!isDetectingLEdge)
+        else if (!isDetectingLedge && !isDetectingLedgeP)
         {
             Movement?.Flip();
             stateMachine.ChangeState(skele.moveState);

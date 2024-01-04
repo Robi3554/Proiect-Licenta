@@ -33,7 +33,7 @@ public class E1_ChargeState : ChargeState
         {
             stateMachine.ChangeState(skele.meleeAttackState);
         }
-        else if (!isDetectingLedge || isDetectingWall)
+        else if ((!isDetectingLedge && !isDetectingLedgeP) || isDetectingWall)
         {
             stateMachine.ChangeState(skele.lookForPlayerState);
         }

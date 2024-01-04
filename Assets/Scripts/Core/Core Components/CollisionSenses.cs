@@ -56,6 +56,8 @@ public class CollisionSenses : CoreComponent
 
     [SerializeField]
     private LayerMask whatIsGround;
+    [SerializeField]
+    private LayerMask whatIsPlatform;
     #endregion
 
     public bool Ceiling
@@ -66,6 +68,11 @@ public class CollisionSenses : CoreComponent
     public bool Ground
     {
         get => Physics2D.OverlapCircle(GroundCheck.position, groundCheckRadius, whatIsGround);
+    }
+
+    public bool Platform
+    {
+        get => Physics2D.OverlapCircle(GroundCheck.position, groundCheckRadius, whatIsPlatform);
     }
 
     public bool WallFront
@@ -81,6 +88,11 @@ public class CollisionSenses : CoreComponent
     public bool LedgeVertical
     {
         get => Physics2D.Raycast(LedgeCheckVertical.position, Vector2.down, wallCheckDistance, whatIsGround);
+    }
+
+    public bool LedgeVerticalP
+    {
+        get => Physics2D.Raycast(LedgeCheckVertical.position, Vector2.down, wallCheckDistance, whatIsPlatform);
     }
 
     public bool WallBack

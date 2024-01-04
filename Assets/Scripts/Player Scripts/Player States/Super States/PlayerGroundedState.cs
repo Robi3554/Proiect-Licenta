@@ -16,6 +16,7 @@ public class PlayerGroundedState : PlayerState
 
     #region Checks
     private bool isGrounded;
+    private bool isOnPlatform;
     private bool isTouchingWall;
     private bool isTouchingLedge;
 
@@ -42,6 +43,7 @@ public class PlayerGroundedState : PlayerState
         if(CollisionSenses != null)
         {
             isGrounded = CollisionSenses.Ground;
+            isOnPlatform = CollisionSenses.Platform;
             isTouchingWall = CollisionSenses.WallFront;
             isTouchingLedge = CollisionSenses.LedgeHorizontal;
             isTouchingCeiling = CollisionSenses.Ceiling;
@@ -79,15 +81,11 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.jumpState);
         }
-        else if(!isGrounded)
+        else if(!isGrounded && !isOnPlatform)
         {
             player.inAirState.StartCoyoteTime();
             stateMachine.ChangeState(player.inAirState);
         }
-        //else if(isTouchingWall && grabImput && isTouchingLedge)
-        //{
-        //    stateMachine.ChangeState(player.wallGrabState);
-        //}
         else if (dashInput && player.dashState.CheckIfCanDash() && !isTouchingCeiling)
         {
             stateMachine.ChangeState(player.dashState);

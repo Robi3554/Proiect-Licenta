@@ -29,7 +29,7 @@ public class E1_MoveState : MoveState
         {
             stateMachine.ChangeState(skele.playerDetectedState);
         }
-        else if(isDetectingWall || !isDetectingLedge)
+        else if(isDetectingWall || (!isDetectingLedge && !isDetectingLedgeP))
         {
             skele.idleState.SetFlipAfterIdle(true);
             stateMachine.ChangeState(skele.idleState);

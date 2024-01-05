@@ -66,26 +66,4 @@ public class Archer : Entity
 
         Gizmos.DrawWireSphere(meleeAttackPos.position, meleeAttackStateData.attackRadius);
     }
-
-    //public override void Damage(AttackDetails attackDetails)
-    //{
-    //    base.Damage(attackDetails);
-    //    if (isDead)
-    //    {
-    //        stateMachine.ChangeState(deadState);
-    //    }
-    //    else if (isStunned && stateMachine.currentState != stunState)
-    //    {
-    //        stateMachine.ChangeState(stunState);
-    //    }
-    //    else if (CheckPlayerInMinAggroRange())
-    //    {
-    //        stateMachine.ChangeState(rangedAttackState);
-    //    }
-    //    else if (!CheckPlayerInMinAggroRange())
-    //    {
-    //        lookForPlayerState.SetTurnImmediately(true);
-    //        stateMachine.ChangeState(lookForPlayerState);
-    //    }
-    //}
 }

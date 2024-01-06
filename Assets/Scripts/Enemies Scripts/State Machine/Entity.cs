@@ -7,7 +7,11 @@ public class Entity : MonoBehaviour
 {
     protected Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
 
+    protected CollisionSenses Collision { get => collision ??= core.GetCoreComponent<CollisionSenses>(); }
+
     private Movement movement;
+
+    private CollisionSenses collision;
 
     public FiniteStateMachine stateMachine;
 
@@ -22,8 +26,8 @@ public class Entity : MonoBehaviour
     protected Transform
         wallCheck,
         ledgeCheck,
-        playerCheck,
-        groundCheck;
+        playerCheck;
+        //groundCheck;
 
     private Vector2 velocityWorkspace;
 
@@ -96,7 +100,7 @@ public class Entity : MonoBehaviour
     {
         if(core != null)
         {
-            Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * Movement.facingDir * entityData.wallCheckDistance));
+            Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * Movement.facingDir * Collision.WallCheckDistance));
             Gizmos.DrawLine(ledgeCheck.position, ledgeCheck.position + (Vector3)(Vector2.down * entityData.ledgeCheckDistance));
 
             Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.closeRangeActionDistance), 0.2f);

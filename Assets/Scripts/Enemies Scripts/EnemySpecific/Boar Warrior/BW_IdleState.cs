@@ -33,7 +33,7 @@ public class BW_IdleState : IdleState
 
         if (isPlayerInMinAggroRange)
         {
-            //stateMachine.ChangeState(bWarrior.playerDetectedState);
+            stateMachine.ChangeState(bWarrior.playerDetectedState);
         }
         else if (isIdleTimeOver)
         {

@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Searcher;
 using UnityEngine;
 
-public class BW_MoveState : MoveState
+public class BW_LookForPlayerState : LookForPlayerState
 {
     private BoarWarrior bWarrior;
 
-    public BW_MoveState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_MoveState stateData, BoarWarrior bWarrior) : base(stateMachine, entity, animBoolName, stateData)
+    public BW_LookForPlayerState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_LookForPlayerState stateData, BoarWarrior bWarrior) : base(stateMachine, entity, animBoolName, stateData)
     {
         this.bWarrior = bWarrior;
     }
@@ -34,10 +35,9 @@ public class BW_MoveState : MoveState
         {
             stateMachine.ChangeState(bWarrior.playerDetectedState);
         }
-        else if (isDetectingWall || (!isDetectingLedge && !isDetectingLedgeP))
+        else if (isAllTurnsTimeDone)
         {
-            bWarrior.idleState.SetFlipAfterIdle(true);
-            stateMachine.ChangeState(bWarrior.idleState);
+            stateMachine.ChangeState(bWarrior.moveState);
         }
     }
 

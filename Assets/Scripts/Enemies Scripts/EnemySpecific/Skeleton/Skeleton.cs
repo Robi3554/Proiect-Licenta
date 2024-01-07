@@ -11,7 +11,7 @@ public class Skeleton : Entity
     public E1_LookForPlayerState lookForPlayerState { get; private set; }
     public E1_MeleeAttackState meleeAttackState { get; private set; }
     public E1_StunState stunState { get; private set; }
-    public E1_DeadState deadState { get; private set; }
+    //public E1_DeadState deadState { get; private set; }
 
     [SerializeField]
     private D_IdleState idleStateData;
@@ -27,8 +27,8 @@ public class Skeleton : Entity
     private D_MeleeAttack meleeAttackData;
     [SerializeField]
     private D_StunState stunStateData;
-    [SerializeField]
-    private D_DeadState deadStateData;
+    //[SerializeField]
+    //private D_DeadState deadStateData;
 
     [SerializeField]
     private Transform meleeAttackPos;
@@ -44,7 +44,7 @@ public class Skeleton : Entity
         lookForPlayerState = new E1_LookForPlayerState(stateMachine, this, "lookForPlayer", lookForPlayerData, this);
         meleeAttackState = new E1_MeleeAttackState(stateMachine, this, "meleeAttack",meleeAttackPos, meleeAttackData, this);
         stunState = new E1_StunState(stateMachine, this, "stun", stunStateData, this);
-        deadState = new E1_DeadState(stateMachine, this, "dead", deadStateData, this);
+        //deadState = new E1_DeadState(stateMachine, this, "dead", deadStateData, this);
     }
 
     private void Start()

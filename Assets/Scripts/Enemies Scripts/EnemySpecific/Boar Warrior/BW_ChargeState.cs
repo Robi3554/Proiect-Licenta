@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BW_PlayerDetectedState : PlayerDetectedState
+public class BW_ChargeState : ChargeState
 {
     private BoarWarrior bWarrior;
 
-    public BW_PlayerDetectedState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_PlayerDetected stateData, BoarWarrior bWarrior) : base(stateMachine, entity, animBoolName, stateData)
+    public BW_ChargeState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_ChargeState stateData, BoarWarrior bWarrior) : base(stateMachine, entity, animBoolName, stateData)
     {
         this.bWarrior = bWarrior;
     }
@@ -34,18 +34,20 @@ public class BW_PlayerDetectedState : PlayerDetectedState
         {
             stateMachine.ChangeState(bWarrior.meleeAttackState);
         }
-        else if (performLongRangeAction)
-        {
-            stateMachine.ChangeState(bWarrior.chargeState);
-        }
-        else if (!isPlayerInMaxAggroRange)
+        else if ((!isDetectingLedge && !isDetectingLedgeP) || isDetectingWall)
         {
             stateMachine.ChangeState(bWarrior.lookForPlayerState);
         }
-        else if (!isDetectingLedge && !isDetectingLedgeP)
+        else if (isChargeTimeOver)
         {
-            Movement?.Flip();
-            stateMachine.ChangeState(bWarrior.moveState);
+            if (isPlayerInMinAggroRange)
+            {
+                stateMachine.ChangeState(bWarrior.playerDetectedState);
+            }
+            else
+            {
+                stateMachine.ChangeState(bWarrior.lookForPlayerState);
+            }
         }
     }
 

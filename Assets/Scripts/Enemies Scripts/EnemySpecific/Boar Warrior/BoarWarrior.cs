@@ -8,6 +8,8 @@ public class BoarWarrior : Entity
     public BW_MoveState moveState { get; private set; }
     public BW_LookForPlayerState lookForPlayerState { get; private set; }
     public BW_PlayerDetectedState playerDetectedState { get; private set; }
+    public BW_ChargeState chargeState { get; private set; }
+    public BW_MeleeAttackState meleeAttackState { get; private set;}
 
 
     [SerializeField]
@@ -17,7 +19,14 @@ public class BoarWarrior : Entity
     [SerializeField]
     private D_LookForPlayerState lookForPlayerStateData;
     [SerializeField]
-    private D_PlayerDetected playerDetectedStateData;   
+    private D_PlayerDetected playerDetectedStateData;
+    [SerializeField]
+    private D_ChargeState chargeStateData;
+    [SerializeField]
+    private D_MeleeAttack meleeAttackData;
+
+    [SerializeField]
+    private Transform meleeAttackPos;
 
     public override void Awake()
     {
@@ -27,6 +36,8 @@ public class BoarWarrior : Entity
         moveState = new BW_MoveState(stateMachine, this, "move", moveStateData, this);
         lookForPlayerState = new BW_LookForPlayerState(stateMachine, this, "lookForPlayer", lookForPlayerStateData, this);
         playerDetectedState = new BW_PlayerDetectedState(stateMachine, this, "playerDetected", playerDetectedStateData, this);
+        chargeState = new BW_ChargeState(stateMachine, this, "charge", chargeStateData, this);
+        meleeAttackState = new BW_MeleeAttackState(stateMachine, this, "attack", meleeAttackPos, meleeAttackData, this);
     }
 
     private void Start()
@@ -37,5 +48,7 @@ public class BoarWarrior : Entity
     public override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
+
+        Gizmos.DrawWireSphere(meleeAttackPos.position, meleeAttackData.attackRadius);
     }
 }

@@ -9,19 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 909fa1ade12bf934e9d3defc1fbe8851, type: 3}
-  m_Name: BoarWarriorData
+  m_Script: {fileID: 11500000, guid: d337a8135e64dd64a86c2f7fea09b31d, type: 3}
+  m_Name: BW_MeleeAttackState
   m_EditorClassIdentifier: 
-  damageHopSpeed: 2
-  ledgeCheckDistance: 0.4
-  minAggroRange: 6
-  maxAggroRange: 8
-  stunResistance: 3
-  stunRecoveryTime: 2
-  closeRangeActionDistance: 1.5
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
+  attackRadius: 4
+  attackDamage: 20
+  knockbackAngle: {x: 5, y: 2}
+  knockbackStrength: 20
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512

@@ -28,7 +28,7 @@ public class SwordProjectile : MonoBehaviour
     [SerializeField]
     private Transform damagePos;
 
-    private List<IDamageable> detectedDamageables = new List<IDamageable>();
+    private HashSet<IDamageable> damagedEnemies = new HashSet<IDamageable>();
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();  
@@ -50,6 +50,8 @@ public class SwordProjectile : MonoBehaviour
 
     private void Damage()
     {
+        damagedEnemies.Clear();
+
         Collider2D[] damageHit = Physics2D.OverlapCircleAll(damagePos.position, damageRadius, whatIsEnemy);
         Collider2D groundHit = Physics2D.OverlapCircle(damagePos.position, damageRadius, whatIsGround);
 
@@ -67,9 +69,10 @@ public class SwordProjectile : MonoBehaviour
             {
                 IDamageable damageable = collider.GetComponent<IDamageable>();
 
-                if (damageable != null)
+                if (damageable != null && !damagedEnemies.Contains(damageable))
                 {
                     damageable.Damage(damage);
+                    damagedEnemies.Add(damageable);
                     //Destroy(gameObject);
                 }
             }
@@ -98,27 +101,26 @@ public class SwordProjectile : MonoBehaviour
     {
         IDamageable damageable = col.GetComponent<IDamageable>();
 
-        if (damageable != null)
-        {
-            detectedDamageables.Add(damageable);
-        }
+        
     }
 
     public void RemoveFromDetected(Collider2D col)
     {
         IDamageable damageable = col.GetComponent<IDamageable>();
 
-        if (damageable != null)
-        {
-            detectedDamageables.Remove(damageable);
-        }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        AddToDetected(col);
+        IDamageable damageable = col.GetComponent<IDamageable>();
 
-        Damage();
+        if (damageable != null && !damagedEnemies.Contains(damageable))
+        {
+            AddToDetected(col);
+            Damage();
+            damagedEnemies.Add(damageable);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D col)

@@ -2,30 +2,37 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerStats : Stats
 {
     [SerializeField]
     private HealthBar healtBar;
 
+    [SerializeField]
+    private TextMeshProUGUI text;
+
     protected override void Awake()
     {
         base.Awake();
+    }
 
+    protected void FixedUpdate()
+    {
         healtBar.SetMaxHealth(maxHealth);
+
+        healtBar.SetHealth(currentHealth);
+
+        text.text = $"{currentHealth}/{maxHealth}";
     }
 
     public override void DecreaseHealth(float amount)
     {
         base.DecreaseHealth(amount);
-
-        healtBar.SetHealth(currentHealth);
     }
 
     public override void IncreaseHealth(float amount)
     {
         base.IncreaseHealth(amount);
-
-        healtBar.SetHealth(currentHealth);
     }
 }

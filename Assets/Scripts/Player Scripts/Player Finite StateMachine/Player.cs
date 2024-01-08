@@ -99,15 +99,5 @@ public class Player : MonoBehaviour
 
     private void AnimationFinishtrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
-    public void SetColliderHeight(float height)
-    {
-        Vector2 center = moveCollider.offset;
-        workSpace.Set(moveCollider.size.x, height);
-
-        center.y += (height - moveCollider.size.y) / 2;
-
-        moveCollider.size = workSpace;
-        moveCollider.offset = center;
-    }
     #endregion
 }

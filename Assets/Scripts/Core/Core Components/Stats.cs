@@ -34,6 +34,6 @@ public class Stats : CoreComponent
 
     public virtual void IncreaseHealth(float amount)
     {
-        currentHealth += Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
     }
 }

@@ -9,6 +9,7 @@ public class HealthUp : PowerupEffect
 
     public override void ApplyEffect(GameObject obj)
     {
-        obj.GetComponentInChildren<Stats>().maxHealth += healthAmmount;
+        obj.GetComponentInChildren<PlayerStats>().maxHealth += healthAmmount;
+        obj.GetComponentInChildren<PlayerStats>().IncreaseHealth(healthAmmount / 2);
     }
 }

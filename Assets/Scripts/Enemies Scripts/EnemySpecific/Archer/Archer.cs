@@ -11,7 +11,6 @@ public class Archer : Entity
     public E2_MeleeAttackState meleeAttackState { get; private set; }
     public E2_LookForPlayerState lookForPlayerState { get; private set; }
     public E2_StunState stunState { get; private set; }
-    public E2_DeadState deadState { get; private set; }
     public E2_DodgeState dodgeState { get; private set;}
 
     public E2_RangedAttackState rangedAttackState { get; private set;}
@@ -28,8 +27,6 @@ public class Archer : Entity
     private D_LookForPlayerState lookForPlayerStateData;
     [SerializeField]
     private D_StunState stunStateData;
-    [SerializeField]
-    private D_DeadState2 deadStateData;
     [SerializeField]
     public D_DodgeState dodgeStateData;
     [SerializeField]
@@ -50,7 +47,6 @@ public class Archer : Entity
         meleeAttackState = new E2_MeleeAttackState(stateMachine, this, "meleeAttack", meleeAttackPos, meleeAttackStateData, this);
         lookForPlayerState = new E2_LookForPlayerState(stateMachine, this, "lookForPlayer", lookForPlayerStateData, this);
         stunState = new E2_StunState(stateMachine, this, "stun", stunStateData, this);
-        deadState = new E2_DeadState(stateMachine, this, "dead", deadStateData, this);
         dodgeState = new E2_DodgeState(stateMachine, this, "dodge", dodgeStateData, this);
         rangedAttackState = new E2_RangedAttackState(stateMachine, this, "rangedAttack", rangedAttackPos, rangedAttackStateData, this);
     }

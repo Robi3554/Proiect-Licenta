@@ -11,10 +11,13 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
     protected CollisionSenses CollisionSenses => collisionSenses ? collisionSenses : core.GetCoreComponent<CollisionSenses>(); 
     protected Stats Stats => stats ? stats : core.GetCoreComponent<Stats>();
     protected ParticleManager ParticleManager => particleManager ? particleManager : core.GetCoreComponent<ParticleManager>();
+    private PlayerStats PlayerStats => pStats ? pStats : core.GetCoreComponent<PlayerStats>();
+
     protected Movement movement;
     protected CollisionSenses collisionSenses;
     protected Stats stats;
     protected ParticleManager particleManager;
+    private PlayerStats pStats;
 
     [SerializeField]
     protected float maxKncockbackTime = 0.5f;
@@ -33,6 +36,7 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
     public virtual void Damage(float amount)
     {
         Debug.Log(core.transform.parent.name + " damaged!");
+
         Stats?.DecreaseHealth(amount);
 
         ParticleManager?.StartParticlesWithRandomRotation(damageParticles);

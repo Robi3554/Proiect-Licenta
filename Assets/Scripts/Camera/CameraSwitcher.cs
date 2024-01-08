@@ -20,11 +20,13 @@ public class CameraSwitcher : MonoBehaviour
     private void Awake()
     {
         currentCamera = firstCamera;
+
+        canSwitch = true;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") && canSwitch)
         {
             if(currentCamera == firstCamera)
             {

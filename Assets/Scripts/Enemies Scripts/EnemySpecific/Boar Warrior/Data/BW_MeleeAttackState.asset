@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BW_MeleeAttackState
   m_EditorClassIdentifier: 
   attackRadius: 4
-  attackDamage: 20
+  attackDamage: 35
   knockbackAngle: {x: 5, y: 2}
   knockbackStrength: 20
   whatIsPlayer:

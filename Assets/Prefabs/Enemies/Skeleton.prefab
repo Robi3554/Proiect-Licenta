@@ -516,7 +516,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
-  co2D: {fileID: 6580390149310666637}
   maxKncockbackTime: 0.5
 --- !u!1 &6580390149347138175
 GameObject:
@@ -706,7 +705,6 @@ MonoBehaviour:
   wallCheck: {fileID: 6580390148647059042}
   ledgeCheck: {fileID: 6580390147678873499}
   playerCheck: {fileID: 6580390149383263645}
-  groundCheck: {fileID: 6580390148173270646}
   idleStateData: {fileID: 11400000, guid: a857d1ddb6d98e7439b91bd178f75926, type: 2}
   moveStateData: {fileID: 11400000, guid: 87b3a589aaf7e0344b4fab5da585a337, type: 2}
   playerDetectedData: {fileID: 11400000, guid: b461aa601e662e74283dc4cc97f63a60, type: 2}
@@ -714,7 +712,6 @@ MonoBehaviour:
   lookForPlayerData: {fileID: 11400000, guid: 8b311378ef523404f9f33286f2f934e5, type: 2}
   meleeAttackData: {fileID: 11400000, guid: 5be749a439b39964e90311d9fefc5d03, type: 2}
   stunStateData: {fileID: 11400000, guid: f6dc67ff1c34238468ee5517d195fadd, type: 2}
-  deadStateData: {fileID: 11400000, guid: ee740b558e168db4ab7e78a0a7dd46bd, type: 2}
   meleeAttackPos: {fileID: 6580390148214433880}
 --- !u!1 &6580390149383263644
 GameObject:

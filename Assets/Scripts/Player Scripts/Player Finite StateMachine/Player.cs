@@ -42,6 +42,9 @@ public class Player : MonoBehaviour
     private Vector2 workSpace;
 
     public bool canFire = false;
+
+    [SerializeField]
+    private float atkSpeed = 1f;
     #endregion
 
     #region Unity Callback Functions
@@ -98,6 +101,16 @@ public class Player : MonoBehaviour
     private void AnimationTirgger() => stateMachine.currentState.AnimationTrigger();
 
     private void AnimationFinishtrigger() => stateMachine.currentState.AnimationFinishTrigger();
+
+    public float GetAtkSpeed()
+    {
+        return atkSpeed;
+    }
+
+    public void ChangeAtkSpeed(float value)
+    {
+        atkSpeed = atkSpeed + (atkSpeed * (value / 100));
+    }
 
     #endregion
 }

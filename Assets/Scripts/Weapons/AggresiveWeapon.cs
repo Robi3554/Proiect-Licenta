@@ -10,6 +10,8 @@ public class AggresiveWeapon : Weapon
     
     private Movement movement;
 
+    private Player player;
+
     private List<IDamageable> detectedDamageables = new List<IDamageable>();
 
     private List<IKnockbackable> detectedKnockbackables = new List<IKnockbackable>();
@@ -20,6 +22,8 @@ public class AggresiveWeapon : Weapon
     {
         base.Awake();
 
+        player = GetComponentInParent<Player>();
+
         if(weaponData.GetType() == typeof(AggresiveWeaponData))
         {
             agrresiveWeaponData = (AggresiveWeaponData)weaponData;
@@ -27,6 +31,14 @@ public class AggresiveWeapon : Weapon
         else
         {
             Debug.LogError("Wrong Data For The Weapon");
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (player != null)
+        {
+            anim.speed = player.GetAtkSpeed();
         }
     }
 

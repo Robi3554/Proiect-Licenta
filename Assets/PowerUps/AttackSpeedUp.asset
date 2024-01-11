@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bef9485c5009834d98c28e03f263bf4, type: 3}
   m_Name: AttackSpeedUp
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}
   percentage: 20

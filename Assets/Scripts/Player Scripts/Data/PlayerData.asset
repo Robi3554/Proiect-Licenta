@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   moveVelocity: 10
-  crouchMoveVelocity: 5
-  crouchColliderHeight: 0.8
-  standColliderHeight: 1.744321
   jumpVelocity: 25
   ammountOfJumps: 1
   wallJumpVelocity: 25
@@ -24,9 +21,6 @@ MonoBehaviour:
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 0.75
   wallSlideVelocity: 2
-  wallClimbVelocity: 3
-  startOffset: {x: 0.65, y: 2}
-  stopOffset: {x: 1, y: 1}
   dashCooldown: 0.5
   maxHoldTime: 1
   holdTimeScale: 0.25
@@ -35,3 +29,5 @@ MonoBehaviour:
   drag: 10
   dashEndYMultiplier: 0.2
   distanceBetweenAfterImages: 0.5
+  attackSpeed: 1
+  _revert: 1

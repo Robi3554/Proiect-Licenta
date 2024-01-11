@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR 
+using UnityEditor;
+#endif
 
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Data")]
 public class PlayerData : ScriptableObject
@@ -33,4 +36,43 @@ public class PlayerData : ScriptableObject
     public float drag = 10f;
     public float dashEndYMultiplier = 0.2f;
     public float distanceBetweenAfterImages = 0.5f;
+
+    [Header("Attack State")]
+    public float attackSpeed = 1f;
+
+    public float GetAtkSpeed()
+    {
+        return attackSpeed;
+    }
+
+#if UNITY_EDITOR
+    [SerializeField] private bool _revert;
+    private string _initialJson = string.Empty;
+#endif
+
+    private void OnEnable()
+    {
+#if UNITY_EDITOR
+        EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;
+        EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
+#endif
+    }
+
+#if UNITY_EDITOR
+    private void OnPlayModeStateChanged(PlayModeStateChange obj)
+    {
+        switch (obj)
+        {
+            case PlayModeStateChange.EnteredPlayMode:
+                _initialJson = EditorJsonUtility.ToJson(this);
+                break;
+
+            case PlayModeStateChange.ExitingPlayMode:
+                EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;
+                if (_revert)
+                    EditorJsonUtility.FromJsonOverwrite(_initialJson, this);
+                break;
+        }
+    }
+#endif
 }

@@ -10,7 +10,8 @@ public class AggresiveWeapon : Weapon
     
     private Movement movement;
 
-    private Player player;
+    [SerializeField]
+    private PlayerData data;
 
     private List<IDamageable> detectedDamageables = new List<IDamageable>();
 
@@ -21,8 +22,6 @@ public class AggresiveWeapon : Weapon
     protected override void Awake()
     {
         base.Awake();
-
-        player = GetComponentInParent<Player>();
 
         if(weaponData.GetType() == typeof(AggresiveWeaponData))
         {
@@ -36,9 +35,9 @@ public class AggresiveWeapon : Weapon
 
     private void FixedUpdate()
     {
-        if (player != null)
+        if (data != null)
         {
-            anim.speed = player.GetAtkSpeed();
+            anim.speed = data.GetAtkSpeed();
         }
     }
 

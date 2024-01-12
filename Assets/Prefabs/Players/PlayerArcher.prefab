@@ -164,8 +164,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7884976939961770773}
-  - component: {fileID: 7884976939961770774}
   - component: {fileID: 7884976939961770775}
+  - component: {fileID: 4172806621519136393}
   m_Layer: 9
   m_Name: Combat
   m_TagString: Untagged
@@ -188,20 +188,6 @@ Transform:
   m_Father: {fileID: 7884976939644660855}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7884976939961770774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7884976939961770772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1ea00bab8100648b881871216a52ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
-  maxKncockbackTime: 0.5
 --- !u!61 &7884976939961770775
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -228,6 +214,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5869738, y: 2.20035}
   m_EdgeRadius: 0
+--- !u!114 &4172806621519136393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7884976939961770772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bc4ea8ec106cd42811a0b7845fe893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
+  maxKncockbackTime: 0.05
+  flashColor: {r: 0.8666667, g: 0.14117648, b: 0.14117648, a: 0}
+  regularColor: {r: 1, g: 1, b: 1, a: 0}
+  flashDuration: 0.1
+  numberOfFlashes: 8
+  col: {fileID: 7884976939961770775}
 --- !u!1 &7884976940036249364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,4 +1148,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 150
-  healthBar: {fileID: 0}
+  healtBar: {fileID: 0}
+  text: {fileID: 0}

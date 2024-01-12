@@ -52,32 +52,12 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
         knockbackStartTime = Time.time;
     }
 
-    private void CheckKnockback()
+    protected virtual void CheckKnockback()
     {
         if(isKnockbackActive && ((Movement?.currentVelocity.y <= 0.01f && CollisionSenses.Ground) || Time.time >= knockbackStartTime + maxKncockbackTime))
         {
             isKnockbackActive = false;
             Movement.canSetVelocity = true;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (!hitByWave)
-        {
-            if (col.CompareTag("SwordWave"))
-            {
-                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), col, true);
-                hitByWave = true;
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.CompareTag("SwordWave"))
-        {
-            hitByWave = false;
         }
     }
 }

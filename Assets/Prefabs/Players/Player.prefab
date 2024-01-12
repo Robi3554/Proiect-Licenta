@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8706217524488752151}
-  - component: {fileID: 8706217524488752149}
   - component: {fileID: 8706217524488752150}
+  - component: {fileID: 3081904062189951468}
   m_Layer: 9
   m_Name: Combat
   m_TagString: Untagged
@@ -33,20 +33,6 @@ Transform:
   m_Father: {fileID: 8706217525562989826}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8706217524488752149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8706217524488752144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1ea00bab8100648b881871216a52ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
-  maxKncockbackTime: 0.05
 --- !u!61 &8706217524488752150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73,6 +59,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.8092065}
   m_EdgeRadius: 0
+--- !u!114 &3081904062189951468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706217524488752144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bc4ea8ec106cd42811a0b7845fe893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
+  maxKncockbackTime: 0.05
+  flashColor: {r: 0.8679245, g: 0.14247058, b: 0.14247058, a: 0.39215687}
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.1
+  numberOfFlashes: 8
+  col: {fileID: 8706217524488752150}
 --- !u!1 &8706217524610909990
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 0ac9efc7b8895804c99d96951d7dcfb2, type: 2}
+  data: {fileID: 0}
 --- !u!114 &9150046916037671188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 150
+  healtBar: {fileID: 0}
+  text: {fileID: 0}
 --- !u!1 &8706217526421685663
 GameObject:
   m_ObjectHideFlags: 0

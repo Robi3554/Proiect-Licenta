@@ -8,6 +8,7 @@ TagManager:
   - ParticleContainer
   - OneWayPlatform
   - SwordWave
+  - PowerUp
   layers:
   - Default
   - TransparentFX

@@ -8,8 +8,7 @@ public class AttackSpeedUp : PowerupEffect
     [SerializeField]
     private PlayerData data;
 
-    [SerializeField]
-    private float percentage;
+    public float percentage;
 
     public override void ApplyEffect(GameObject obj)
     {

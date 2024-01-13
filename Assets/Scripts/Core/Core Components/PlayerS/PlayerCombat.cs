@@ -21,13 +21,13 @@ public class PlayerCombat : Combat
     public override void Damage(float amount)
     {
         base.Damage(amount);
+
+        StartCoroutine(FramesCo());
     }
 
     public override void Knockback(Vector2 angle, float strength, int direction)
     {
         base.Knockback(angle, strength, direction);
-
-        StartCoroutine(FramesCo());
     }
 
     public override void LogicUpdate()

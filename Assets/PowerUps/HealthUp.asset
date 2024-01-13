@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ede5f3ac999cea4a965b659714e0aaf, type: 3}
   m_Name: HealthUp
   m_EditorClassIdentifier: 
-  healthAmmount: 30
+  healthAmount: 30

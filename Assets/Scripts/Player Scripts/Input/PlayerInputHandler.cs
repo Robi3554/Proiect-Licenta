@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 
@@ -15,11 +17,15 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField]
     private BoxCollider2D bc;
 
+    public delegate void PowerUpHandler(Collider2D col);
+
+    public event PowerUpHandler PowerUp;
+
     public Vector2 rawMoveInput { get; private set; }
     public Vector2 rawDashDirectionInput { get; private set; }
     public Vector2Int dashDirectionInput { get; private set; }
 
-    public float moveInput;
+    public float moveInput { get; private set; }
 
     public int normalizedInputX { get; private set; }
     public int normalizedInputY { get; private set; }
@@ -33,6 +39,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     private float jumpInputStartTime;
     private float dashInputStartTime;
+
+    private bool isInTrigger;
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
@@ -147,6 +155,17 @@ public class PlayerInputHandler : MonoBehaviour
         dashDirectionInput = Vector2Int.RoundToInt(rawDashDirectionInput.normalized);
     }
 
+    public void OnActionInput(InputAction.CallbackContext context)
+    {
+        if (isInTrigger)
+        {
+            if (context.started)
+            {
+                PowerUp?.Invoke(bc);
+            }
+        }
+    }
+
     public void UseDashInput() => dashInput = false;
 
     public void UseJumpInput() => jumpInput = false;
@@ -177,6 +196,18 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (col.gameObject.CompareTag("OneWayPlatform"))
             currentOneWayPlatform = null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("PowerUp"))
+            isInTrigger = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("PowerUp"))
+            isInTrigger = false;
     }
 
     private IEnumerator DisableCollision()

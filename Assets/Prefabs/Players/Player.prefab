@@ -904,7 +904,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bc: {fileID: 0}
-  moveInput: 0
   inputHoldTime: 0.2
 --- !u!114 &8706217526112705992
 MonoBehaviour:

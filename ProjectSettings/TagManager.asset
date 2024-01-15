@@ -9,6 +9,7 @@ TagManager:
   - OneWayPlatform
   - SwordWave
   - PowerUp
+  - Platform
   layers:
   - Default
   - TransparentFX

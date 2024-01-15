@@ -18,7 +18,8 @@ public class SwordProjectile : MonoBehaviour
     private float
         damageRadius,
         speed,
-        travelDistance;
+        travelDistance,
+        travelTime;
 
     [SerializeField]
     private LayerMask
@@ -31,7 +32,7 @@ public class SwordProjectile : MonoBehaviour
     private HashSet<IDamageable> damagedEnemies = new HashSet<IDamageable>();
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();  
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -45,14 +46,6 @@ public class SwordProjectile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-    }
-
-    private void Damage()
-    {
-        damagedEnemies.Clear();
-
-        Collider2D[] damageHit = Physics2D.OverlapCircleAll(damagePos.position, damageRadius, whatIsEnemy);
         Collider2D groundHit = Physics2D.OverlapCircle(damagePos.position, damageRadius, whatIsGround);
 
         if (groundHit)
@@ -61,20 +54,25 @@ public class SwordProjectile : MonoBehaviour
         }
         else if (Mathf.Abs(xStartPos - transform.position.x) >= travelDistance)
         {
+            Debug.Log("Travel Over!");
             Destroy(gameObject);
         }
-        else
-        {
-            foreach (Collider2D collider in damageHit)
-            {
-                IDamageable damageable = collider.GetComponent<IDamageable>();
+    }
 
-                if (damageable != null && !damagedEnemies.Contains(damageable))
-                {
-                    damageable.Damage(damage);
-                    damagedEnemies.Add(damageable);
-                    //Destroy(gameObject);
-                }
+    private void Damage()
+    {
+        damagedEnemies.Clear();
+
+        Collider2D[] damageHit = Physics2D.OverlapCircleAll(damagePos.position, damageRadius, whatIsEnemy);
+       
+        foreach (Collider2D collider in damageHit)
+        {
+            IDamageable damageable = collider.GetComponent<IDamageable>();
+
+            if (damageable != null && !damagedEnemies.Contains(damageable))
+            {
+                damageable.Damage(damage);
+                damagedEnemies.Add(damageable);
             }
         }
     }
@@ -93,22 +91,6 @@ public class SwordProjectile : MonoBehaviour
         {
             countData.count = 0;
         }
-
-        Debug.Log(damage);
-    }
-
-    public void AddToDetected(Collider2D col)
-    {
-        IDamageable damageable = col.GetComponent<IDamageable>();
-
-        
-    }
-
-    public void RemoveFromDetected(Collider2D col)
-    {
-        IDamageable damageable = col.GetComponent<IDamageable>();
-
-       
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -117,14 +99,8 @@ public class SwordProjectile : MonoBehaviour
 
         if (damageable != null && !damagedEnemies.Contains(damageable))
         {
-            AddToDetected(col);
             Damage();
             damagedEnemies.Add(damageable);
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        RemoveFromDetected(col);
     }
 }

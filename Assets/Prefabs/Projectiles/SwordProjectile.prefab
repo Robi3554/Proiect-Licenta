@@ -107,7 +107,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!60 &250882342160028911
 PolygonCollider2D:
@@ -189,7 +189,8 @@ MonoBehaviour:
   countData: {fileID: 11400000, guid: 9c121a1c0a0cd76418177965fe4e54a2, type: 2}
   damageRadius: 1.7
   speed: 20
-  travelDistance: 6
+  travelDistance: 8
+  travelTime: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64

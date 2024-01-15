@@ -14,6 +14,8 @@ public class BW_MeleeAttackState : MeleeAttackState
     public override void Enter()
     {
         base.Enter();
+
+        entity.atsm.bwMeleeAttackState = this;
     }
 
     public override void Exit()
@@ -41,7 +43,12 @@ public class BW_MeleeAttackState : MeleeAttackState
                 stateMachine.ChangeState(bWarrior.lookForPlayerState);
             }
         }
+    }
 
+    public void RockAttackStart()
+    {
+        bWarrior.EnableRocks();
+        Debug.Log("Rock Start!");
     }
 
     public override void PhysicsUpdate()

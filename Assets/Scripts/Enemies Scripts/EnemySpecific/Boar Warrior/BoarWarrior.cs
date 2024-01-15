@@ -28,6 +28,8 @@ public class BoarWarrior : Entity
     [SerializeField]
     private Transform meleeAttackPos;
 
+    public GameObject rockAttack;
+
     public override void Awake()
     {
         base.Awake();
@@ -50,5 +52,11 @@ public class BoarWarrior : Entity
         base.OnDrawGizmos();
 
         Gizmos.DrawWireSphere(meleeAttackPos.position, meleeAttackData.attackRadius);
+    }
+
+    public void EnableRocks()
+    {
+        rockAttack.SetActive(true);
+        Debug.Log("Enabled!");
     }
 }

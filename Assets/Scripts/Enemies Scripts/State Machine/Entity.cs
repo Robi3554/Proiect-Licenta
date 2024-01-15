@@ -27,7 +27,6 @@ public class Entity : MonoBehaviour
         wallCheck,
         ledgeCheck,
         playerCheck;
-        //groundCheck;
 
     private Vector2 velocityWorkspace;
 
@@ -94,6 +93,11 @@ public class Entity : MonoBehaviour
     {
         isStunned = false;
         currentStunResistance = entityData.stunResistance;
+    }
+
+    public int GetFacingDir()
+    {
+        return Movement.facingDir;
     }
 
     public virtual void OnDrawGizmos()

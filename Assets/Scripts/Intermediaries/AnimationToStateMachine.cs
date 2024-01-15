@@ -10,6 +10,8 @@ public class AnimationToStateMachine : MonoBehaviour
 
     public Exec_Teleport_State teleportState;
 
+    public BW_MeleeAttackState bwMeleeAttackState;
+
     private void TriggerAttack()
     {
         attackState.TriggerAttack();
@@ -42,5 +44,10 @@ public class AnimationToStateMachine : MonoBehaviour
         {
             Debug.LogError("TeleportState is null!");
         }
+    }
+
+    private void RockStart()
+    {
+        bwMeleeAttackState.RockAttackStart();
     }
 }

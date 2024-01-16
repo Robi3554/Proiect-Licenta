@@ -14,7 +14,7 @@ public class RockAttack : MonoBehaviour
     [SerializeField]
     private float delay;
 
-    private Animator anim;
+    private LayerMask maskToIgnore;
 
     private BoarWarrior bw;
 
@@ -22,25 +22,25 @@ public class RockAttack : MonoBehaviour
     {
         bw = GetComponentInParent<BoarWarrior>();
 
-        anim = GetComponent<Animator>();
+        maskToIgnore = ~LayerMask.GetMask("Damageable");
     }
 
     public void Attack()
     {
-        Collider2D[] detectedObjects = Physics2D.OverlapBoxAll(atkPos.position, size, data.whatIsPlayer);
+        Collider2D[] detectedObjects = Physics2D.OverlapBoxAll(atkPos.position, size, maskToIgnore);
 
         StartCoroutine(DisableCo(delay));
 
-        foreach (Collider2D collider in detectedObjects)
+        foreach (Collider2D col in detectedObjects)
         {
-            IDamageable damageable = collider.GetComponent<IDamageable>();
+            IDamageable damageable = col.GetComponent<IDamageable>();
 
             if (damageable != null)
             {
                 damageable.Damage(data.attackDamage);
             }
 
-            IKnockbackable knockbackable = collider.GetComponent<IKnockbackable>();
+            IKnockbackable knockbackable = col.GetComponent<IKnockbackable>();
 
             if (knockbackable != null)
             {

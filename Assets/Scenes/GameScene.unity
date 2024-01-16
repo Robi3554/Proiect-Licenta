@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3237533}
   - component: {fileID: 3237534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Inner Right Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36939,7 +36939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 74736761}
   - component: {fileID: 74736762}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Inner Left Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37425,7 +37425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 239645770}
   - component: {fileID: 239645771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Outer Left Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38852,9 +38852,9 @@ GameObject:
   - component: {fileID: 608189377}
   - component: {fileID: 608189379}
   - component: {fileID: 608189380}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rocks
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39248,7 +39248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 621463495}
   - component: {fileID: 621463496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Middle Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96108,7 +96108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1073246573}
   - component: {fileID: 1073246574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Middle Left Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98234,7 +98234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1560853900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attack Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105116,7 +105116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1762255431}
   - component: {fileID: 1762255432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Middle Right Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105200,7 +105200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1784448359}
   - component: {fileID: 1784448360}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Outer Right Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}

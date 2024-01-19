@@ -18,8 +18,7 @@ public class Player : MonoBehaviour
     public PlayerDashState dashState { get; private set; }
     public PlayerAttackState primaryAttackState { get; private set; }
 
-    [SerializeField]
-    private PlayerData playerData;
+    public PlayerData playerData;
     #endregion
 
     #region Components
@@ -41,7 +40,6 @@ public class Player : MonoBehaviour
     #region Other Variables
     private Vector2 workSpace;
 
-    public bool canFire = false;
     #endregion
 
     #region Unity Callback Functions

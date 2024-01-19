@@ -11,7 +11,7 @@ public class FireProjectile : MonoBehaviour
     private GameObject projectile;
 
     [SerializeField]
-    private Player player;
+    private Swordsman player;
 
     private void Fire()
     {

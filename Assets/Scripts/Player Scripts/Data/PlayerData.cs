@@ -40,11 +40,6 @@ public class PlayerData : ScriptableObject
     [Header("Attack State")]
     public float attackSpeed = 1f;
 
-    public float GetAtkSpeed()
-    {
-        return attackSpeed;
-    }
-
 #if UNITY_EDITOR
     [SerializeField] private bool _revert;
     private string _initialJson = string.Empty;

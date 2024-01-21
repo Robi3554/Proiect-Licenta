@@ -40,6 +40,9 @@ public class Player : MonoBehaviour
     #region Other Variables
     private Vector2 workSpace;
 
+    [SerializeField]
+    internal bool canLightOnFire;
+
     #endregion
 
     #region Unity Callback Functions

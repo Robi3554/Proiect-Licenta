@@ -7,8 +7,10 @@ using System.Linq;
 public class AggresiveWeapon : Weapon
 {
     protected Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
+    protected Combat Comabt { get => combat ??= core.GetCoreComponent<Combat>(); }
     
     private Movement movement;
+    private Combat combat;
 
     [SerializeField]
     private PlayerData data;
@@ -37,7 +39,7 @@ public class AggresiveWeapon : Weapon
     {
         if (data != null)
         {
-            anim.speed = data.GetAtkSpeed();
+            anim.speed = data.attackSpeed;
         }
     }
 
@@ -66,10 +68,16 @@ public class AggresiveWeapon : Weapon
     public void AddToDetected(Collider2D collision)
     {
         IDamageable damageable = collision.GetComponent<IDamageable>();
+        Combat burning = collision.GetComponent<Combat>();
 
-        if(damageable != null)
+        if (damageable != null)
         {
             detectedDamageables.Add(damageable);
+
+            if (player.canLightOnFire)
+            {
+                burning.StartsBurning();
+            }
         }
 
         IKnockbackable knockbackable = collision.GetComponent<IKnockbackable>();

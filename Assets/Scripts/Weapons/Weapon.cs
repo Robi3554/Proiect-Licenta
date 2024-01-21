@@ -13,11 +13,15 @@ public class Weapon : MonoBehaviour
 
     protected Core core;
 
+    protected Player player;
+
     protected int attackCounter;
 
     protected virtual void Awake()
     {
         anim = GetComponent<Animator>();
+
+        player = GetComponentInParent<Player>();
 
         gameObject.SetActive(false);
     }

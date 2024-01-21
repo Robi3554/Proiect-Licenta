@@ -7,6 +7,6 @@ public class FlameAtr : PowerupEffect
 {
     public override void ApplyEffect(GameObject obj)
     {
-        obj.GetComponentInChildren<PlayerCombat>().enabled = true;
+        obj.GetComponentInChildren<Player>().canLightOnFire = true;
     }
 }

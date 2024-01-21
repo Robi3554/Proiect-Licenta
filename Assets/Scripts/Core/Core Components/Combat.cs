@@ -20,11 +20,12 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
     [SerializeField]
     protected float maxKncockbackTime = 0.5f;
 
-    protected bool isKnockbackActive;
-
     protected float knockbackStartTime;
 
-    protected bool hitByWave = false;
+    protected bool isKnockbackActive;
+
+    [SerializeField]
+    internal bool willBurn;
 
     public override void LogicUpdate()
     {
@@ -37,11 +38,6 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
 
         Stats?.DecreaseHealth(amount);
 
-        if (Stats.canBurn)
-        {
-            Stats?.CacthFire();
-        }
-
         ParticleManager?.StartParticlesWithRandomRotation(damageParticles);
     }
 
@@ -53,6 +49,14 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
 
         isKnockbackActive = true;
         knockbackStartTime = Time.time;
+    }
+
+    public virtual void StartsBurning()
+    {
+        if (Stats.canBurn)
+        {
+            Stats?.CacthFire();
+        }
     }
 
     protected virtual void CheckKnockback()

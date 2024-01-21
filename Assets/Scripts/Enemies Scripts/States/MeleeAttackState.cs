@@ -56,10 +56,16 @@ public class MeleeAttackState : AttackState
         foreach(Collider2D collider in detectedObjects)
         {
             IDamageable damageable = collider.GetComponent<IDamageable>();
+            Combat burning = collider.GetComponent<Combat>();
 
             if(damageable != null)
             {
                 damageable.Damage(stateData.attackDamage);
+
+                if (stateData.canLightOnFire)
+                {
+                    burning.StartsBurning();
+                }
             }
 
             IKnockbackable knockbackable = collider.GetComponent<IKnockbackable>(); 

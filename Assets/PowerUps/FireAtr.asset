@@ -9,14 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d337a8135e64dd64a86c2f7fea09b31d, type: 3}
-  m_Name: E1_MeleeAttackData
+  m_Script: {fileID: 11500000, guid: 3341780de5bb76842ab93d2677067423, type: 3}
+  m_Name: FireAtr
   m_EditorClassIdentifier: 
-  canLightOnFire: 1
-  attackRadius: 1.1
-  attackDamage: 15
-  knockbackAngle: {x: 1, y: 1}
-  knockbackStrength: 10
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 512

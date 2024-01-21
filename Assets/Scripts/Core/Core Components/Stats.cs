@@ -7,19 +7,22 @@ public class Stats : CoreComponent
 {
     public event Action OnHealthZero;
 
-    public bool canBurn;
-
-    public float maxHealth;
+    [SerializeField]
+    internal float maxHealth;
 
     protected float currentHealth;
 
-    protected bool onFire;
+    [SerializeField]
+    internal bool canBurn;
+    internal bool onFire;
 
     [Header("OnFire")]
     [SerializeField]
     private float duration;
     [SerializeField]
-    private float timeBetweenHit;
+    private float timeBetweenBurn;
+    [SerializeField]
+    private float burnDamage;
 
     private SpriteRenderer sr;
 
@@ -50,13 +53,19 @@ public class Stats : CoreComponent
 
     public virtual void CacthFire()
     {
-        onFire = true;
+        if (canBurn && !onFire)
+        {
+            onFire = true;
 
-        Color onFireColor = HexToColor("FC8702");
+            Color onFireColor = HexToColor("FC8702");
 
-        sr.color = onFireColor;
+            sr.color = onFireColor;
 
-        StartCoroutine(OnFire());
+            if (onFire)
+            {
+                StartCoroutine(OnFire());
+            }
+        }
     }
 
     Color HexToColor(string hex)
@@ -68,7 +77,12 @@ public class Stats : CoreComponent
 
     public IEnumerator OnFire()
     {
-        yield return new WaitForSeconds(duration);
+        for (int i = 1; i <= duration; i++)
+        {
+            yield return new WaitForSeconds(timeBetweenBurn);
+
+            DecreaseHealth(burnDamage);
+        }
 
         Color regularColor = HexToColor("FFFFFF");
 

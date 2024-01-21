@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3081904062189951468}
   m_Layer: 9
   m_Name: Combat
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 9150046916037671188}
   m_Layer: 10
   m_Name: Sword1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1151,6 +1151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 150
+  onFire: 0
+  canBurn: 0
   healtBar: {fileID: 0}
   text: {fileID: 0}
 --- !u!1 &8706217526421685663

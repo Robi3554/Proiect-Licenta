@@ -6,6 +6,7 @@ using TMPro;
 
 public class PlayerStats : Stats
 {
+    [Header("Health Bar")]
     [SerializeField]
     private HealthBar healtBar;
 
@@ -34,5 +35,15 @@ public class PlayerStats : Stats
     public override void IncreaseHealth(float amount)
     {
         base.IncreaseHealth(amount);
+    }
+
+    public override void CacthFire()
+    {
+        base.CacthFire();
+    }
+
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
     }
 }

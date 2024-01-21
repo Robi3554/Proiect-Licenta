@@ -7,15 +7,28 @@ public class Stats : CoreComponent
 {
     public event Action OnHealthZero;
 
+    public bool canBurn;
+
     public float maxHealth;
 
     protected float currentHealth;
+
+    protected bool onFire;
+
+    [Header("OnFire")]
+    [SerializeField]
+    private float duration;
+    [SerializeField]
+    private float timeBetweenHit;
+
+    private SpriteRenderer sr;
 
     protected override void Awake()
     {
         base.Awake();
 
         currentHealth = maxHealth;
+        sr = GetComponentInParent<SpriteRenderer>();
     }
 
     public virtual void DecreaseHealth(float amount)
@@ -27,13 +40,45 @@ public class Stats : CoreComponent
             currentHealth = 0;
 
             OnHealthZero?.Invoke();
-
-            Debug.Log("Health is 0!");
         }
     }
 
     public virtual void IncreaseHealth(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+    }
+
+    public virtual void CacthFire()
+    {
+        onFire = true;
+
+        Color onFireColor = HexToColor("FC8702");
+
+        sr.color = onFireColor;
+
+        StartCoroutine(OnFire());
+    }
+
+    Color HexToColor(string hex)
+    {
+        Color color = new Color();
+        ColorUtility.TryParseHtmlString("#" + hex, out color);
+        return color;
+    }
+
+    public IEnumerator OnFire()
+    {
+        yield return new WaitForSeconds(duration);
+
+        Color regularColor = HexToColor("FFFFFF");
+
+        sr.color = regularColor;
+
+        onFire = false;
+    }
+
+    public virtual void OnDestroy()
+    {
+        StopCoroutine(OnFire());
     }
 }

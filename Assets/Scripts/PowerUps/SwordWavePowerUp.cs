@@ -7,6 +7,6 @@ public class SwordWavePowerUp : PowerupEffect
 {
     public override void ApplyEffect(GameObject obj)
     {
-        obj.GetComponentInChildren<Swordsman>().canFire = true;
+        obj.GetComponentInChildren<Swordsman>().canShoot = true;
     }
 }

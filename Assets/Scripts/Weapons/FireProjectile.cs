@@ -15,7 +15,7 @@ public class FireProjectile : MonoBehaviour
 
     private void Fire()
     {
-        if (player.canFire)
+        if (player.canShoot)
         {
             Instantiate(projectile, firePos.position, firePos.rotation);
         }

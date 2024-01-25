@@ -8,6 +8,9 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Data")]
 public class PlayerData : ScriptableObject
 {
+    public float maxHealth = 150f;
+    public float currentHealth = 150f;
+
     [Header("Move State")]
     public float moveVelocity = 10f;
 

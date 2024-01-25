@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Swordsman : Player
 {
-    public bool canFire = false;
+    public bool canShoot = false;
 }

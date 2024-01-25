@@ -25,7 +25,7 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
     protected bool isKnockbackActive;
 
     [SerializeField]
-    internal bool willBurn;
+    //internal bool willBurn;
 
     public override void LogicUpdate()
     {

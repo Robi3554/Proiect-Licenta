@@ -21,6 +21,11 @@ public class Death : CoreComponent
             ParticleManager.StartParticles(particle);
         }
 
+        if(transform.parent.gameObject.CompareTag("Enemy"))
+        {
+            GetComponentInParent<LootBag>().InstantiateLoot(transform.position);
+        }
+
         core.transform.parent.gameObject.SetActive(false);
     }
 

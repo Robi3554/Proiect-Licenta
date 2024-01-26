@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6580390147398921224}
   m_Layer: 7
   m_Name: Death
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 6580390147668577863}
   m_Layer: 9
   m_Name: Stats
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,6 +91,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  canBurn: 0
+  duration: 0
+  timeBetweenBurn: 0
+  burnDamage: 0
 --- !u!1 &6580390147678873498
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +138,7 @@ GameObject:
   - component: {fileID: 6580390147902804618}
   m_Layer: 7
   m_Name: Core
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,7 +250,7 @@ GameObject:
   - component: {fileID: 6580390148406515537}
   m_Layer: 7
   m_Name: ParticleManager
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,7 +325,7 @@ GameObject:
   - component: {fileID: 6580390148661279444}
   m_Layer: 7
   m_Name: Movement
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,7 +400,7 @@ GameObject:
   - component: {fileID: 6580390149189509182}
   m_Layer: 7
   m_Name: CollisonSenses
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,7 +461,7 @@ GameObject:
   - component: {fileID: 9054690626214782717}
   m_Layer: 7
   m_Name: Combat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,6 +536,7 @@ GameObject:
   - component: {fileID: 6580390149347138173}
   - component: {fileID: 6580390149347138169}
   - component: {fileID: 6580390149347138150}
+  - component: {fileID: 8798177186304299508}
   m_Layer: 7
   m_Name: Skeleton
   m_TagString: Enemy
@@ -713,6 +718,24 @@ MonoBehaviour:
   meleeAttackData: {fileID: 11400000, guid: 5be749a439b39964e90311d9fefc5d03, type: 2}
   stunStateData: {fileID: 11400000, guid: f6dc67ff1c34238468ee5517d195fadd, type: 2}
   meleeAttackPos: {fileID: 6580390148214433880}
+--- !u!114 &8798177186304299508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580390149347138175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cd5ade5432db741909f3dc5b37c812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 7541499582618765950, guid: 98e4abb1ea02f084596f115b9f3d045d, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 5ffd0510a5c80ad4286cf1989d567308, type: 2}
+  - {fileID: 11400000, guid: 9cd337c9e8c8b76418af56336b454056, type: 2}
+  dropForce: 50
+  spinSpeed: 200
 --- !u!1 &6580390149383263644
 GameObject:
   m_ObjectHideFlags: 0

@@ -84,13 +84,7 @@ public class SwordProjectile : MonoBehaviour
 
     private void DamageCalc()
     {
-        damage = Mathf.Round(data.AttackDetails[countData.count].damageAmount / 2);
-        countData.count++;
-
-        if (countData.count >= data.AttackDetails.Length)
-        {
-            countData.count = 0;
-        }
+        damage = Mathf.Round(data.AttackDetails[data.count].damageAmount / 2);
     }
 
     private void OnTriggerEnter2D(Collider2D col)

@@ -90,11 +90,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1f3be73d6b0284ea7c8b37094a8ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  canBurn: 0
-  duration: 0
-  timeBetweenBurn: 0
-  burnDamage: 0
+  maxHealth: 75
+  canBurn: 1
+  canBeSlowed: 0
+  fireDuration: 3
+  timeBetweenBurn: 1
+  burnDamage: 10
+  slowDuration: 0
 --- !u!1 &6580390147678873498
 GameObject:
   m_ObjectHideFlags: 0

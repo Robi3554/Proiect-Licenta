@@ -13,16 +13,25 @@ public class Stats : CoreComponent
     protected float currentHealth;
 
     [SerializeField]
-    internal bool canBurn;
-    internal bool onFire;
+    internal bool 
+        canBurn,
+        canBeSlowed;
+
+    internal bool 
+        onFire,
+        isSlowed;
 
     [Header("OnFire")]
     [SerializeField]
-    private float duration;
+    private float fireDuration;
     [SerializeField]
     private float timeBetweenBurn;
     [SerializeField]
     private float burnDamage;
+
+    [Header("Slowed")]
+    [SerializeField]
+    private float slowDuration;
 
     private SpriteRenderer sr;
 
@@ -51,7 +60,7 @@ public class Stats : CoreComponent
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
     }
 
-    public virtual void CacthFire()
+    public virtual void LightOnFire()
     {
         if (canBurn && !onFire)
         {
@@ -63,7 +72,24 @@ public class Stats : CoreComponent
 
             if (onFire)
             {
-                StartCoroutine(OnFire());
+                StartCoroutine(OnFireCo());
+            }
+        }
+    }
+
+    public virtual void Slowing()
+    {
+        if(canBeSlowed && !isSlowed)
+        {
+            isSlowed = true;
+
+            Color isSlowedColor = HexToColor("75B7F1");
+
+            sr.color = isSlowedColor;
+
+            if (isSlowed)
+            {
+                StartCoroutine(SlowingCo());
             }
         }
     }
@@ -75,9 +101,9 @@ public class Stats : CoreComponent
         return color;
     }
 
-    public IEnumerator OnFire()
+    public IEnumerator OnFireCo()
     {
-        for (int i = 1; i <= duration; i++)
+        for (int i = 1; i <= fireDuration; i++)
         {
             yield return new WaitForSeconds(timeBetweenBurn);
 
@@ -91,8 +117,13 @@ public class Stats : CoreComponent
         onFire = false;
     }
 
+    public virtual IEnumerator SlowingCo()
+    {
+        yield return new WaitForSeconds(slowDuration);
+    }
+
     public virtual void OnDestroy()
     {
-        StopCoroutine(OnFire());
+        StopCoroutine(OnFireCo());
     }
 }

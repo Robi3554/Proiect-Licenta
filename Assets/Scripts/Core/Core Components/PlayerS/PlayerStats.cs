@@ -46,9 +46,9 @@ public class PlayerStats : Stats
         base.IncreaseHealth(amount);
     }
 
-    public override void CacthFire()
+    public override void LightOnFire()
     {
-        base.CacthFire();
+        base.LightOnFire();
     }
 
     public override void OnDestroy()

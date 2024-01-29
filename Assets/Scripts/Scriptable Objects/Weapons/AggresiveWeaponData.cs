@@ -9,6 +9,8 @@ public class AggresiveWeaponData : WeaponData
     [SerializeField]
     private WeaponAttackDetails[] attackDetails;
 
+    internal int count = 0;
+
     public WeaponAttackDetails[] AttackDetails { get => attackDetails; private set => attackDetails = value; }
 
 #if UNITY_EDITOR
@@ -25,7 +27,10 @@ public class AggresiveWeaponData : WeaponData
         for (int i = 0; i < amountOfAttacks; i++) 
         {
             moveSpeed[i] = attackDetails[i].moveSpeed;
+            count++;
         }
+        if (count >= amountOfAttacks)
+            count = 0;
 
 #if UNITY_EDITOR
         EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;

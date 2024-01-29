@@ -24,9 +24,6 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
 
     protected bool isKnockbackActive;
 
-    [SerializeField]
-    //internal bool willBurn;
-
     public override void LogicUpdate()
     {
         CheckKnockback();
@@ -55,7 +52,7 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
     {
         if (Stats.canBurn)
         {
-            Stats?.CacthFire();
+            Stats?.LightOnFire();
         }
     }
 

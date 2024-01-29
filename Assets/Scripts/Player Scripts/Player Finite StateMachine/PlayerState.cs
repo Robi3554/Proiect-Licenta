@@ -34,8 +34,6 @@ public class PlayerState
 
         player.anim.SetBool(animBoolName, true);
 
-        //Debug.Log(animBoolName);
-
         isAnimationFinished = false;
         isExitingState = false;
     }

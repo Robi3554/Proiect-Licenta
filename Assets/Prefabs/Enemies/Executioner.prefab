@@ -202,7 +202,6 @@ MonoBehaviour:
   wallCheck: {fileID: 6685853113652901305}
   ledgeCheck: {fileID: 6685853113865158042}
   playerCheck: {fileID: 6685853112571429405}
-  groundCheck: {fileID: 6685853113011337330}
   idleStateData: {fileID: 11400000, guid: 26b1444d8184c974aae2a33a8c83d225, type: 2}
   spawnStateData: {fileID: 11400000, guid: 1b15144d3c32df24ea714c14af8f1d8a, type: 2}
   attackStateData: {fileID: 11400000, guid: a10b6961e6a158b4aa59106097b59116, type: 2}
@@ -450,6 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
+  co2D: {fileID: 0}
 --- !u!1 &6685853113011337325
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,4 +787,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1f3be73d6b0284ea7c8b37094a8ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: ed3f92e780789fd4ab616267ee47b7ae, type: 2}
   maxHealth: 300
+  canBurn: 0
+  canBeSlowed: 0
+  fireDuration: 0
+  timeBetweenBurn: 0
+  burnDamage: 0
+  slowDuration: 0

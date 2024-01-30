@@ -47,7 +47,6 @@ public class PlayerData : ScriptableObject
     [SerializeField] private bool _revert;
     private string _initialJson = string.Empty;
 #endif
-
     private void OnEnable()
     {
 #if UNITY_EDITOR

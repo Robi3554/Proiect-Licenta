@@ -8,6 +8,9 @@ public class Stats : CoreComponent
     public event Action OnHealthZero;
 
     [SerializeField]
+    private D_MoveState data;
+
+    [SerializeField]
     internal float maxHealth;
 
     protected float currentHealth;
@@ -79,7 +82,7 @@ public class Stats : CoreComponent
 
     public virtual void Slowing()
     {
-        if(canBeSlowed && !isSlowed)
+        if(canBeSlowed && !isSlowed && !onFire)
         {
             isSlowed = true;
 
@@ -119,7 +122,19 @@ public class Stats : CoreComponent
 
     public virtual IEnumerator SlowingCo()
     {
+        float speed = data.movementSpeed;
+
+        data.movementSpeed = speed / 2;
+
         yield return new WaitForSeconds(slowDuration);
+
+        Color regularColor = HexToColor("FFFFFF");
+
+        sr.color = regularColor;
+
+        data.movementSpeed = speed;
+
+        isSlowed = false;
     }
 
     public virtual void OnDestroy()

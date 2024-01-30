@@ -316,7 +316,6 @@ MonoBehaviour:
   meleeAttackStateData: {fileID: 11400000, guid: ea97a00cab385884b8d6c5c5ec5497ce, type: 2}
   lookForPlayerStateData: {fileID: 11400000, guid: 9dc45ee7f33287f41aee237ad8728638, type: 2}
   stunStateData: {fileID: 11400000, guid: a5f1c290319368f4eb214cc5cc0464db, type: 2}
-  deadStateData: {fileID: 11400000, guid: 765a3ca6578a0c74fae0ea10b037855c, type: 2}
   dodgeStateData: {fileID: 11400000, guid: 5112ee88207979f42b8c6103f14c7b60, type: 2}
   rangedAttackStateData: {fileID: 11400000, guid: f21130aa8663c824ba5037f1f97a7e67, type: 2}
   meleeAttackPos: {fileID: 3895333819520268275}
@@ -365,7 +364,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1f3be73d6b0284ea7c8b37094a8ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: ce6100151266515499d211831dde360a, type: 2}
   maxHealth: 100
+  canBurn: 0
+  canBeSlowed: 0
+  fireDuration: 0
+  timeBetweenBurn: 0
+  burnDamage: 0
+  slowDuration: 4
 --- !u!1 &3895333818495057114
 GameObject:
   m_ObjectHideFlags: 0

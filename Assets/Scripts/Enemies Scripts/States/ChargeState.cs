@@ -42,6 +42,8 @@ public class ChargeState : State
 
         isChargeTimeOver = false;
 
+        stateData.Initialize();
+
         Movement?.SetVelocityX(stateData.chargeSpeed * Movement.facingDir);
     }
 

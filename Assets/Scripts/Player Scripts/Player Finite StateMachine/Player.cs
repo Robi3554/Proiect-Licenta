@@ -41,7 +41,9 @@ public class Player : MonoBehaviour
     private Vector2 workSpace;
 
     [SerializeField]
-    internal bool canLightOnFire;
+    internal bool
+        canLightOnFire,
+        canSlow;
 
     #endregion
 

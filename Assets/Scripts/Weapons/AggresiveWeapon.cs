@@ -6,7 +6,7 @@ using System.Linq;
 
 public class AggresiveWeapon : Weapon
 {
-    protected Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
+    protected Movement Movement => movement ? movement : core.GetCoreComponent<Movement>();
     protected Combat Comabt { get => combat ??= core.GetCoreComponent<Combat>(); }
     
     private Movement movement;
@@ -68,7 +68,7 @@ public class AggresiveWeapon : Weapon
     public void AddToDetected(Collider2D collision)
     {
         IDamageable damageable = collision.GetComponent<IDamageable>();
-        Combat burning = collision.GetComponent<Combat>();
+        Combat debuff = collision.GetComponent<Combat>();
 
         if (damageable != null)
         {
@@ -76,7 +76,11 @@ public class AggresiveWeapon : Weapon
 
             if (player.canLightOnFire)
             {
-                burning.StartsBurning();
+                debuff.StartsBurning();
+            }
+            if (player.canSlow)
+            {
+                debuff.StartSlowness();
             }
         }
 

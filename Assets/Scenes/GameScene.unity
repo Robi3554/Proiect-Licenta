@@ -96848,6 +96848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1f3be73d6b0284ea7c8b37094a8ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 6bc8101a05a996a47afe5ad84ed1023c, type: 2}
   maxHealth: 150
   canBurn: 0
   canBeSlowed: 0
@@ -106809,8 +106810,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6580390147668577863, guid: 6f97dc3867a83f646ba3d133e1e64c62, type: 3}
+      propertyPath: canBurn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580390147668577863, guid: 6f97dc3867a83f646ba3d133e1e64c62, type: 3}
       propertyPath: duration
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580390147668577863, guid: 6f97dc3867a83f646ba3d133e1e64c62, type: 3}
+      propertyPath: canBeSlowed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580390147668577863, guid: 6f97dc3867a83f646ba3d133e1e64c62, type: 3}
+      propertyPath: slowDuration
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6580390147668577863, guid: 6f97dc3867a83f646ba3d133e1e64c62, type: 3}
       propertyPath: onFireColor.b
@@ -106960,10 +106973,6 @@ PrefabInstance:
     - target: {fileID: 6685853112571429405, guid: 1da8604f52fd8154f87394ce187ededc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6685853114391238121, guid: 1da8604f52fd8154f87394ce187ededc, type: 3}
-      propertyPath: canBurn
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1da8604f52fd8154f87394ce187ededc, type: 3}
@@ -107320,12 +107329,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 81873398}
     m_Modifications:
     - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
-      propertyPath: canShoot
+      propertyPath: canSlow
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
+      propertyPath: canShoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: canLightOnFire
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3081904062189951468, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: numberOfFlashes

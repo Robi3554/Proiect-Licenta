@@ -8,7 +8,9 @@ public class Stats : CoreComponent
     public event Action OnHealthZero;
 
     [SerializeField]
-    private D_MoveState data;
+    private D_Entity enemyData;
+    [SerializeField]
+    private D_MoveState moveData;
 
     [SerializeField]
     internal float maxHealth;
@@ -36,7 +38,7 @@ public class Stats : CoreComponent
     [SerializeField]
     private float slowDuration;
 
-    private SpriteRenderer sr;
+    internal SpriteRenderer sr;
 
     protected override void Awake()
     {
@@ -122,9 +124,13 @@ public class Stats : CoreComponent
 
     public virtual IEnumerator SlowingCo()
     {
-        float speed = data.movementSpeed;
+        float moveSpeed = moveData.movementSpeed;
 
-        data.movementSpeed = speed / 2;
+        float animSpeed = enemyData.animSpeed;
+
+        moveData.movementSpeed = moveSpeed / 2;
+
+        enemyData.animSpeed = animSpeed / 2;
 
         yield return new WaitForSeconds(slowDuration);
 
@@ -132,7 +138,9 @@ public class Stats : CoreComponent
 
         sr.color = regularColor;
 
-        data.movementSpeed = speed;
+        moveData.movementSpeed = moveSpeed;
+
+        enemyData.animSpeed = animSpeed;
 
         isSlowed = false;
     }

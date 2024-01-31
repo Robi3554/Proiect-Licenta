@@ -66,6 +66,8 @@ public class Entity : MonoBehaviour
         stateMachine.currentState.PhysicsUpdate();
 
         anim.SetFloat("yVelocity", Movement.rb.velocity.y);
+
+        anim.speed = entityData.animSpeed;
     }
 
     public virtual bool CheckPlayerInMinAggroRange()

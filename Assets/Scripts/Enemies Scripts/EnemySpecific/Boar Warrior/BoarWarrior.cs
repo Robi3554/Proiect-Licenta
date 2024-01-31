@@ -28,7 +28,11 @@ public class BoarWarrior : Entity
     [SerializeField]
     private Transform meleeAttackPos;
 
-    public GameObject rockAttack;
+    [Header("RockAttack")]
+    [SerializeField]
+    private GameObject rockAttack;
+    [SerializeField]
+    private Transform rockAttackPos;
 
     public override void Awake()
     {
@@ -56,7 +60,7 @@ public class BoarWarrior : Entity
 
     public void EnableRocks()
     {
-        rockAttack.SetActive(true);
-        Debug.Log("Enabled!");
+        Instantiate(rockAttack, rockAttackPos.position, rockAttackPos.rotation);
+        Debug.Log("Instantiated!");
     }
 }

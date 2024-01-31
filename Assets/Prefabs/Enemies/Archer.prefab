@@ -364,14 +364,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1f3be73d6b0284ea7c8b37094a8ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: ce6100151266515499d211831dde360a, type: 2}
+  enemyData: {fileID: 11400000, guid: 01be5ed47eec44c4dbd7753d48024972, type: 2}
+  moveData: {fileID: 11400000, guid: ce6100151266515499d211831dde360a, type: 2}
   maxHealth: 100
   canBurn: 0
-  canBeSlowed: 0
+  canBeSlowed: 1
   fireDuration: 0
   timeBetweenBurn: 0
   burnDamage: 0
-  slowDuration: 4
+  slowDuration: 5
 --- !u!1 &3895333818495057114
 GameObject:
   m_ObjectHideFlags: 0

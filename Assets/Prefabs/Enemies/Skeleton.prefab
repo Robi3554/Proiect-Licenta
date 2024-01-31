@@ -90,14 +90,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1f3be73d6b0284ea7c8b37094a8ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 87b3a589aaf7e0344b4fab5da585a337, type: 2}
+  enemyData: {fileID: 11400000, guid: 8991d807e8345684881a1207bf5fb838, type: 2}
+  moveData: {fileID: 11400000, guid: 87b3a589aaf7e0344b4fab5da585a337, type: 2}
   maxHealth: 75
-  canBurn: 1
-  canBeSlowed: 0
+  canBurn: 0
+  canBeSlowed: 1
   fireDuration: 3
   timeBetweenBurn: 1
   burnDamage: 10
-  slowDuration: 4
+  slowDuration: 10
 --- !u!1 &6580390147678873498
 GameObject:
   m_ObjectHideFlags: 0

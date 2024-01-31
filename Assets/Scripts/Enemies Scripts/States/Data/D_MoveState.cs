@@ -9,8 +9,6 @@ public class D_MoveState : ScriptableObject
 {
     public float _movementSpeed = 3;
 
-    public float animSpeed = 1;
-
     public event Action<float> OnMovementSpeedChanged;
     public float movementSpeed
     {

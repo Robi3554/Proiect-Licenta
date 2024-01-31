@@ -787,11 +787,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1f3be73d6b0284ea7c8b37094a8ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: ed3f92e780789fd4ab616267ee47b7ae, type: 2}
+  enemyData: {fileID: 11400000, guid: 7c2a0a63349507040ada5bc4faf5e026, type: 2}
+  moveData: {fileID: 11400000, guid: ed3f92e780789fd4ab616267ee47b7ae, type: 2}
   maxHealth: 300
   canBurn: 0
-  canBeSlowed: 0
+  canBeSlowed: 1
   fireDuration: 0
   timeBetweenBurn: 0
   burnDamage: 0
-  slowDuration: 0
+  slowDuration: 10

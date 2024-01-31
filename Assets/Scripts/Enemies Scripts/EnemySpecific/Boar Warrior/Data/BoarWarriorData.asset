@@ -19,6 +19,7 @@ MonoBehaviour:
   stunResistance: 3
   stunRecoveryTime: 2
   closeRangeActionDistance: 1.5
+  animSpeed: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64

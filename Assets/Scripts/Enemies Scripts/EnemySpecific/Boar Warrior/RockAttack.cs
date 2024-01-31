@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class RockAttack : MonoBehaviour
 {
-    [SerializeField]
-    private BoarWarrior bw;
+
     [SerializeField]
     private D_MeleeAttack data;
     [SerializeField]
@@ -16,10 +15,14 @@ public class RockAttack : MonoBehaviour
     [SerializeField]
     private float delay;
 
+    private BoarWarrior bw;
+
     private LayerMask maskToIgnore;
 
     void Awake()
     {
+        bw = GetComponentInParent<BoarWarrior>();
+
         maskToIgnore = ~LayerMask.GetMask("Damageable");
     }
 
@@ -56,6 +59,6 @@ public class RockAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(value);
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

@@ -717,6 +717,7 @@ GameObject:
   - component: {fileID: 1412083703286374116}
   - component: {fileID: 8706217526112706000}
   - component: {fileID: 8706217526112705992}
+  - component: {fileID: 2087467046834226569}
   - component: {fileID: 8706217526112705994}
   - component: {fileID: 8706217526112705995}
   - component: {fileID: 8706217526112706004}
@@ -914,7 +915,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}
-  canFire: 0
+  canLightOnFire: 0
+  canSlow: 0
+  canShoot: 0
 --- !u!114 &8706217526112706000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,6 +946,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons:
   - {fileID: 8706217524610910041}
+--- !u!114 &2087467046834226569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706217526112706001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a76d529e1c3274fb4d5d0108968833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightning: {fileID: 5727028198497155286, guid: 07bb48a7b68e5c744a3fedd5f48966cc, type: 3}
+  spawnHeightAdd: 16
 --- !u!212 &8706217526112705994
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1150,11 +1167,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f3ee2b0cb1862142a8381f54a2c3227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyData: {fileID: 0}
+  moveData: {fileID: 0}
   maxHealth: 150
-  onFire: 0
   canBurn: 0
+  canBeSlowed: 0
+  fireDuration: 0
+  timeBetweenBurn: 0
+  burnDamage: 0
+  slowDuration: 0
   healtBar: {fileID: 0}
   text: {fileID: 0}
+  playerData: {fileID: 0}
 --- !u!1 &8706217526421685663
 GameObject:
   m_ObjectHideFlags: 0

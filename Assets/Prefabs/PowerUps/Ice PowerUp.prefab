@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2627992489653425547, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8078653827024784828, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
       propertyPath: powerupEffect
       value: 
@@ -78,6 +82,12 @@ PrefabInstance:
     - target: {fileID: 8078653827024784831, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8208584464839333149, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+      propertyPath: m_text
+      value: 'Allows the player to slow enemies
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}

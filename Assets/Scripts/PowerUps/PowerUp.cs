@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
+    [Header("Effects")]
     [SerializeField]
     private GameObject pickupEffect;
     [SerializeField]
     private PowerupEffect powerupEffect;
+
+    [Header("Info Box")]
+    [SerializeField]
+    private GameObject infoBox;
 
     private bool inTrigger = false;
 
@@ -27,6 +32,7 @@ public class PowerUp : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             inTrigger = true;
+            infoBox.SetActive(true);
         }
     }
 
@@ -35,6 +41,7 @@ public class PowerUp : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             inTrigger = false;
+            infoBox.SetActive(false);
         }
     }
 

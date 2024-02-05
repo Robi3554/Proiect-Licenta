@@ -106645,18 +106645,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 81873398}
     m_Modifications:
-    - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
-      propertyPath: canSlow
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
-      propertyPath: canShoot
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
-      propertyPath: canLightOnFire
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3081904062189951468, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: numberOfFlashes
       value: 6

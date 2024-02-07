@@ -915,6 +915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}
+  chainLightning: {fileID: 0}
   canLightOnFire: 0
   canSlow: 0
   canShoot: 0

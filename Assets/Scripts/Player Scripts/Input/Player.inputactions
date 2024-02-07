@@ -629,10 +629,10 @@
                 {
                     "name": "",
                     "id": "384f35d3-4ad1-419d-a407-c28ba366d068",
-                    "path": "*/{Submit}",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
+                    "groups": "Keyboard&Mouse;Touch;Joystick;XR;Keyboard",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false

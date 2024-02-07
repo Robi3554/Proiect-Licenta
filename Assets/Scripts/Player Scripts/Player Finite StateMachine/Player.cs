@@ -41,6 +41,9 @@ public class Player : MonoBehaviour
     private Vector2 workSpace;
 
     [SerializeField]
+    internal GameObject chainLightning;
+
+    [SerializeField]
     internal bool
         canLightOnFire,
         canSlow;

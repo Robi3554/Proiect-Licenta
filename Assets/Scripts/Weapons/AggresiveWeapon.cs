@@ -6,8 +6,6 @@ using System.Linq;
 
 public class AggresiveWeapon : Weapon
 {
-    protected PlayerLightning pLightning;
-
     protected Movement Movement => movement ? movement : core.GetCoreComponent<Movement>();
     protected Combat Comabt  => combat ? combat : core.GetCoreComponent<Combat>();
     
@@ -35,8 +33,6 @@ public class AggresiveWeapon : Weapon
         {
             Debug.LogError("Wrong Data For The Weapon");
         }
-
-        pLightning = GetComponentInParent<PlayerLightning>();
     }
 
     private void FixedUpdate()
@@ -73,7 +69,6 @@ public class AggresiveWeapon : Weapon
     {
         IDamageable damageable = collision.GetComponent<IDamageable>();
         Combat debuff = collision.GetComponent<Combat>();
-        Transform pos = collision.transform;
 
         if (damageable != null)
         {
@@ -83,12 +78,12 @@ public class AggresiveWeapon : Weapon
             {
                 debuff.StartsBurning();
             }
-            if (player.canSlow)
+            else if (player.canSlow)
             {
                 debuff.StartSlowness();
             }
 
-            pLightning.SpawnLightning(pos);
+            Instantiate(player.chainLightning, collision.transform.position, Quaternion.identity);
         }
 
         IKnockbackable knockbackable = collision.GetComponent<IKnockbackable>();

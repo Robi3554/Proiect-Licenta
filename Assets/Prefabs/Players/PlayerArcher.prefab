@@ -716,7 +716,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 528567266a22eeb46a392ca354906398, type: 2}
-  canFire: 0
+  chainLightning: {fileID: 0}
+  canLightOnFire: 0
+  canSlow: 0
 --- !u!114 &7884976940769599051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,7 +732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bc: {fileID: 0}
-  moveInput: 0
   inputHoldTime: 0.2
 --- !u!114 &7884976940769599050
 MonoBehaviour:
@@ -1147,6 +1148,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f3ee2b0cb1862142a8381f54a2c3227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyData: {fileID: 0}
+  moveData: {fileID: 0}
   maxHealth: 150
+  canBurn: 0
+  canBeSlowed: 0
+  fireDuration: 0
+  timeBetweenBurn: 0
+  burnDamage: 0
+  slowDuration: 0
   healtBar: {fileID: 0}
   text: {fileID: 0}
+  playerData: {fileID: 11400000, guid: 528567266a22eeb46a392ca354906398, type: 2}

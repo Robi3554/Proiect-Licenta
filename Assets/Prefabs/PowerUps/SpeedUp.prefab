@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8852421765209242141}
   - component: {fileID: 8494899114930448377}
+  - component: {fileID: 2986914274895083786}
   m_Layer: 0
   m_Name: Info Box
   m_TagString: Untagged
@@ -85,6 +86,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2986914274895083786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896361539612634918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f5397fa1e91d246b3dd5b6bbf4bed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2211276594293224129
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increases the playerspeed by 2
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81f74d16c44d04043a12f3d41bbeb98f, type: 2}
   m_sharedMaterial: {fileID: -3099415312876747097, guid: 81f74d16c44d04043a12f3d41bbeb98f, type: 2}
@@ -387,3 +400,6 @@ MonoBehaviour:
   pickupEffect: {fileID: 2279182899409804110, guid: c7ae2e4a0e569d049a6d6f48e39c7fa0, type: 3}
   powerupEffect: {fileID: 11400000, guid: d0f446ee442e7f4429ecd176c011206a, type: 2}
   infoBox: {fileID: 896361539612634918}
+  powerUpName: Speed Up
+  sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  powerUpDescription: Increases the playerspeed by 2

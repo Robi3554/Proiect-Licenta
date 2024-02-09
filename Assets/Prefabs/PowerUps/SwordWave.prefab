@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910503568082027015}
   - component: {fileID: 2686994517464623492}
+  - component: {fileID: 1482568761468805357}
   m_Layer: 0
   m_Name: Info Box
   m_TagString: Untagged
@@ -85,6 +86,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1482568761468805357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999155566894036398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f5397fa1e91d246b3dd5b6bbf4bed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6293701746281607261
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +229,9 @@ MonoBehaviour:
   pickupEffect: {fileID: 2279182899409804110, guid: c7ae2e4a0e569d049a6d6f48e39c7fa0, type: 3}
   powerupEffect: {fileID: 11400000, guid: b4e1951e6931d3a4094bea2b66a1a27e, type: 2}
   infoBox: {fileID: 2999155566894036398}
+  powerUpName: Sword Wave
+  sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
+  powerUpDescription: Allows the player to create sword waves with each attack
 --- !u!1 &9197039865635054478
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Allows the player to create sword waves with each attack
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81f74d16c44d04043a12f3d41bbeb98f, type: 2}
   m_sharedMaterial: {fileID: -3099415312876747097, guid: 81f74d16c44d04043a12f3d41bbeb98f, type: 2}

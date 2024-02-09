@@ -11,10 +11,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8078653827024784825, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078653827024784828, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+    - target: {fileID: 8078653827024784828, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+      propertyPath: powerUpName
+      value: Ice Element
+      objectReference: {fileID: 0}
     - target: {fileID: 8078653827024784828, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
       propertyPath: powerupEffect
       value: 
       objectReference: {fileID: 11400000, guid: 44258a8cdfaf4e544a04b1b567b6ed6b, type: 2}
+    - target: {fileID: 8078653827024784828, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+      propertyPath: powerUpDescription
+      value: 'Allows the player to slow enemies
+
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 8078653827024784829, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
       propertyPath: m_Name
       value: Ice PowerUp
@@ -72,6 +91,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8078653827024784831, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+    - target: {fileID: 8078653827024784831, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
       propertyPath: m_Color.b
       value: 0.97230196
       objectReference: {fileID: 0}
@@ -85,9 +108,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8208584464839333149, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
       propertyPath: m_text
-      value: 'Allows the player to slow enemies
-
-'
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+--- !u!1 &3843860266259140293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2627992489653425547, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+  m_PrefabInstance: {fileID: 1234166295863401294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6144324479958144440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3843860266259140293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f5397fa1e91d246b3dd5b6bbf4bed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

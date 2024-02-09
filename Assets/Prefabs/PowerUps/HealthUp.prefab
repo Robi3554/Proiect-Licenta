@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7540592371587860596}
   - component: {fileID: 1343456492635423744}
+  - component: {fileID: 24134836552841291}
   m_Layer: 0
   m_Name: Info Box
   m_TagString: Untagged
@@ -85,6 +86,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &24134836552841291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372817343479610957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f5397fa1e91d246b3dd5b6bbf4bed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2154906914436853324
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +227,9 @@ MonoBehaviour:
   pickupEffect: {fileID: 2279182899409804110, guid: c7ae2e4a0e569d049a6d6f48e39c7fa0, type: 3}
   powerupEffect: {fileID: 11400000, guid: 7fd0508119dd5d841bdf5b097ad4236e, type: 2}
   infoBox: {fileID: 1372817343479610957}
+  powerUpName: Health Up
+  sprite: {fileID: 1617965612, guid: 5ff31cd2f631626469ea695427d971db, type: 3}
+  powerUpDescription: Increases the players max health by 35
 --- !u!1 &2476368399293972391
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increases the players max health by 35
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81f74d16c44d04043a12f3d41bbeb98f, type: 2}
   m_sharedMaterial: {fileID: -3099415312876747097, guid: 81f74d16c44d04043a12f3d41bbeb98f, type: 2}

@@ -15,10 +15,23 @@ public class PowerUp : MonoBehaviour
     [SerializeField]
     private GameObject infoBox;
 
+    [Header("PowerUp Info")]
+    [SerializeField]
+    private string powerUpName;
+    [SerializeField]
+    private Sprite sprite;
+    [TextArea]
+    [SerializeField]
+    internal string powerUpDescription;
+
     private bool inTrigger = false;
+
+    private InventoryManager inventoryManager;
 
     private void Awake()
     {
+        inventoryManager = GameObject.Find("Inventory Canvas").GetComponent<InventoryManager>();
+
         PlayerInputHandler playerInput = FindObjectOfType<PlayerInputHandler>();
 
         if (playerInput != null)
@@ -51,6 +64,7 @@ public class PowerUp : MonoBehaviour
         {
             Instantiate(pickupEffect, transform.position, transform.rotation);
             powerupEffect.ApplyEffect(col.gameObject);
+            inventoryManager.AddPowerUp(powerUpName, sprite, powerUpDescription);
             Destroy(gameObject);
         }
     }

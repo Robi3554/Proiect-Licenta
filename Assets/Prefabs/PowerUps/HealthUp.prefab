@@ -229,7 +229,7 @@ MonoBehaviour:
   infoBox: {fileID: 1372817343479610957}
   powerUpName: Health Up
   sprite: {fileID: 1617965612, guid: 5ff31cd2f631626469ea695427d971db, type: 3}
-  powerUpDescription: Increases the players max health by 35
+  powerUpDescription: Increases the players max health by 30
 --- !u!1 &2476368399293972391
 GameObject:
   m_ObjectHideFlags: 0

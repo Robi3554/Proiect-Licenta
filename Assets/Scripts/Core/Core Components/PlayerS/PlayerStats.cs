@@ -46,9 +46,9 @@ public class PlayerStats : Stats
         base.IncreaseHealth(amount);
     }
 
-    public override void LightOnFire()
+    public override void LightOnFire(float fireDuration, float timeBetweenBurn, float burnDamage)
     {
-        base.LightOnFire();
+        base.LightOnFire(fireDuration, timeBetweenBurn, burnDamage);
     }
 
     public override void OnDestroy()

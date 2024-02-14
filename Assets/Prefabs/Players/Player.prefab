@@ -76,7 +76,7 @@ MonoBehaviour:
   flashColor: {r: 0.8679245, g: 0.14247058, b: 0.14247058, a: 0.39215687}
   regularColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.1
-  numberOfFlashes: 8
+  numberOfFlashes: 6
   col: {fileID: 8706217524488752150}
 --- !u!1 &8706217524610909990
 GameObject:

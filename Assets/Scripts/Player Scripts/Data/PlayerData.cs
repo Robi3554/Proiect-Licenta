@@ -43,6 +43,14 @@ public class PlayerData : ScriptableObject
     [Header("Attack State")]
     public float attackSpeed = 1f;
 
+    [Header("Fire Element")]
+    public float fireDuration = 4f;
+    public float timeBetweenBurn = 1f;
+    public float burnDamage = 10f;
+
+    [Header("Ice Element")]
+    public float slowDuration = 4f;
+
 #if UNITY_EDITOR
     [SerializeField] private bool _revert;
     private string _initialJson = string.Empty;

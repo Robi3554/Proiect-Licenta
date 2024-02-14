@@ -64,7 +64,7 @@ public class MeleeAttackState : AttackState
 
                 if (stateData.canLightOnFire)
                 {
-                    burning.StartsBurning();
+                    burning.StartsBurning(stateData.burnDuration, stateData.timeBetweenBurn, stateData.burnDamage);
                 }
             }
 

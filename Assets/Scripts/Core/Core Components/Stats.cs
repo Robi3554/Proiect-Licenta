@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Stats : CoreComponent
 {
+    private Coroutine burnCoroutine;
+    private Coroutine slowCoroutine;
+
     public event Action OnHealthZero;
 
     [SerializeField]
@@ -25,18 +28,6 @@ public class Stats : CoreComponent
     internal bool 
         onFire,
         isSlowed;
-
-    [Header("OnFire")]
-    [SerializeField]
-    private float fireDuration;
-    [SerializeField]
-    private float timeBetweenBurn;
-    [SerializeField]
-    private float burnDamage;
-
-    [Header("Slowed")]
-    [SerializeField]
-    private float slowDuration;
 
     internal SpriteRenderer sr;
 
@@ -65,7 +56,7 @@ public class Stats : CoreComponent
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
     }
 
-    public virtual void LightOnFire()
+    public virtual void LightOnFire(float fireDuration, float timeBetweenBurn, float burnDamage)
     {
         if (canBurn && !onFire)
         {
@@ -77,12 +68,12 @@ public class Stats : CoreComponent
 
             if (onFire)
             {
-                StartCoroutine(OnFireCo());
+                burnCoroutine = StartCoroutine(OnFireCo(fireDuration, timeBetweenBurn, burnDamage));
             }
         }
     }
 
-    public virtual void Slowing()
+    public virtual void Slowing(float slowDuration)
     {
         if(canBeSlowed && !isSlowed && !onFire)
         {
@@ -92,9 +83,11 @@ public class Stats : CoreComponent
 
             sr.color = isSlowedColor;
 
+            Debug.Log("Get Slowed!");
+
             if (isSlowed)
             {
-                StartCoroutine(SlowingCo());
+                slowCoroutine = StartCoroutine(SlowingCo(slowDuration));
             }
         }
     }
@@ -106,7 +99,7 @@ public class Stats : CoreComponent
         return color;
     }
 
-    public IEnumerator OnFireCo()
+    public IEnumerator OnFireCo(float fireDuration, float timeBetweenBurn, float burnDamage)
     {
         for (int i = 1; i <= fireDuration; i++)
         {
@@ -122,7 +115,7 @@ public class Stats : CoreComponent
         onFire = false;
     }
 
-    public virtual IEnumerator SlowingCo()
+    public virtual IEnumerator SlowingCo(float slowDuration)
     {
         float moveSpeed = moveData.movementSpeed;
 
@@ -147,6 +140,14 @@ public class Stats : CoreComponent
 
     public virtual void OnDestroy()
     {
-        StopCoroutine(OnFireCo());
+        if (burnCoroutine != null)
+        {
+            StopCoroutine(burnCoroutine);
+        }
+        
+        if(slowCoroutine != null)
+        {
+            StopCoroutine(slowCoroutine);
+        }
     }
 }

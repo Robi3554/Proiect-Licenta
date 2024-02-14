@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8080707145726056135
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 1820284689, guid: 19899ed78e9bf9c409af32cad5da6279, type: 3}
+    - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: powerUpName
+      value: Attack Speed Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: powerupEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: e108e27700df77345a9cec8395c10c22, type: 2}
+    - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: powerUpDescription
+      value: Increases the players attack speed by 20%
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.778929
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.204696
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853324, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_Name
+      value: AtkSpeedUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853326, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1820284689, guid: 19899ed78e9bf9c409af32cad5da6279, type: 3}
+    - target: {fileID: 2154906914436853327, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.53125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853327, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.53125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656469420586263822, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656469420586263822, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540592371587860596, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540592371587860596, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}

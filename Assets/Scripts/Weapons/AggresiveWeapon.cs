@@ -76,11 +76,11 @@ public class AggresiveWeapon : Weapon
 
             if (player.canLightOnFire)
             {
-                debuff.StartsBurning();
+                debuff.StartsBurning(data.fireDuration, data.timeBetweenBurn, data.burnDamage);
             }
             else if (player.canSlow)
             {
-                debuff.StartSlowness();
+                debuff.StartSlowness(data.slowDuration);
             }
 
             Instantiate(player.chainLightning, collision.transform.position, Quaternion.identity);

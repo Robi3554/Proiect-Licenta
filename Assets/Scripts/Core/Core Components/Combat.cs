@@ -48,19 +48,19 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
         knockbackStartTime = Time.time;
     }
 
-    public virtual void StartsBurning()
+    public virtual void StartsBurning(float fireDuration, float timeBetweenBurn, float burnDamage)
     {
         if (Stats.canBurn)
         {
-            Stats?.LightOnFire();
+            Stats?.LightOnFire(fireDuration, timeBetweenBurn, burnDamage);
         }
     }
 
-    public virtual void StartSlowness()
+    public virtual void StartSlowness(float slowDuration)
     {
         if (Stats.canBeSlowed)
         {
-            Stats?.Slowing();
+            Stats?.Slowing(slowDuration);
         }
     }
 

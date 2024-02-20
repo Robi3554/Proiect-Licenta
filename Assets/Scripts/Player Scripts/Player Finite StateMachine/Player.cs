@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     public PlayerDashState dashState { get; private set; }
     public PlayerAttackState primaryAttackState { get; private set; }
 
+    public PlayerHealState healState { get; private set; }
+
     public PlayerData playerData;
     #endregion
 
@@ -66,6 +68,7 @@ public class Player : MonoBehaviour
         wallJumpState = new PlayerWallJumpState(this, stateMachine, playerData, "inAir");
         dashState = new PlayerDashState(this, stateMachine, playerData, "dash");
         primaryAttackState = new PlayerAttackState(this, stateMachine, playerData, "attack");
+        healState = new PlayerHealState(this, stateMachine, playerData, "idle");
     }
 
     private void Start()

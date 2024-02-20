@@ -1171,15 +1171,11 @@ MonoBehaviour:
   enemyData: {fileID: 0}
   moveData: {fileID: 0}
   maxHealth: 150
-  canBurn: 0
-  canBeSlowed: 0
-  fireDuration: 0
-  timeBetweenBurn: 0
-  burnDamage: 0
-  slowDuration: 0
+  canBurn: 1
+  canBeSlowed: 1
   healtBar: {fileID: 0}
   text: {fileID: 0}
-  playerData: {fileID: 0}
+  playerData: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}
 --- !u!1 &8706217526421685663
 GameObject:
   m_ObjectHideFlags: 0

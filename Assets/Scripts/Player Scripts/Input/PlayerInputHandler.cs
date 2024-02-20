@@ -35,6 +35,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool dashInput { get; private set; }
     public bool dashInputStop { get; private set; }
 
+    public bool healInput { get; private set; }
+
     public bool[] attackInputs { get; private set; }
 
     private float jumpInputStartTime;
@@ -163,6 +165,20 @@ public class PlayerInputHandler : MonoBehaviour
             {
                 PowerUp?.Invoke(bc);
             }
+        }
+    }
+
+    public void OnHealInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            healInput = true;
+            Debug.Log("Heal!");
+
+        }
+        else if (context.canceled)
+        {
+            healInput = false;
         }
     }
 

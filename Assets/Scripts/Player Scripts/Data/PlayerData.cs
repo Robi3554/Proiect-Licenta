@@ -43,6 +43,11 @@ public class PlayerData : ScriptableObject
     [Header("Attack State")]
     public float attackSpeed = 1f;
 
+    [Header("Heal State")]
+    public float healAmmount = 35f;
+    public float healsLeft = 3f;
+    public float healCooldown = 10f;
+
     [Header("Fire Element")]
     public float fireDuration = 4f;
     public float timeBetweenBurn = 1f;

@@ -20,24 +20,6 @@ public class Fader : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter2D(Collider2D col)
-    //{
-    //    if (col.CompareTag("Player"))
-    //    {
-    //        Debug.Log("Player entered collider. Fading out...");
-    //        StartCoroutine(FadeOut());
-    //    }
-    //}
-
-    //private void OnTriggerExit2D(Collider2D col)
-    //{
-    //    if (col.CompareTag("Player"))
-    //    {
-    //        Debug.Log("Player exited collider. Fading in...");
-    //        StartCoroutine(FadeIn());
-    //    }
-    //}
-
     public void FadeOutTo()
     {
         StartCoroutine(FadeOut());

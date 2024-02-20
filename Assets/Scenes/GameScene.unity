@@ -109924,7 +109924,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: canSlow
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: canLightOnFire
@@ -109939,10 +109939,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 174409157}
     - target: {fileID: 4650588523587335304, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
-      propertyPath: canBurn
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4650588523587335304, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: duration
       value: 4
       objectReference: {fileID: 0}
@@ -109954,10 +109950,6 @@ PrefabInstance:
       propertyPath: burnDamage
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 4650588523587335304, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
-      propertyPath: playerData
-      value: 
-      objectReference: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}
     - target: {fileID: 4650588523587335304, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: onFireColor.b
       value: 0.10145953
@@ -110104,7 +110096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706007, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706007, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_ActionId
@@ -110184,7 +110176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706007, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionId
-      value: b2d8d5ee-3430-42dd-a0e3-a36df3883a11
+      value: 45ef7e96-4c1b-4a95-bf50-3fbc258b9a5d
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706007, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_ActionName
@@ -110264,7 +110256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706007, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionName
-      value: Gameplay/Drop[/Keyboard/downArrow]
+      value: Gameplay/Heal Skill[/Keyboard/q]
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706007, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
@@ -110432,7 +110424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706007, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnDropInput
+      value: OnHealInput
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706007, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

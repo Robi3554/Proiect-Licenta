@@ -29,7 +29,11 @@ public class PlayerIdleState : PlayerGroundedState
     {
         base.LogicUpdate();
 
-        if (xInput != 0)
+        if (healInput)
+        {
+            stateMachine.ChangeState(player.healState);
+        }
+        else if (xInput != 0)
         {
             stateMachine.ChangeState(player.moveState);
         }   

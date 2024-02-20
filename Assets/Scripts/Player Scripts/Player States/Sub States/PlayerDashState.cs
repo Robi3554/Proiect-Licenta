@@ -47,9 +47,6 @@ public class PlayerDashState : PlayerAbilityState
 
         if (!isExitingState)
         {
-            //player.anim.SetFloat("yVelocity", Movement.currentVelocity.y);
-            //player.anim.SetFloat("xVelocity", Mathf.Abs(Movement.currentVelocity.x));
-            //player.anim.SetBool("dash", true);
 
             if (isHolding)
             {

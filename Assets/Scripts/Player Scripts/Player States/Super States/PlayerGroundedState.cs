@@ -10,8 +10,8 @@ public class PlayerGroundedState : PlayerState
     protected int yInput;
 
     private bool jumpInput;
-    private bool grabImput;
     private bool dashInput;
+    protected bool healInput;
     #endregion
 
     #region Checks
@@ -70,8 +70,8 @@ public class PlayerGroundedState : PlayerState
         xInput = player.inputHandler.normalizedInputX;
         yInput = player.inputHandler.normalizedInputY;
         jumpInput = player.inputHandler.jumpInput;
-        grabImput = player.inputHandler.grabInput;
         dashInput = player.inputHandler.dashInput;
+        healInput = player.inputHandler.healInput;
 
         if (player.inputHandler.attackInputs[(int)CombatInputs.primary] && !isTouchingCeiling)
         {

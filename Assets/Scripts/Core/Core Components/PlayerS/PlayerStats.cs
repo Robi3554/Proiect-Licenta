@@ -34,6 +34,9 @@ public class PlayerStats : Stats
 
         playerData.maxHealth = maxHealth;
         playerData.currentHealth = currentHealth;
+
+        //if(currentHealth > maxHealth)
+        //    currentHealth = maxHealth;
     }
 
     public override void DecreaseHealth(float amount)

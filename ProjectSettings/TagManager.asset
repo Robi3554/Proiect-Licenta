@@ -56,11 +56,11 @@ TagManager:
   - name: Enemy
     uniqueID: 2641590049
     locked: 0
-  - name: Platform
-    uniqueID: 2910301189
-    locked: 0
   - name: Player
     uniqueID: 3383835807
+    locked: 0
+  - name: Platform
+    uniqueID: 2910301189
     locked: 0
   - name: Foreground
     uniqueID: 627005395

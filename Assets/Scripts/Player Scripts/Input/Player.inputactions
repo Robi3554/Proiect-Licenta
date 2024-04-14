@@ -94,7 +94,7 @@
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "Keyboard;Keyboard2",
                     "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -123,7 +123,7 @@
                 },
                 {
                     "name": "",
-                    "id": "312a8e59-ff2a-40b2-aed4-2feb35723c96",
+                    "id": "040b35e2-a251-4cdb-a119-8b7623f24a10",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
@@ -131,6 +131,61 @@
                     "action": "Dash Direction",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "WASDPostion",
+                    "id": "7fcd6ae5-2b9f-4e06-b207-7076167193c6",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash Direction",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "9ee40af9-110d-4d22-855a-3b369c814b8d",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard2",
+                    "action": "Dash Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "0d54e6da-7d95-4cc0-b6cb-214935cc3519",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard2",
+                    "action": "Dash Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "e90ffa14-74bb-4bf7-95a7-9ccb87264c9b",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard2",
+                    "action": "Dash Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "41772676-d828-4e64-9147-72e42dfd6e45",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard2",
+                    "action": "Dash Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -160,7 +215,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "Keyboard;Keyboard2",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -193,7 +248,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "Keyboard;Keyboard2",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -204,7 +259,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "Keyboard;Keyboard2",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -215,7 +270,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "Keyboard;Keyboard2",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -237,7 +292,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "Keyboard;Keyboard2",
                     "action": "Drop",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -259,7 +314,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "Keyboard;Keyboard2",
                     "action": "Action",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -270,7 +325,7 @@
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "Keyboard;Keyboard2",
                     "action": "Heal Skill",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -848,6 +903,17 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Keyboard2",
+            "bindingGroup": "Keyboard2",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
                     "isOptional": false,
                     "isOR": false
                 }

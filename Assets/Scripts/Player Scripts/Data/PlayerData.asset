@@ -32,4 +32,11 @@ MonoBehaviour:
   dashEndYMultiplier: 0.2
   distanceBetweenAfterImages: 0.5
   attackSpeed: 1
+  healAmmount: 35
+  healsLeft: 1
+  healCooldown: 10
+  fireDuration: 4
+  timeBetweenBurn: 1
+  burnDamage: 10
+  slowDuration: 4
   _revert: 1

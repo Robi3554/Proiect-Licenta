@@ -82,8 +82,6 @@ public class AggresiveWeapon : Weapon
             {
                 debuff.StartSlowness(data.slowDuration);
             }
-
-            Instantiate(player.chainLightning, collision.transform.position, Quaternion.identity);
         }
 
         IKnockbackable knockbackable = collision.GetComponent<IKnockbackable>();

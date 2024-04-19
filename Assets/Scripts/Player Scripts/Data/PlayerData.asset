@@ -37,6 +37,6 @@ MonoBehaviour:
   healCooldown: 10
   fireDuration: 4
   timeBetweenBurn: 1
-  burnDamage: 10
+  burnDamage: 6
   slowDuration: 4
   _revert: 1

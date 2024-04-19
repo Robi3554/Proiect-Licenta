@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 0ac9efc7b8895804c99d96951d7dcfb2, type: 2}
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}
 --- !u!114 &9150046916037671188
 MonoBehaviour:
   m_ObjectHideFlags: 0

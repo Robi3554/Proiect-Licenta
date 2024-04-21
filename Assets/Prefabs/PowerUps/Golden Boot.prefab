@@ -127,8 +127,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.8
-  m_fontSizeBase: 0.8
+  m_fontSize: 0.7
+  m_fontSizeBase: 0.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -298,11 +298,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 2279182899409804110, guid: c7ae2e4a0e569d049a6d6f48e39c7fa0, type: 3}
-  powerupEffect: {fileID: 11400000, guid: 476e9c31b9e0c604393ac2c3ba7d892f, type: 2}
+  powerupEffect: {fileID: 11400000, guid: 97a3f5f9fab9d8c4fb2978b606ae7135, type: 2}
   infoBox: {fileID: 2540886055917902353}
   powerUpName: The Golden Boot
   sprite: {fileID: -1059382145, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
-  powerUpDescription: You found it! THE GOLDEN BOOT!! Increases jump ammount
+  powerUpDescription: You found it! THE GOLDEN BOOT!! Increases jump ammount, jump
+    height and speed.
 --- !u!1 &2540886055917902353
 GameObject:
   m_ObjectHideFlags: 0

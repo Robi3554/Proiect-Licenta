@@ -17,18 +17,18 @@ public class RockAttack : MonoBehaviour
 
     private BoarWarrior bw;
 
-    private LayerMask maskToIgnore;
+    private LayerMask maskToHit;
 
     void Awake()
     {
         bw = GetComponentInParent<BoarWarrior>();
 
-        maskToIgnore = ~LayerMask.GetMask("Damageable");
+        maskToHit = ~LayerMask.GetMask("Damageable");
     }
 
     public void Attack()
     {
-        Collider2D[] detectedObjects = Physics2D.OverlapBoxAll(atkPos.position, size, maskToIgnore);
+        Collider2D[] detectedObjects = Physics2D.OverlapBoxAll(atkPos.position, size, maskToHit);
 
         StartCoroutine(DisableCo(delay));
 

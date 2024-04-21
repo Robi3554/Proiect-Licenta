@@ -30,7 +30,7 @@ public class AnimationToStateMachine : MonoBehaviour
         }
         else
         {
-            Debug.LogError("spawnState is null. Make sure it's properly initialized.");
+            Debug.LogError("spawnState is null.");
         }
     }
 

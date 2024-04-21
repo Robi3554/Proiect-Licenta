@@ -48,7 +48,6 @@ public class BW_MeleeAttackState : MeleeAttackState
     public void RockAttackStart()
     {
         bWarrior.EnableRocks();
-        Debug.Log("Rock Start!");
     }
 
     public override void PhysicsUpdate()

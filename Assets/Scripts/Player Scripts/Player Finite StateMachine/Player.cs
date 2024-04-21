@@ -105,5 +105,17 @@ public class Player : MonoBehaviour
 
     private void AnimationFinishtrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
+    internal int GetDirection()
+    {
+        if(transform.rotation.y == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
     #endregion
 }

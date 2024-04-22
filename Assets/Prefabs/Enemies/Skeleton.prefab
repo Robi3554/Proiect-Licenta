@@ -520,6 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
+  explosion: {fileID: 6996797005797088400, guid: 49aaf493c99736d4187f8fd5f4257d7f, type: 3}
   maxKncockbackTime: 0.5
 --- !u!1 &6580390149347138175
 GameObject:

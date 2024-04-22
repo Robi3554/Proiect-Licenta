@@ -6,6 +6,8 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
 {
     [SerializeField]
     protected GameObject damageParticles;
+    [SerializeField] 
+    protected GameObject explosion;
 
     protected Movement Movement => movement ? movement : core.GetCoreComponent<Movement>();
     protected CollisionSenses CollisionSenses => collisionSenses ? collisionSenses : core.GetCoreComponent<CollisionSenses>(); 
@@ -71,5 +73,10 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
             isKnockbackActive = false;
             Movement.canSetVelocity = true;
         }
+    }
+
+    public void Explode()
+    {
+        ParticleManager?.StartParticlesWithRandomRotation(explosion);
     }
 }

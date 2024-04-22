@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
-  co2D: {fileID: 0}
+  explosion: {fileID: 6996797005797088400, guid: 49aaf493c99736d4187f8fd5f4257d7f, type: 3}
 --- !u!1 &6685853113011337325
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +792,3 @@ MonoBehaviour:
   maxHealth: 300
   canBurn: 0
   canBeSlowed: 1
-  fireDuration: 0
-  timeBetweenBurn: 0
-  burnDamage: 0
-  slowDuration: 10

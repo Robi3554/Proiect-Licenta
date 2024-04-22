@@ -45,7 +45,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     internal bool
         canLightOnFire,
-        canSlow;
+        canSlow,
+        canCauseExplosions;
 
     #endregion
 

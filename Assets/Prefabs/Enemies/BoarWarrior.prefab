@@ -209,6 +209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
+  explosion: {fileID: 6996797005797088400, guid: 49aaf493c99736d4187f8fd5f4257d7f, type: 3}
+  maxKncockbackTime: 0
 --- !u!1 &4962330424137881352
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +380,7 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: f9243964b903277468fdc0e5811d24e3, type: 2}
   moveData: {fileID: 11400000, guid: 6bc8101a05a996a47afe5ad84ed1023c, type: 2}
   maxHealth: 150
-  canBurn: 0
+  canBurn: 1
   canBeSlowed: 1
 --- !u!1 &4962330424959404949
 GameObject:

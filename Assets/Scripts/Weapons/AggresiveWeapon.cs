@@ -6,6 +6,7 @@ using System.Linq;
 
 public class AggresiveWeapon : Weapon
 {
+    protected AggresiveWeaponData agrresiveWeaponData;
     protected Movement Movement => movement ? movement : core.GetCoreComponent<Movement>();
     protected Combat Comabt  => combat ? combat : core.GetCoreComponent<Combat>();
     
@@ -19,7 +20,10 @@ public class AggresiveWeapon : Weapon
 
     private List<IKnockbackable> detectedKnockbackables = new List<IKnockbackable>();
 
-    protected AggresiveWeaponData agrresiveWeaponData;
+    private int count;
+
+    [SerializeField]
+    private int toCount;
 
     protected override void Awake()
     {
@@ -73,6 +77,17 @@ public class AggresiveWeapon : Weapon
         if (damageable != null)
         {
             detectedDamageables.Add(damageable);
+
+            if (player.canCauseExplosions)
+            {
+                count++;
+
+                if (count >= toCount)
+                {
+                    debuff.Explode();
+                    count = 0;
+                }
+            }
 
             if (player.canLightOnFire)
             {

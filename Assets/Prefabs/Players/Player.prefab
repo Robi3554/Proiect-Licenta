@@ -72,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
+  explosion: {fileID: 2279182899409804110, guid: c7ae2e4a0e569d049a6d6f48e39c7fa0, type: 3}
   maxKncockbackTime: 0.05
   flashColor: {r: 0.8679245, g: 0.14247058, b: 0.14247058, a: 0.39215687}
   regularColor: {r: 1, g: 1, b: 1, a: 1}
@@ -226,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 0ac9efc7b8895804c99d96951d7dcfb2, type: 2}
   data: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}
+  toCount: 10
 --- !u!114 &9150046916037671188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,6 +919,7 @@ MonoBehaviour:
   playerData: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}
   canLightOnFire: 0
   canSlow: 0
+  canCauseExplosions: 0
   canShoot: 0
 --- !u!114 &8706217526112706000
 MonoBehaviour:

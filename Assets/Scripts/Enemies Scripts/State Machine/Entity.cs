@@ -30,8 +30,6 @@ public class Entity : MonoBehaviour
 
     private Vector2 velocityWorkspace;
 
-    private float currentHealth;
-    private float currentStunResistance;
     private float lastDamageTime;
 
     protected bool isStunned;
@@ -40,8 +38,6 @@ public class Entity : MonoBehaviour
     public virtual void Awake()
     {
         core  = GetComponentInChildren<Core>();
-
-        currentStunResistance = entityData.stunResistance;
 
         anim = GetComponent <Animator>();
         atsm = GetComponent<AnimationToStateMachine>();
@@ -94,7 +90,6 @@ public class Entity : MonoBehaviour
     public virtual void ResetStunResistance()
     {
         isStunned = false;
-        currentStunResistance = entityData.stunResistance;
     }
 
     public int GetFacingDir()

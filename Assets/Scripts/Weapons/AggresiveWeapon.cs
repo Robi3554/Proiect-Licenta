@@ -95,7 +95,7 @@ public class AggresiveWeapon : Weapon
             }
             else if (player.canSlow)
             {
-                debuff.StartSlowness(data.slowDuration);
+                debuff.StartSlowness(data.slowDuration, data.slowAmmount);
             }
         }
 

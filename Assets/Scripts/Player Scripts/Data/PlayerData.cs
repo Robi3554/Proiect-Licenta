@@ -55,6 +55,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Ice Element")]
     public float slowDuration = 4f;
+    public float slowAmmount = 2f;
 
 #if UNITY_EDITOR
     [SerializeField] private bool _revert;

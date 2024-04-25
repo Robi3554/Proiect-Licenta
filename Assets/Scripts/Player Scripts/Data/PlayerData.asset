@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   maxHealth: 150
-  currentHealth: 150
+  currentHealth: 120
   moveVelocity: 10
   jumpVelocity: 25
   ammountOfJumps: 1
@@ -36,7 +36,8 @@ MonoBehaviour:
   healsLeft: 1
   healCooldown: 10
   fireDuration: 4
-  timeBetweenBurn: 1
+  timeBetweenBurn: 2
   burnDamage: 6
   slowDuration: 4
+  slowAmmount: 2
   _revert: 1

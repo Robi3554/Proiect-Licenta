@@ -58,11 +58,11 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
         }
     }
 
-    public virtual void StartSlowness(float slowDuration)
+    public virtual void StartSlowness(float slowDuration, float slowAmmount)
     {
         if (Stats.canBeSlowed)
         {
-            Stats?.Slowing(slowDuration);
+            Stats?.Slowing(slowDuration, slowAmmount);
         }
     }
 

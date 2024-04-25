@@ -73,7 +73,7 @@ public class Stats : CoreComponent
         }
     }
 
-    public virtual void Slowing(float slowDuration)
+    public virtual void Slowing(float slowDuration, float slowAmmount)
     {
         if(canBeSlowed && !isSlowed && !onFire)
         {
@@ -87,7 +87,7 @@ public class Stats : CoreComponent
 
             if (isSlowed)
             {
-                slowCoroutine = StartCoroutine(SlowingCo(slowDuration));
+                slowCoroutine = StartCoroutine(SlowingCo(slowDuration, slowAmmount));
             }
         }
     }
@@ -115,15 +115,15 @@ public class Stats : CoreComponent
         onFire = false;
     }
 
-    public virtual IEnumerator SlowingCo(float slowDuration)
+    public virtual IEnumerator SlowingCo(float slowDuration, float slowAmmount)
     {
         float moveSpeed = moveData.movementSpeed;
 
         float animSpeed = enemyData.animSpeed;
 
-        moveData.movementSpeed = moveSpeed / 2;
+        moveData.movementSpeed = moveSpeed / slowAmmount;
 
-        enemyData.animSpeed = animSpeed / 2;
+        enemyData.animSpeed = animSpeed /slowAmmount;
 
         yield return new WaitForSeconds(slowDuration);
 

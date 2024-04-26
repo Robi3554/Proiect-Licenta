@@ -24,6 +24,12 @@ public class PowerUp : MonoBehaviour
     [SerializeField]
     internal string powerUpDescription;
 
+    [Header("Element")]
+    [SerializeField]
+    internal bool isFireElement;
+    [SerializeField]
+    internal bool isIceElement;
+
     private bool inTrigger = false;
 
     private InventoryManager inventoryManager;

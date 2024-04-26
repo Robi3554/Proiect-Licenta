@@ -24,6 +24,14 @@ PrefabInstance:
       value: Ice Element
       objectReference: {fileID: 0}
     - target: {fileID: 8078653827024784828, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+      propertyPath: isIceElement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078653827024784828, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
+      propertyPath: isFireElement
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078653827024784828, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
       propertyPath: powerupEffect
       value: 
       objectReference: {fileID: 11400000, guid: 44258a8cdfaf4e544a04b1b567b6ed6b, type: 2}

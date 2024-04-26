@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 2540886055685571200}
   - component: {fileID: 2540886055685571231}
   m_Layer: 0
-  m_Name: Golden Boot
+  m_Name: Golden Boots
   m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

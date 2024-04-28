@@ -105,6 +105,10 @@ MonoBehaviour:
   powerUpName: Cursed Sword
   sprite: {fileID: 1424266988, guid: 61ae4aad8c13d0740b14c00b9468fc99, type: 3}
   powerUpDescription: A cursed sword that drains your life. 2x damage, half max health
+  isFireElement: 0
+  isIceElement: 0
+  isUnique: 0
+  list: {fileID: 0}
 --- !u!61 &1700054940851777504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -203,8 +207,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_Sprite: {fileID: 1940313412, guid: f486f1bc160d1934b9fb8ac3f0a608b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -305,8 +309,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1700054942123197021

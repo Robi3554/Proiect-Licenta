@@ -132,6 +132,10 @@ MonoBehaviour:
   powerUpName: Attack Up
   sprite: {fileID: 2095169345, guid: 9a6d11c51b53e81438817576983fab1f, type: 3}
   powerUpDescription: Increases the players attack by 5
+  isFireElement: 0
+  isIceElement: 0
+  isUnique: 0
+  list: {fileID: 0}
 --- !u!1 &4158237917592385111
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,8 +212,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &9222059013475353226
@@ -376,8 +380,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_Sprite: {fileID: 1940313412, guid: f486f1bc160d1934b9fb8ac3f0a608b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

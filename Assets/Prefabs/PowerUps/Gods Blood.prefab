@@ -76,8 +76,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1294809439323874277
@@ -277,6 +277,10 @@ MonoBehaviour:
   powerUpName: Gods Blood
   sprite: {fileID: 1406713039, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
   powerUpDescription: The blood of an ancient God. Gives boost to all stats
+  isFireElement: 0
+  isIceElement: 0
+  isUnique: 0
+  list: {fileID: 0}
 --- !u!61 &1294809440017556939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -375,8 +379,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_Sprite: {fileID: 1940313412, guid: f486f1bc160d1934b9fb8ac3f0a608b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

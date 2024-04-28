@@ -109,6 +109,7 @@ MonoBehaviour:
   isFireElement: 0
   isIceElement: 1
   isUnique: 1
+  list: {fileID: 0}
 --- !u!61 &1618793036079344775
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -222,8 +223,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_Sprite: {fileID: 1940313412, guid: f486f1bc160d1934b9fb8ac3f0a608b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -324,8 +325,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1618793037584649165
@@ -490,8 +491,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 2
   m_Sprite: {fileID: 88917330, guid: 58bddbb1aebcc3a4a92ea6be4fb90ac2, type: 3}
   m_Color: {r: 0.3018868, g: 0.30017802, b: 0.30017802, a: 1}

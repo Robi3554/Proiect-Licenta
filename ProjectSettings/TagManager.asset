@@ -23,7 +23,7 @@ TagManager:
   - Player
   - Weapon
   - Platform
-  - 
+  - Message
   - 
   - 
   - 
@@ -64,4 +64,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 627005395
+    locked: 0
+  - name: Message
+    uniqueID: 1195076055
     locked: 0

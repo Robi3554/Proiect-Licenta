@@ -76,8 +76,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1190884559100927670
@@ -306,6 +306,8 @@ MonoBehaviour:
   powerUpDescription: Decreases burn time, but also decreases burn damage
   isFireElement: 1
   isIceElement: 0
+  isUnique: 0
+  list: {fileID: 0}
 --- !u!114 &297382653622777173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,8 +395,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_Sprite: {fileID: 1940313412, guid: f486f1bc160d1934b9fb8ac3f0a608b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -489,8 +491,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -911131489
-  m_SortingLayer: 4
+  m_SortingLayerID: 1195076055
+  m_SortingLayer: 7
   m_SortingOrder: 2
   m_Sprite: {fileID: -1822568423, guid: 61ae4aad8c13d0740b14c00b9468fc99, type: 3}
   m_Color: {r: 0.3018868, g: 0.30017802, b: 0.30017802, a: 1}

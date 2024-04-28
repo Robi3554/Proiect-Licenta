@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   maxHealth: 150
-  currentHealth: 120
+  currentHealth: 150
   moveVelocity: 10
   jumpVelocity: 25
   ammountOfJumps: 1

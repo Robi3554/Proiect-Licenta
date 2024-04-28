@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 88917330, guid: 58bddbb1aebcc3a4a92ea6be4fb90ac2, type: 3}
     - target: {fileID: 8078653827024784828, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
       propertyPath: powerUpName
-      value: Ice Element
+      value: Ice Sword
       objectReference: {fileID: 0}
     - target: {fileID: 8078653827024784828, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
       propertyPath: isIceElement

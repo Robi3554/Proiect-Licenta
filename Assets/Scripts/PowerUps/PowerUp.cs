@@ -1,6 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class PowerUp : MonoBehaviour
@@ -33,6 +37,10 @@ public class PowerUp : MonoBehaviour
     private bool inTrigger = false;
 
     private InventoryManager inventoryManager;
+
+    public bool isUnique;
+
+    public PowerUpList list;
 
     private void Awake()
     {
@@ -71,7 +79,31 @@ public class PowerUp : MonoBehaviour
             Instantiate(pickupEffect, transform.position, transform.rotation);
             powerupEffect.ApplyEffect(col.gameObject);
             inventoryManager.AddPowerUp(powerUpName, sprite, powerUpDescription);
+            if(isUnique)
+                RemoveFromList(gameObject);
             Destroy(gameObject);
+        }
+    }
+
+    private void RemoveFromList(GameObject obj)
+    {
+        if(list.powerUps != null)
+        {
+            for(int i = 0; i < list.powerUps.Length; i++)
+            {
+                if (obj.name.StartsWith(list.powerUps[i].name))
+                {
+                    list.powerUps[i] = null;
+
+                    for (int j = i; j < list.powerUps.Length - 1; j++)
+                    {
+                        list.powerUps[j] = list.powerUps[j + 1];
+                    }
+
+                    Array.Resize(ref list.powerUps, list.powerUps.Length - 1);
+                    break;
+                }
+            }
         }
     }
 }

@@ -108,6 +108,7 @@ MonoBehaviour:
   powerUpDescription: Freezes the enemies but halves the duration
   isFireElement: 0
   isIceElement: 1
+  isUnique: 1
 --- !u!61 &1618793036079344775
 BoxCollider2D:
   m_ObjectHideFlags: 0

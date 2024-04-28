@@ -203,6 +203,9 @@ MonoBehaviour:
   powerUpName: Sword Wave
   sprite: {fileID: -1570154665, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
   powerUpDescription: Allows the player to create sword waves with each attack
+  isFireElement: 0
+  isIceElement: 0
+  isUnique: 1
 --- !u!61 &6649106044056242957
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -132,6 +132,9 @@ MonoBehaviour:
   sprite: {fileID: 329740145, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
   powerUpDescription: Every 10 hits the player causes an explosion that deals massive
     damage
+  isFireElement: 0
+  isIceElement: 0
+  isUnique: 1
 --- !u!1 &2961952458530320669
 GameObject:
   m_ObjectHideFlags: 0

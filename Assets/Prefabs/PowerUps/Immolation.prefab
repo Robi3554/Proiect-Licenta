@@ -406,7 +406,7 @@ MonoBehaviour:
   isFireElement: 1
   isIceElement: 0
   isUnique: 0
-  list: {fileID: 0}
+  list: {fileID: 11400000, guid: 91770742b13431c44a7e42cfae562ebe, type: 2}
 --- !u!114 &6655116320363774086
 MonoBehaviour:
   m_ObjectHideFlags: 0

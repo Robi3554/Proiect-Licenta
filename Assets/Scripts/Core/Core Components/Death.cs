@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,9 @@ public class Death : CoreComponent
     private ParticleManager particleManager;
     private Stats stats;
 
+    public event Action IncreaseChance;
+
+    public bool IsSubscribed = false;
 
     public void Die()
     {
@@ -23,7 +27,17 @@ public class Death : CoreComponent
 
         if(transform.parent.gameObject.CompareTag("Enemy"))
         {
+            
             GetComponentInParent<LootBag>().InstantiateLoot(transform.position);
+        }
+
+        if(IncreaseChance != null)
+        {
+            IncreaseChance?.Invoke();
+        }
+        else
+        {
+            Debug.Log("Chance is null");
         }
 
         core.transform.parent.gameObject.SetActive(false);

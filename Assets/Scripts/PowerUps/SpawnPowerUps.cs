@@ -5,65 +5,21 @@ using UnityEngine;
 
 public class SpawnPowerUps : MonoBehaviour
 {
+    private GameManager manager;
+
+    private BoxCollider2D bc;
+
     public GameObject[] positions;
 
     public PowerUpList commonList;
     public PowerUpList rareList;
     public PowerUpList legendaryList;
 
-    void Start()
+    void Awake()
     {
-        int randInt;
+        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-        int[] alreadyChosen = new int[positions.Length];
-
-        for (int i = 0; i < positions.Length; i++)
-        {
-            int chance = Random.Range(0, 100);
-
-            if(chance <= 60)
-            {
-                do
-                {
-                    randInt = Random.Range(0, commonList.powerUps.Length);
-                } while (alreadyChosen.Contains(randInt));
-
-                alreadyChosen[i] = randInt;
-
-                Debug.Log("Common");
-                SpawnCommonPowerUp(randInt, i);
-
-                randInt = 0;
-            }
-            else if(chance <= 85)
-            {
-                do
-                {
-                    randInt = Random.Range(0, rareList.powerUps.Length);
-                } while (alreadyChosen.Contains(randInt));
-
-                alreadyChosen[i] = randInt;
-
-                Debug.Log("Rare");
-                SpawnRarePowerUp(randInt, i);
-
-                randInt = 0;
-            }
-            else if(chance <= 100)
-            {
-                do
-                {
-                    randInt = Random.Range(0, legendaryList.powerUps.Length);
-                } while (alreadyChosen.Contains(randInt));
-
-                alreadyChosen[i] = randInt;
-
-                Debug.Log("Legendary");
-                SpawnLegendaryPowerUp(randInt, i);
-
-                randInt = 0;
-            }
-        }
+        bc = GetComponent<BoxCollider2D>();
     }
 
     private void SpawnCommonPowerUp(int index, int n)
@@ -90,6 +46,66 @@ public class SpawnPowerUps : MonoBehaviour
         {
             GameObject prefab = legendaryList.powerUps[index];
             Instantiate(prefab, positions[n].transform.position, Quaternion.identity);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Player"))
+        {
+            int randInt;
+
+            int[] alreadyChosen = new int[positions.Length];
+
+            for (int i = 0; i < positions.Length; i++)
+            {
+                int chance = Random.Range(manager.minChance, manager.maxChance);
+                Debug.Log(chance);
+                if (chance <= 40)
+                {
+                    do
+                    {
+                        randInt = Random.Range(0, commonList.powerUps.Length);
+                    } while (alreadyChosen.Contains(randInt));
+
+                    alreadyChosen[i] = randInt;
+
+                    Debug.Log("Common");
+                    SpawnCommonPowerUp(randInt, i);
+
+                    randInt = 0;
+                }
+                else if (chance <= 80)
+                {
+                    do
+                    {
+                        randInt = Random.Range(0, rareList.powerUps.Length);
+                    } while (alreadyChosen.Contains(randInt));
+
+                    alreadyChosen[i] = randInt;
+
+                    Debug.Log("Rare");
+                    SpawnRarePowerUp(randInt, i);
+
+                    randInt = 0;
+                }
+                else if (chance <= 100)
+                {
+                    do
+                    {
+                        randInt = Random.Range(0, legendaryList.powerUps.Length);
+                    } while (alreadyChosen.Contains(randInt));
+
+                    alreadyChosen[i] = randInt;
+
+                    Debug.Log("Legendary");
+                    SpawnLegendaryPowerUp(randInt, i);
+
+                    randInt = 0;
+                }
+            }
+
+            bc.enabled = false;
         }
     }
 }

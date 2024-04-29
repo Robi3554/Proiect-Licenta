@@ -233,7 +233,7 @@ MonoBehaviour:
   isFireElement: 0
   isIceElement: 0
   isUnique: 0
-  list: {fileID: 0}
+  list: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
 --- !u!1 &2476368399293972391
 GameObject:
   m_ObjectHideFlags: 0

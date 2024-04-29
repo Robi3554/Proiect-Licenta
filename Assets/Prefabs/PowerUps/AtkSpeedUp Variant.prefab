@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: list
+      value: 
+      objectReference: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
+    - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
       propertyPath: sprite
       value: 
       objectReference: {fileID: 1820284689, guid: 19899ed78e9bf9c409af32cad5da6279, type: 3}
@@ -77,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2154906914436853324, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
       propertyPath: m_Name
-      value: AtkSpeedUp
+      value: AtkSpeedUp Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2154906914436853326, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
       propertyPath: m_Sprite

@@ -31568,7 +31568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2795756375964527704, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 122.08324
+      value: 107.86
       objectReference: {fileID: 0}
     - target: {fileID: 2795756375964527704, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31650,7 +31650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81873396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.29, y: 0.4, z: 0}
+  m_LocalPosition: {x: -99.7, y: 15.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34320,7 +34320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 118.80424, y: 7.6112013, z: -9.680563}
+  m_LocalPosition: {x: 84.97474, y: 3.995676, z: -9.680563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -124620,7 +124620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217534526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 118.80424, y: 7.6112013, z: -9.680563}
+  m_LocalPosition: {x: 84.97474, y: 3.995676, z: -9.680563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -133937,14 +133937,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 81873398}
     m_Modifications:
     - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
-      propertyPath: canSlow
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
-      propertyPath: canLightOnFire
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412083703286374116, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: chainLightning
       value: 
       objectReference: {fileID: 8479382044182643951, guid: a95c48f0673784b4e883fe5b777d29b7, type: 3}
@@ -134058,11 +134050,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706006, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 167.52951
+      value: 195.11
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706006, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.615525
+      value: -6.1
       objectReference: {fileID: 0}
     - target: {fileID: 8706217526112706006, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: m_LocalPosition.z

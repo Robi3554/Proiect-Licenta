@@ -108,7 +108,7 @@ MonoBehaviour:
   isFireElement: 0
   isIceElement: 0
   isUnique: 0
-  list: {fileID: 0}
+  list: {fileID: 11400000, guid: 91770742b13431c44a7e42cfae562ebe, type: 2}
 --- !u!61 &1700054940851777504
 BoxCollider2D:
   m_ObjectHideFlags: 0

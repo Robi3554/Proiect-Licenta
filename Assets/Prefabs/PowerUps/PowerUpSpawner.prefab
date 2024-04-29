@@ -78,11 +78,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd4a57d9753870498439f2b9ed545d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos:
+  positions:
   - {fileID: 2795756375948781710}
   - {fileID: 2795756377358328590}
   - {fileID: 2795756377197270840}
-  list: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
+  commonList: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
+  rareList: {fileID: 11400000, guid: 91770742b13431c44a7e42cfae562ebe, type: 2}
+  legendaryList: {fileID: 11400000, guid: a5c85f2a1a69ba04ca0d39c54ece1231, type: 2}
 --- !u!1 &2795756377197270840
 GameObject:
   m_ObjectHideFlags: 0

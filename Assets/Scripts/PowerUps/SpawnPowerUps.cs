@@ -7,7 +7,9 @@ public class SpawnPowerUps : MonoBehaviour
 {
     public GameObject[] positions;
 
-    public PowerUpList list;
+    public PowerUpList commonList;
+    public PowerUpList rareList;
+    public PowerUpList legendaryList;
 
     void Start()
     {
@@ -17,22 +19,76 @@ public class SpawnPowerUps : MonoBehaviour
 
         for (int i = 0; i < positions.Length; i++)
         {
-            do
+            int chance = Random.Range(0, 100);
+
+            if(chance <= 60)
             {
-              randInt = Random.Range(0, list.powerUps.Length);
-            } while (alreadyChosen.Contains(randInt));
+                do
+                {
+                    randInt = Random.Range(0, commonList.powerUps.Length);
+                } while (alreadyChosen.Contains(randInt));
 
-            alreadyChosen[i] = randInt;
+                alreadyChosen[i] = randInt;
 
-            SpawnPowerUp(randInt, i);
+                Debug.Log("Common");
+                SpawnCommonPowerUp(randInt, i);
+
+                randInt = 0;
+            }
+            else if(chance <= 85)
+            {
+                do
+                {
+                    randInt = Random.Range(0, rareList.powerUps.Length);
+                } while (alreadyChosen.Contains(randInt));
+
+                alreadyChosen[i] = randInt;
+
+                Debug.Log("Rare");
+                SpawnRarePowerUp(randInt, i);
+
+                randInt = 0;
+            }
+            else if(chance <= 100)
+            {
+                do
+                {
+                    randInt = Random.Range(0, legendaryList.powerUps.Length);
+                } while (alreadyChosen.Contains(randInt));
+
+                alreadyChosen[i] = randInt;
+
+                Debug.Log("Legendary");
+                SpawnLegendaryPowerUp(randInt, i);
+
+                randInt = 0;
+            }
         }
     }
 
-    private void SpawnPowerUp(int index, int n)
+    private void SpawnCommonPowerUp(int index, int n)
     {
-        if (index >= 0 && index < list.powerUps.Length)
+        if (index >= 0 && index < commonList.powerUps.Length)
         {
-            GameObject prefab = list.powerUps[index];
+            GameObject prefab = commonList.powerUps[index];
+            Instantiate(prefab, positions[n].transform.position, Quaternion.identity);
+        }
+    }
+
+    private void SpawnRarePowerUp(int index, int n)
+    {
+        if (index >= 0 && index < rareList.powerUps.Length)
+        {
+            GameObject prefab = rareList.powerUps[index];
+            Instantiate(prefab, positions[n].transform.position, Quaternion.identity);
+        }
+    }
+
+    private void SpawnLegendaryPowerUp(int index, int n)
+    {
+        if (index >= 0 && index < legendaryList.powerUps.Length)
+        {
+            GameObject prefab = legendaryList.powerUps[index];
             Instantiate(prefab, positions[n].transform.position, Quaternion.identity);
         }
     }

@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
 
     private CinemachineVirtualCamera cvc;
 
-    public int minChance;
-    public int maxChance;
+    internal int minChance;
+    internal int maxChance;
 
     private void Start()
     {

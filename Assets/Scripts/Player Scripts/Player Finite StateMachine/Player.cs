@@ -46,7 +46,8 @@ public class Player : MonoBehaviour
     internal bool
         canLightOnFire,
         canSlow,
-        canCauseExplosions;
+        canCauseExplosions,
+        canStealLife;
 
     #endregion
 

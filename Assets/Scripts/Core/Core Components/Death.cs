@@ -16,7 +16,11 @@ public class Death : CoreComponent
 
     public event Action IncreaseChance;
 
+    public delegate void IncreaseMaxHealth(float amount);
+    public event IncreaseMaxHealth IncreaseHealth;
+
     public bool IsSubscribed = false;
+    public bool subscribedToHealth = false;
 
     public void Die()
     {
@@ -31,14 +35,9 @@ public class Death : CoreComponent
             GetComponentInParent<LootBag>().InstantiateLoot(transform.position);
         }
 
-        if(IncreaseChance != null)
-        {
-            IncreaseChance?.Invoke();
-        }
-        else
-        {
-            Debug.Log("Chance is null");
-        }
+        IncreaseChance?.Invoke();
+
+        IncreaseHealth?.Invoke(2f);
 
         core.transform.parent.gameObject.SetActive(false);
     }

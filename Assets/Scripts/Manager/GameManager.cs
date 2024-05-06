@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     private GameObject player;
     [SerializeField]
     private float respawnTime;
+    [SerializeField]
+    internal float elapsedTime;
+    [SerializeField]
+    internal int points;
 
     private float respawnTimeStart;
 
@@ -25,12 +29,15 @@ public class GameManager : MonoBehaviour
     {
         cvc = GameObject.Find("Player Camera").GetComponent<CinemachineVirtualCamera>();
 
+        points = 1000;
+
         StartCoroutine(CheckForEnemies());
     }
 
     private void Update()
     {
         CheckRespawn();
+        elapsedTime += Time.deltaTime;
     }
 
     public void Respawn()

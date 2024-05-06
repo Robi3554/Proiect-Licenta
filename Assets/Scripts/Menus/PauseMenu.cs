@@ -13,7 +13,14 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    public TextHelper time;
+
     public InputAction pauseAction;
+
+    public void Start()
+    {
+        time = GetComponentInChildren<TextHelper>(true);
+    }
 
     private void OnEnable()
     {
@@ -50,6 +57,7 @@ public class PauseMenu : MonoBehaviour
         playerInput.SwitchCurrentActionMap("Gameplay");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        time.DisableTexts();
         isPaused = false;
     }
 
@@ -58,6 +66,7 @@ public class PauseMenu : MonoBehaviour
         playerInput.SwitchCurrentActionMap("UI");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        time.EnableTexts();
         isPaused = true;
     }
 

@@ -460,9 +460,12 @@ MonoBehaviour:
   powerUpName: Speed Up
   sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   powerUpDescription: Increases the players speed by 2
+  rarity: common
+  isUnique: 0
   isFireElement: 0
   isIceElement: 0
-  isUnique: 0
+  points: 0
+  isSubscribed: 0
   list: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
 --- !u!61 &2007479729596619014
 BoxCollider2D:

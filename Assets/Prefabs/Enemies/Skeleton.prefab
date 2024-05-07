@@ -46,6 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles:
   - {fileID: 1544539627495211898, guid: e49e294ef14545b49ba9c118de0b1649, type: 3}
+  data: {fileID: 11400000, guid: 8991d807e8345684881a1207bf5fb838, type: 2}
+  IsSubscribed: 0
+  subscribedToHealth: 0
 --- !u!1 &6580390147668577881
 GameObject:
   m_ObjectHideFlags: 0

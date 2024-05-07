@@ -122,6 +122,9 @@ MonoBehaviour:
   deathParticles:
   - {fileID: 8961022614382155364, guid: 5cb8bf789b007124e92572067353ee20, type: 3}
   - {fileID: 2060411815713593693, guid: dde5c1edfd6b8ce48b7317f02bbc4fea, type: 3}
+  data: {fileID: 11400000, guid: 01be5ed47eec44c4dbd7753d48024972, type: 2}
+  IsSubscribed: 0
+  subscribedToHealth: 0
 --- !u!1 &3895333818057811585
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +276,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9846154, y: 0.9846154}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.9846154, y: 0.9846154}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

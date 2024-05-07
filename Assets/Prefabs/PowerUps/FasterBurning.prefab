@@ -304,9 +304,12 @@ MonoBehaviour:
   powerUpName: Faster Burning
   sprite: {fileID: 1207088591, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
   powerUpDescription: Decreases burn time, but also decreases burn damage
+  rarity: common
+  isUnique: 0
   isFireElement: 1
   isIceElement: 0
-  isUnique: 0
+  points: 0
+  isSubscribed: 0
   list: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
 --- !u!114 &297382653622777173
 MonoBehaviour:

@@ -53,15 +53,12 @@ public class PlayerStats : Stats
 
     public void IncreaseMaxHealth(float amount)
     {
-        Debug.Log("Enter increase");
-
         Player player = GetComponentInParent<Player>();
 
         if (player.canStealLife)
         {
             maxHealth += amount;
             currentHealth += amount;
-            Debug.Log("Increased");
         }
     }
 

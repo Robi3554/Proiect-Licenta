@@ -105,9 +105,12 @@ MonoBehaviour:
   powerUpName: Cursed Sword
   sprite: {fileID: 1424266988, guid: 61ae4aad8c13d0740b14c00b9468fc99, type: 3}
   powerUpDescription: A cursed sword that drains your life. 2x damage, half max health
+  rarity: rare
+  isUnique: 0
   isFireElement: 0
   isIceElement: 0
-  isUnique: 0
+  points: 0
+  isSubscribed: 0
   list: {fileID: 11400000, guid: 91770742b13431c44a7e42cfae562ebe, type: 2}
 --- !u!61 &1700054940851777504
 BoxCollider2D:

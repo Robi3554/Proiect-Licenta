@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Exec_Base_Data
   m_EditorClassIdentifier: 
   damageHopSpeed: 0.001
-  wallCheckDistance: 0.2
   ledgeCheckDistance: 0.4
-  groundCheckRadius: 0.3
   minAggroRange: 10
   maxAggroRange: 15
   stunResistance: 999999
   stunRecoveryTime: 0.1
   closeRangeActionDistance: 3.5
-  hitParticle: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
+  animSpeed: 1
+  pointsToIncrease: 100
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
+  _revert: 1

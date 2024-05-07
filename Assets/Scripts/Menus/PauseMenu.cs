@@ -13,14 +13,11 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
-    public TextHelper time;
+    public TextHelper 
+        time,
+        points;
 
     public InputAction pauseAction;
-
-    public void Start()
-    {
-        time = GetComponentInChildren<TextHelper>(true);
-    }
 
     private void OnEnable()
     {
@@ -58,6 +55,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         time.DisableTexts();
+        points.DisableTexts();
         isPaused = false;
     }
 
@@ -67,6 +65,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         time.EnableTexts();
+        points.EnableTexts();
         isPaused = true;
     }
 

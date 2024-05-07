@@ -27,6 +27,9 @@ public class PowerUp : MonoBehaviour
     [TextArea]
     [SerializeField]
     internal string powerUpDescription;
+    [SerializeField]
+    internal string rarity;
+    public bool isUnique;
 
     [Header("Element")]
     [SerializeField]
@@ -36,11 +39,17 @@ public class PowerUp : MonoBehaviour
 
     private bool inTrigger = false;
 
+    [SerializeField]
+    private int points;
+
     private InventoryManager inventoryManager;
 
-    public bool isUnique;
+    public bool isSubscribed = false;
 
     public PowerUpList list;
+
+    public delegate void PowerUpPoints(int ammount);
+    public event PowerUpPoints PowerUpIncrease;
 
     private void Awake()
     {
@@ -51,7 +60,9 @@ public class PowerUp : MonoBehaviour
         if (playerInput != null)
         {
             playerInput.PowerUp += PowerUpHandlerPick;
-        }
+        } 
+
+        points = PointsToIncrease();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -81,6 +92,7 @@ public class PowerUp : MonoBehaviour
             inventoryManager.AddPowerUp(powerUpName, sprite, powerUpDescription);
             if(isUnique)
                 RemoveFromList(gameObject);
+            PowerUpIncrease?.Invoke(points);
             Destroy(gameObject);
         }
     }
@@ -105,5 +117,17 @@ public class PowerUp : MonoBehaviour
                 }
             }
         }
+    }
+
+    private int PointsToIncrease()
+    {
+        if (rarity.Equals("common"))
+            return 20;
+        else if (rarity.Equals("rare"))
+            return 55;
+        else if (rarity.Equals("legendary"))
+            return 100;
+        else
+            return 999;
     }
 }

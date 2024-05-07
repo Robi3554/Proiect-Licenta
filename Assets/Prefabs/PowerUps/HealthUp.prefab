@@ -230,9 +230,12 @@ MonoBehaviour:
   powerUpName: Health Up
   sprite: {fileID: 1617965612, guid: 5ff31cd2f631626469ea695427d971db, type: 3}
   powerUpDescription: Increases the players max health by 30
+  rarity: common
+  isUnique: 0
   isFireElement: 0
   isIceElement: 0
-  isUnique: 0
+  points: 0
+  isSubscribed: 0
   list: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
 --- !u!1 &2476368399293972391
 GameObject:

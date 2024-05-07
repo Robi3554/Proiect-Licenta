@@ -132,9 +132,12 @@ MonoBehaviour:
   powerUpName: Attack Up
   sprite: {fileID: 2095169345, guid: 9a6d11c51b53e81438817576983fab1f, type: 3}
   powerUpDescription: Increases the players attack by 5
+  rarity: common
+  isUnique: 0
   isFireElement: 0
   isIceElement: 0
-  isUnique: 0
+  points: 0
+  isSubscribed: 0
   list: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
 --- !u!1 &4158237917592385111
 GameObject:

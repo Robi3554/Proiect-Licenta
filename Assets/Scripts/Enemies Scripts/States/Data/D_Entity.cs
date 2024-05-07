@@ -20,6 +20,8 @@ public class D_Entity : ScriptableObject
 
     public float animSpeed = 1f;
 
+    public int pointsToIncrease;
+
     public LayerMask whatIsGround;
     public LayerMask whatIsPlayer;
 

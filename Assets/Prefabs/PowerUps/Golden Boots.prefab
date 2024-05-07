@@ -304,9 +304,12 @@ MonoBehaviour:
   sprite: {fileID: -1059382145, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
   powerUpDescription: You found it! THE GOLDEN BOOT!! Increases jump ammount, jump
     height and speed.
+  rarity: rare
+  isUnique: 1
   isFireElement: 0
   isIceElement: 0
-  isUnique: 1
+  points: 0
+  isSubscribed: 0
   list: {fileID: 11400000, guid: 91770742b13431c44a7e42cfae562ebe, type: 2}
 --- !u!1 &2540886055917902353
 GameObject:

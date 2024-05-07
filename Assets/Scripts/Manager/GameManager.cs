@@ -25,13 +25,14 @@ public class GameManager : MonoBehaviour
     internal int minChance;
     internal int maxChance;
 
-    private void Start()
+    private void Awake()
     {
         cvc = GameObject.Find("Player Camera").GetComponent<CinemachineVirtualCamera>();
 
         points = 1000;
 
         StartCoroutine(CheckForEnemies());
+        StartCoroutine(CheckPowerUps());
     }
 
     private void Update()
@@ -59,14 +60,18 @@ public class GameManager : MonoBehaviour
 
     private void IncreaseChance()
     {
-        Debug.Log("Chance Increased");
         maxChance += 2;
 
-        if(maxChance > 100)
+        if(maxChance > 101)
         {
-            maxChance = 100;
+            maxChance = 101;
             minChance += 2;
         }
+    }
+
+    private void IncreasePoints(int value)
+    {
+        points += value;
     }
 
     private IEnumerator CheckForEnemies()
@@ -77,10 +82,30 @@ public class GameManager : MonoBehaviour
 
             foreach (Death de in death)
             {
-                if (!de.IsSubscribed)
+                if (!de.isSubscribed)
                 {
                     de.IncreaseChance += IncreaseChance;
-                    de.IsSubscribed = true;
+                    de.PointIncrease += IncreasePoints;
+                    de.isSubscribed = true;
+                }
+            }
+
+            yield return null;
+        }
+    }
+
+    private IEnumerator CheckPowerUps()
+    {
+        while (true)
+        {
+            PowerUp[] powerUps = FindObjectsOfType<PowerUp>();
+
+            foreach (PowerUp pu in powerUps)
+            {
+                if (!pu.isSubscribed)
+                {
+                    pu.PowerUpIncrease += IncreasePoints;
+                    pu.isSubscribed = true;
                 }
             }
 

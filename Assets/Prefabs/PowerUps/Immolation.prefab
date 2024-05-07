@@ -403,9 +403,12 @@ MonoBehaviour:
   powerUpName: Immolation
   sprite: {fileID: -1198487435, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
   powerUpDescription: Your fire grows stronger. More duration and more damage
+  rarity: rare
+  isUnique: 0
   isFireElement: 1
   isIceElement: 0
-  isUnique: 0
+  points: 0
+  isSubscribed: 0
   list: {fileID: 11400000, guid: 91770742b13431c44a7e42cfae562ebe, type: 2}
 --- !u!114 &6655116320363774086
 MonoBehaviour:

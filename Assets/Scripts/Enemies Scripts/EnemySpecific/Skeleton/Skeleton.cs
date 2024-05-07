@@ -11,7 +11,6 @@ public class Skeleton : Entity
     public E1_LookForPlayerState lookForPlayerState { get; private set; }
     public E1_MeleeAttackState meleeAttackState { get; private set; }
     public E1_StunState stunState { get; private set; }
-    //public E1_DeadState deadState { get; private set; }
 
     [SerializeField]
     private D_IdleState idleStateData;

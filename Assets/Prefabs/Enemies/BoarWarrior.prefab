@@ -302,6 +302,9 @@ MonoBehaviour:
   deathParticles:
   - {fileID: 8961022614382155364, guid: 5cb8bf789b007124e92572067353ee20, type: 3}
   - {fileID: 2060411815713593693, guid: dde5c1edfd6b8ce48b7317f02bbc4fea, type: 3}
+  data: {fileID: 11400000, guid: f9243964b903277468fdc0e5811d24e3, type: 2}
+  IsSubscribed: 0
+  subscribedToHealth: 0
 --- !u!1 &4962330424475450797
 GameObject:
   m_ObjectHideFlags: 0

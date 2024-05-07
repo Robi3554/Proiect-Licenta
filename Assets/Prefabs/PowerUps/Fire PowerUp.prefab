@@ -377,9 +377,12 @@ MonoBehaviour:
   powerUpDescription: 'Allows the player to set enemies on fire
 
 '
+  rarity: common
+  isUnique: 1
   isFireElement: 1
   isIceElement: 0
-  isUnique: 1
+  points: 0
+  isSubscribed: 0
   list: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
 --- !u!61 &3782936013791158333
 BoxCollider2D:

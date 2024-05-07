@@ -302,10 +302,13 @@ MonoBehaviour:
   infoBox: {fileID: 369007075431236854}
   powerUpName: Vamprie Necklace
   sprite: {fileID: -1630564903, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
-  powerUpDescription: Every kill raises the player max hp
+  powerUpDescription: Every kill raises the player max hp by 1
+  rarity: legendary
+  isUnique: 1
   isFireElement: 0
   isIceElement: 0
-  isUnique: 1
+  points: 0
+  isSubscribed: 0
   list: {fileID: 11400000, guid: a5c85f2a1a69ba04ca0d39c54ece1231, type: 2}
 --- !u!1 &369007075431236854
 GameObject:

@@ -450,6 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
   explosion: {fileID: 6996797005797088400, guid: 49aaf493c99736d4187f8fd5f4257d7f, type: 3}
+  maxKncockbackTime: 0.5
 --- !u!1 &6685853113011337325
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +694,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles:
   - {fileID: 1701808332163390172, guid: c8594ce73bbb60448a4cf5c0a01d668d, type: 3}
+  data: {fileID: 11400000, guid: 7c2a0a63349507040ada5bc4faf5e026, type: 2}
+  IsSubscribed: 0
+  subscribedToHealth: 0
 --- !u!1 &6685853114360281605
 GameObject:
   m_ObjectHideFlags: 0

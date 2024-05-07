@@ -8,6 +8,9 @@ public class Death : CoreComponent
     [SerializeField]
     private GameObject[] deathParticles;
 
+    [SerializeField]
+    private D_Entity data;
+
     private ParticleManager ParticleManager => particleManager ? particleManager : core.GetCoreComponent<ParticleManager>();
     private Stats Stats => stats ? stats : core.GetCoreComponent<Stats>();
 
@@ -19,7 +22,10 @@ public class Death : CoreComponent
     public delegate void IncreaseMaxHealth(float amount);
     public event IncreaseMaxHealth IncreaseHealth;
 
-    public bool IsSubscribed = false;
+    public delegate void IncreasePoints(int ammount);
+    public event IncreasePoints PointIncrease;
+
+    public bool isSubscribed = false;
     public bool subscribedToHealth = false;
 
     public void Die()
@@ -37,7 +43,9 @@ public class Death : CoreComponent
 
         IncreaseChance?.Invoke();
 
-        IncreaseHealth?.Invoke(2f);
+        IncreaseHealth?.Invoke(1f);
+
+        PointIncrease?.Invoke(data.pointsToIncrease);
 
         core.transform.parent.gameObject.SetActive(false);
     }

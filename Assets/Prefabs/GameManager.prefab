@@ -48,6 +48,8 @@ MonoBehaviour:
   respawnPoint: {fileID: 5961423573553215143}
   player: {fileID: 0}
   respawnTime: 5
+  elapsedTime: 0
+  points: 0
   minChance: 0
   maxChance: 40
 --- !u!1 &5961423573553215142

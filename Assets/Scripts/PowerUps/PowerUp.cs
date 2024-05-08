@@ -94,6 +94,16 @@ public class PowerUp : MonoBehaviour
                 RemoveFromList(gameObject);
             PowerUpIncrease?.Invoke(points);
             Destroy(gameObject);
+            DestroyOtherPowerUps();
+        }
+    }
+
+    private void DestroyOtherPowerUps()
+    {
+        GameObject[] powerUpsToDestroy = GameObject.FindGameObjectsWithTag("PowerUp");
+        foreach(GameObject powerUp in powerUpsToDestroy)
+        {
+            Destroy(powerUp); 
         }
     }
 

@@ -12,7 +12,6 @@ public class Timer : MonoBehaviour
 
     private int seconds;
     private int minutes;
-    private int hours;
 
     void Start()
     {
@@ -25,12 +24,8 @@ public class Timer : MonoBehaviour
     {
         seconds = Mathf.FloorToInt(manager.elapsedTime % 60);
         minutes = Mathf.FloorToInt(manager.elapsedTime / 60);
-        if(minutes >= 60)
-        {
-            manager.elapsedTime = 0;
-            hours++;
-        }
-        timeText.text = string.Format("{0:00}:{1:00}:{2:00}",hours, minutes, seconds);
+
+        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     public void ChangePoints()

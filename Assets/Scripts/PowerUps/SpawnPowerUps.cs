@@ -73,7 +73,6 @@ public class SpawnPowerUps : MonoBehaviour
                     Debug.Log("Common");
                     SpawnCommonPowerUp(randInt, i);
 
-                    randInt = 0;
                 }
                 else if (chance <= 80)
                 {
@@ -87,7 +86,6 @@ public class SpawnPowerUps : MonoBehaviour
                     Debug.Log("Rare");
                     SpawnRarePowerUp(randInt, i);
 
-                    randInt = 0;
                 }
                 else if (chance <= 100)
                 {
@@ -101,8 +99,8 @@ public class SpawnPowerUps : MonoBehaviour
                     Debug.Log("Legendary");
                     SpawnLegendaryPowerUp(randInt, i);
 
-                    randInt = 0;
                 }
+
             }
 
             bc.enabled = false;

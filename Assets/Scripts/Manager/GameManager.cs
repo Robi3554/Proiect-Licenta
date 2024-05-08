@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private GameObject player;
     [SerializeField]
     private float respawnTime;
+
+    [Header("Timer&Points")]
     [SerializeField]
     internal float elapsedTime;
     [SerializeField]
@@ -22,8 +24,13 @@ public class GameManager : MonoBehaviour
 
     private CinemachineVirtualCamera cvc;
 
+    [Header("DropChances")]
+    [SerializeField]
     internal int minChance;
+    [SerializeField]
     internal int maxChance;
+
+
 
     private void Awake()
     {

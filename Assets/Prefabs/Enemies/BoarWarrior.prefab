@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4962330423850164433}
   m_Layer: 7
   m_Name: ParticleManager
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 6416304545590519031}
   m_Layer: 7
   m_Name: Combat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 4962330424137881358}
   m_Layer: 7
   m_Name: Movement
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 4962330424332371846}
   m_Layer: 7
   m_Name: Death
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   - {fileID: 8961022614382155364, guid: 5cb8bf789b007124e92572067353ee20, type: 3}
   - {fileID: 2060411815713593693, guid: dde5c1edfd6b8ce48b7317f02bbc4fea, type: 3}
   data: {fileID: 11400000, guid: f9243964b903277468fdc0e5811d24e3, type: 2}
-  IsSubscribed: 0
+  isSubscribed: 0
   subscribedToHealth: 0
 --- !u!1 &4962330424475450797
 GameObject:
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 4962330424896217441}
   m_Layer: 7
   m_Name: Stats
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 4962330424959404939}
   m_Layer: 7
   m_Name: Core
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 4962330425135931819}
   m_Layer: 7
   m_Name: CollisionSenses
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

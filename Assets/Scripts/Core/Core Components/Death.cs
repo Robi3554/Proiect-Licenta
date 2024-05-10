@@ -41,11 +41,14 @@ public class Death : CoreComponent
             GetComponentInParent<LootBag>().InstantiateLoot(transform.position);
         }
 
-        IncreaseChance?.Invoke();
+        if (gameObject.CompareTag("Enemy"))
+        {
+            IncreaseChance?.Invoke();
 
-        IncreaseHealth?.Invoke(1f);
+            IncreaseHealth?.Invoke(1f);
 
-        PointIncrease?.Invoke(data.pointsToIncrease);
+            PointIncrease?.Invoke(data.pointsToIncrease);
+        }
 
         core.transform.parent.gameObject.SetActive(false);
     }

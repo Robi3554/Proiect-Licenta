@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 6685853112951260086}
   m_Layer: 7
   m_Name: ParticleManager
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 6685853112959235501}
   m_Layer: 7
   m_Name: Combat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 6685853113652123162}
   m_Layer: 7
   m_Name: Movement
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -660,7 +660,7 @@ GameObject:
   - component: {fileID: 6685853114077791303}
   m_Layer: 7
   m_Name: Death
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -695,7 +695,7 @@ MonoBehaviour:
   deathParticles:
   - {fileID: 1701808332163390172, guid: c8594ce73bbb60448a4cf5c0a01d668d, type: 3}
   data: {fileID: 11400000, guid: 7c2a0a63349507040ada5bc4faf5e026, type: 2}
-  IsSubscribed: 0
+  isSubscribed: 0
   subscribedToHealth: 0
 --- !u!1 &6685853114360281605
 GameObject:
@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 6685853114360281611}
   m_Layer: 7
   m_Name: Core
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 6685853114391238121}
   m_Layer: 7
   m_Name: Stats
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

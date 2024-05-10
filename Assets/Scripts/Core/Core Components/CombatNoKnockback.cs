@@ -8,4 +8,9 @@ public class CombatNoKnockback : Combat
     {
         
     }
+
+    public override void Knockback(Vector2 angle, float strength, int direction)
+    {
+
+    }
 }

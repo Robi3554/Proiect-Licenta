@@ -10,6 +10,7 @@ TagManager:
   - SwordWave
   - PowerUp
   - Platform
+  - Door
   layers:
   - Default
   - TransparentFX

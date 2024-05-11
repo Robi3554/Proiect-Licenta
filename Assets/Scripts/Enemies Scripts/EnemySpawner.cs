@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    private void SpawnRandomEnemy()
+    public void SpawnRandomEnemy()
     {
         if(enemies.Count > 0)
         {

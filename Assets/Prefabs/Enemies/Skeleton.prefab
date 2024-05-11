@@ -47,7 +47,7 @@ MonoBehaviour:
   deathParticles:
   - {fileID: 1544539627495211898, guid: e49e294ef14545b49ba9c118de0b1649, type: 3}
   data: {fileID: 11400000, guid: 8991d807e8345684881a1207bf5fb838, type: 2}
-  IsSubscribed: 0
+  isSubscribed: 0
   subscribedToHealth: 0
 --- !u!1 &6580390147668577881
 GameObject:
@@ -556,7 +556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6580390149347138175}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2579994, y: 9.192, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

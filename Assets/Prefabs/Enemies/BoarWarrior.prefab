@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 4962330425312595819}
   - component: {fileID: 4962330425312595828}
   - component: {fileID: 4962330425312595822}
+  - component: {fileID: -7988227118528886145}
   m_Layer: 7
   m_Name: BoarWarrior
   m_TagString: Enemy
@@ -691,6 +692,24 @@ MonoBehaviour:
   meleeAttackData: {fileID: 11400000, guid: 9a827e14f2b050d4cbee890758c7ddb2, type: 2}
   meleeAttackPos: {fileID: 4962330425464680105}
   rockAttack: {fileID: 3781825926339140081}
+--- !u!114 &-7988227118528886145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4962330425312595829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cd5ade5432db741909f3dc5b37c812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 7541499582618765950, guid: 98e4abb1ea02f084596f115b9f3d045d, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 5ffd0510a5c80ad4286cf1989d567308, type: 2}
+  - {fileID: 11400000, guid: 9cd337c9e8c8b76418af56336b454056, type: 2}
+  dropForce: 50
+  spinSpeed: 200
 --- !u!1 &4962330425464680106
 GameObject:
   m_ObjectHideFlags: 0

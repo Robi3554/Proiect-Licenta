@@ -10,27 +10,19 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
-    private BoxCollider2D bc;
-
-    void Start()
+    void Awake()
     {
-        bc = GetComponent<BoxCollider2D>();
-
         player = GameObject.Find("Player");
     }
 
     public void SpawnRandomEnemy()
     {
-        if(enemies.Count > 0)
-        {
-            int randomIndex = Random.Range(0, enemies.Count);
+         int randomIndex = Random.Range(0, enemies.Count);
+        
+         Instantiate(enemies[randomIndex], transform.position, Quaternion.identity);
 
-            Instantiate(enemies[randomIndex], transform.position, Quaternion.identity);
-        }
-        else
-        {
-            Debug.LogError("There are no enemies in the list!");
-        }
+        if (gameObject.CompareTag("Spawner"))
+            Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D col)

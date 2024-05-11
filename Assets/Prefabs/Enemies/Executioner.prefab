@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6685853112559179431}
   - component: {fileID: 6685853112559179485}
   - component: {fileID: 6685853112559179428}
+  - component: {fileID: -1059026459913639109}
   m_Layer: 7
   m_Name: Executioner
   m_TagString: Enemy
@@ -208,6 +209,24 @@ MonoBehaviour:
   teleportStateData: {fileID: 11400000, guid: a6b2edf4898900e46907c35c7cb36060, type: 2}
   attackPos: {fileID: 6685853112926309160}
   teleportPos: {fileID: 0}
+--- !u!114 &-1059026459913639109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685853112559179484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cd5ade5432db741909f3dc5b37c812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 7541499582618765950, guid: 98e4abb1ea02f084596f115b9f3d045d, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 5ffd0510a5c80ad4286cf1989d567308, type: 2}
+  - {fileID: 11400000, guid: 9cd337c9e8c8b76418af56336b454056, type: 2}
+  dropForce: 50
+  spinSpeed: 200
 --- !u!1 &6685853112571429404
 GameObject:
   m_ObjectHideFlags: 0

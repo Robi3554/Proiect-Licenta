@@ -13,9 +13,13 @@ public class RoomManager : MonoBehaviour
 
     public List<EnemySpawner> spawners = new List<EnemySpawner>();
 
+    public int timeBetweenWaves;
+
+    public bool canSpawn = true;
+
     void Awake()
     {
-        WaveSpawn();
+        StartCoroutine(StartWave());
     }
 
     void Update()
@@ -30,28 +34,42 @@ public class RoomManager : MonoBehaviour
             spawn.SpawnRandomEnemy();
         }
 
+        canSpawn = false;
         count++;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Enemy"))
+        if (col.CompareTag("Enemy") && !col.name.StartsWith("Combat"))
         {
-            if (!col.name.StartsWith("Combat"))
-            {
-                enemies.Add(col.gameObject);
-            }
+            enemies.Add(col.gameObject);
         }
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.CompareTag("Enemy"))
+        if (col.CompareTag("Enemy") && !col.name.StartsWith("Combat"))
         {
-            if (!col.name.StartsWith("Combat"))
+            enemies.Remove(col.gameObject);
+            if (enemies.Count <= 0)
             {
-                enemies.Remove(col.gameObject);
+                canSpawn = true;
+                StartCoroutine(StartWave());
             }
+                
+        }
+    }
+
+    private IEnumerator StartWave()
+    {
+        if(count >= 3)
+        {
+            Destroy(gameObject);
+        }
+        else if(canSpawn)
+        {
+            yield return new WaitForSeconds(timeBetweenWaves);
+            WaveSpawn();
         }
     }
 }

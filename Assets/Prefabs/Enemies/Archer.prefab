@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3895333817886704148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08100009, y: -0.065999985, z: 0}
+  m_LocalPosition: {x: 0.25, y: -0.065999985, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 3895333818057811589}
   - component: {fileID: 3895333818057811595}
   - component: {fileID: 3895333818057811594}
+  - component: {fileID: 2904411311728715905}
   m_Layer: 7
   m_Name: Archer
   m_TagString: Enemy
@@ -272,7 +273,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015453875, y: -0.06771886}
+  m_Offset: {x: -0.02184105, y: -0.06771886}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -283,7 +284,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17845404, y: 0.3598523}
+  m_Size: {x: 0.5643425, y: 0.3598523}
   m_EdgeRadius: 0
 --- !u!114 &3895333818057811595
 MonoBehaviour:
@@ -323,6 +324,24 @@ MonoBehaviour:
   rangedAttackStateData: {fileID: 11400000, guid: f21130aa8663c824ba5037f1f97a7e67, type: 2}
   meleeAttackPos: {fileID: 3895333819520268275}
   rangedAttackPos: {fileID: 3895333819249521826}
+--- !u!114 &2904411311728715905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895333818057811585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cd5ade5432db741909f3dc5b37c812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 7541499582618765950, guid: 98e4abb1ea02f084596f115b9f3d045d, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 5ffd0510a5c80ad4286cf1989d567308, type: 2}
+  - {fileID: 11400000, guid: 9cd337c9e8c8b76418af56336b454056, type: 2}
+  dropForce: 50
+  spinSpeed: 200
 --- !u!1 &3895333818117011982
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,6 +41,8 @@ public class CollisionSenses : CoreComponent
 
     public LayerMask WhatIsGround { get => whatIsGround; set => whatIsGround = value; }
 
+    public LayerMask WhatIsPlatform { get => whatIsPlatform; set => whatIsPlatform = value; }
+
     [SerializeField]
     private Transform
         groundCheck,

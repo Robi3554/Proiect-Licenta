@@ -11,6 +11,7 @@ TagManager:
   - PowerUp
   - Platform
   - Door
+  - Spawner
   layers:
   - Default
   - TransparentFX

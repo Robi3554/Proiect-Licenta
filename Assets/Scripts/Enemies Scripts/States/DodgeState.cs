@@ -15,6 +15,7 @@ public class DodgeState : State
     protected bool performCloseRangeAction;
     protected bool isPlayerInMaxAggroRange;
     protected bool isGrounded;
+    protected bool isOnPlatform;
     protected bool isDodgeOver;
 
     public DodgeState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_DodgeState stateData) : base(stateMachine, entity, animBoolName)
@@ -29,6 +30,7 @@ public class DodgeState : State
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
         isPlayerInMaxAggroRange = entity.CheckPlayerInMaxAggroRange();
         isGrounded = CollisionSenses.Ground;
+        isOnPlatform = CollisionSenses.Platform;
     }
 
     public override void Enter()
@@ -49,7 +51,7 @@ public class DodgeState : State
     {
         base.LogicUpdate();
 
-        if(Time.time >= startTime + stateData.dodgeTime && isGrounded)
+        if(Time.time >= startTime + stateData.dodgeTime && (isGrounded || isOnPlatform))
         {
             isDodgeOver = true;
         }

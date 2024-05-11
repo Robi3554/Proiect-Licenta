@@ -30,6 +30,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     internal int maxChance;
 
+    public bool noMoreEnemies;
+
+    public List<GameObject> spawners = new List<GameObject>();
+
+    public List<GameObject> enemies = new List<GameObject>();
 
 
     private void Awake()
@@ -117,6 +122,26 @@ public class GameManager : MonoBehaviour
             }
 
             yield return null;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Enemy") && !col.name.StartsWith("Combat"))
+        {
+            enemies.Add(col.gameObject);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("Spawner"))
+        {
+            enemies.Remove(col.gameObject);
+        }
+        else if (col.CompareTag("Enemy") && !col.name.StartsWith("Combat"))
+        {
+            enemies.Remove(col.gameObject);
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerCombat : Combat
 {
@@ -18,11 +19,41 @@ public class PlayerCombat : Combat
 
     private SpriteRenderer sr;
 
+    private Player pr;
+
+    private int count;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        sr = GetComponentInParent<SpriteRenderer>();
+
+        pr = GetComponentInParent<Player>();
+    }
+
     public override void Damage(float amount)
     {
-        base.Damage(amount);
+        Debug.Log(core.transform.parent.name + " damaged!");
 
-        StartCoroutine(FramesCo());
+        if (pr.canNegateHits && count >= 2)
+        {
+            count = 0;
+
+            StartCoroutine(FramesCo());
+        }
+        else
+        {
+            Stats?.DecreaseHealth(amount);
+
+            count++;
+
+            Debug.Log(count);
+
+            ParticleManager?.StartParticlesWithRandomRotation(damageParticles);
+
+            StartCoroutine(FramesCo());
+        }
     }
 
     public override void Knockback(Vector2 angle, float strength, int direction)
@@ -33,13 +64,6 @@ public class PlayerCombat : Combat
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-    }
-
-    protected override void Awake()
-    {
-        base.Awake();
-
-        sr = GetComponentInParent<SpriteRenderer>();
     }
 
     protected override void CheckKnockback()

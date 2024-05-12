@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &728454954969733009
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1618793036079344768, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: list
+      value: 
+      objectReference: {fileID: 11400000, guid: 91770742b13431c44a7e42cfae562ebe, type: 2}
+    - target: {fileID: 1618793036079344768, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: rarity
+      value: rare
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344768, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: powerupEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: eefa76b2dee6f4846a0f16affa84f644, type: 2}
+    - target: {fileID: 1618793036079344768, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: powerUpDescription
+      value: Increases slowness duration
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344769, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -359746618, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 323.14368
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.336706
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344770, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618793036079344774, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}
+      propertyPath: m_Name
+      value: ColderWind Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f00951d298dc7b4299cb7d0ecfe6ed3, type: 3}

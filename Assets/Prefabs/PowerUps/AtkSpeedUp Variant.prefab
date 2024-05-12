@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e108e27700df77345a9cec8395c10c22, type: 2}
     - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
       propertyPath: powerUpDescription
-      value: Increases the players attack speed by 20%
+      value: Increases the players attack speed
       objectReference: {fileID: 0}
     - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
       propertyPath: m_RootOrder

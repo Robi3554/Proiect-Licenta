@@ -47,7 +47,8 @@ public class Player : MonoBehaviour
         canLightOnFire,
         canSlow,
         canCauseExplosions,
-        canStealLife;
+        canStealLife,
+        canNegateHits;
 
     #endregion
 

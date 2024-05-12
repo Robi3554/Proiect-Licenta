@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: CursedSword
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 0ac9efc7b8895804c99d96951d7dcfb2, type: 2}
+  pData: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}

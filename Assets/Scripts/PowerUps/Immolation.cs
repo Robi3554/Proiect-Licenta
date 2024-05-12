@@ -6,8 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Immolation", menuName = "PowerUps/Universal/Immolation")]
 public class Immolation : PowerupEffect
 {
-    [SerializeField]
-    private PlayerData playerData;
+    public PlayerData playerData;
 
     public override void ApplyEffect(GameObject obj)
     {

@@ -8,6 +8,8 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Data")]
 public class PlayerData : ScriptableObject
 {
+    public bool statsWontGoDown;
+
     public float maxHealth = 150f;
     public float currentHealth = 150f;
 

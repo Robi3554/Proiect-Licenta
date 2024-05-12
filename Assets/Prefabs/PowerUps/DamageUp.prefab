@@ -131,7 +131,7 @@ MonoBehaviour:
   infoBox: {fileID: 4356709476074347783}
   powerUpName: Attack Up
   sprite: {fileID: 2095169345, guid: 9a6d11c51b53e81438817576983fab1f, type: 3}
-  powerUpDescription: Increases the players attack by 5
+  powerUpDescription: Increases the players attack
   rarity: common
   isUnique: 0
   isFireElement: 0

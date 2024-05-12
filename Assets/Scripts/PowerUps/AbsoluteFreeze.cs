@@ -12,6 +12,7 @@ public class AbsoluteFreeze : PowerupEffect
     {
         playerData.slowAmmount = 100;
 
-        playerData.slowDuration = 2;
+        if(playerData.statsWontGoDown)
+            playerData.slowDuration /= 2;
     }
 }

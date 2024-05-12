@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7558923247483388015
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: list
+      value: 
+      objectReference: {fileID: 11400000, guid: a5c85f2a1a69ba04ca0d39c54ece1231, type: 2}
+    - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: rarity
+      value: legendary
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: isUnique
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: powerupEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: ce92e3c36d33f324291230b8a5417db6, type: 2}
+    - target: {fileID: 2154906914436853320, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: powerUpDescription
+      value: The third hit taken  by the player is negated
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 290.71375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.342068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853321, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853324, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_Name
+      value: HitNegation
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853326, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1885846889, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
+    - target: {fileID: 2154906914436853327, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154906914436853327, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905125964134947604, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}

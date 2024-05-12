@@ -105,10 +105,13 @@ MonoBehaviour:
   infoBox: {fileID: 1618793036093634490}
   powerUpName: AbsoluteFreeze
   sprite: {fileID: 177478818, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
-  powerUpDescription: Freezes the enemies but halves the duration
+  powerUpDescription: Completely freezes the target but duration is cut in half
+  rarity: 
+  isUnique: 1
   isFireElement: 0
   isIceElement: 1
-  isUnique: 1
+  points: 0
+  isSubscribed: 0
   list: {fileID: 11400000, guid: a5c85f2a1a69ba04ca0d39c54ece1231, type: 2}
 --- !u!61 &1618793036079344775
 BoxCollider2D:

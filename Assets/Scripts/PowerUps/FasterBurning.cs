@@ -12,6 +12,7 @@ public class FasterBurning : PowerupEffect
     {
         playerData.timeBetweenBurn -= 0.25f;
 
-        playerData.burnDamage -= 0.5f;
+        if(!playerData.statsWontGoDown)
+            playerData.burnDamage -= 0.5f;
     }
 }

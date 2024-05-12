@@ -26,15 +26,17 @@ public class GameManager : MonoBehaviour
 
     [Header("DropChances")]
     [SerializeField]
-    internal int minChance;
+    internal float minChance;
     [SerializeField]
-    internal int maxChance;
+    internal float maxChance;
 
     public bool noMoreEnemies;
 
     public List<GameObject> spawners = new List<GameObject>();
 
     public List<GameObject> enemies = new List<GameObject>();
+
+    public int count;
 
 
     private void Awake()
@@ -45,6 +47,11 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(CheckForEnemies());
         StartCoroutine(CheckPowerUps());
+    }
+
+    private void Start()
+    {
+        count = spawners.Count;
     }
 
     private void Update()
@@ -72,12 +79,12 @@ public class GameManager : MonoBehaviour
 
     private void IncreaseChance()
     {
-        maxChance += 2;
+        maxChance += 1.5f;
 
         if(maxChance > 101)
         {
             maxChance = 101;
-            minChance += 2;
+            minChance += 1.5f;
         }
     }
 
@@ -135,13 +142,12 @@ public class GameManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.CompareTag("Spawner"))
+        if (col.CompareTag("Enemy") && !col.name.StartsWith("Combat"))
         {
             enemies.Remove(col.gameObject);
-        }
-        else if (col.CompareTag("Enemy") && !col.name.StartsWith("Combat"))
-        {
-            enemies.Remove(col.gameObject);
+            count--;
+            if (count == 0)
+                noMoreEnemies = true;
         }
     }
 }

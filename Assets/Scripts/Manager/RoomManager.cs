@@ -14,6 +14,7 @@ public class RoomManager : MonoBehaviour
     public List<EnemySpawner> spawners = new List<EnemySpawner>();
 
     public int timeBetweenWaves;
+    public int nrOfWaves;
 
     public bool canSpawn = true;
 
@@ -62,7 +63,7 @@ public class RoomManager : MonoBehaviour
 
     private IEnumerator StartWave()
     {
-        if(count >= 3)
+        if(count >= nrOfWaves)
         {
             Destroy(gameObject);
         }

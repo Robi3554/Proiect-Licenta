@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class SpawnPowerUps : MonoBehaviour
 {
-    private GameManager manager;
+    protected GameManager manager;
 
-    private BoxCollider2D bc;
+    protected BoxCollider2D bc;
 
     public GameObject[] positions;
 
@@ -22,7 +22,7 @@ public class SpawnPowerUps : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
     }
 
-    private void SpawnCommonPowerUp(int index, int n)
+    protected virtual void SpawnCommonPowerUp(int index, int n)
     {
         if (index >= 0 && index < commonList.powerUps.Length)
         {
@@ -31,7 +31,7 @@ public class SpawnPowerUps : MonoBehaviour
         }
     }
 
-    private void SpawnRarePowerUp(int index, int n)
+    protected virtual void SpawnRarePowerUp(int index, int n)
     {
         if (index >= 0 && index < rareList.powerUps.Length)
         {
@@ -40,7 +40,7 @@ public class SpawnPowerUps : MonoBehaviour
         }
     }
 
-    private void SpawnLegendaryPowerUp(int index, int n)
+    protected virtual void SpawnLegendaryPowerUp(int index, int n)
     {
         if (index >= 0 && index < legendaryList.powerUps.Length)
         {
@@ -49,7 +49,7 @@ public class SpawnPowerUps : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    protected virtual void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
@@ -59,7 +59,7 @@ public class SpawnPowerUps : MonoBehaviour
 
             for (int i = 0; i < positions.Length; i++)
             {
-                int chance = Random.Range(manager.minChance, manager.maxChance);
+                float chance = Random.Range(manager.minChance, manager.maxChance);
                 Debug.Log(chance);
                 if (chance <= 40)
                 {

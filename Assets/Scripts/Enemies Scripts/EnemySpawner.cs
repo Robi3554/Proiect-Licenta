@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    private BoxCollider2D bc;
+
     [SerializeField]
     private List<GameObject> enemies = new List<GameObject>();
 
-    [SerializeField]
-    private GameObject player;
-
     void Awake()
     {
-        player = GameObject.Find("Player");
+        bc = GetComponent<BoxCollider2D>();
+
+        bc.enabled = false;
+
+        StartCoroutine(StartCollider());
     }
 
     public void SpawnRandomEnemy()
@@ -22,7 +25,10 @@ public class EnemySpawner : MonoBehaviour
          Instantiate(enemies[randomIndex], transform.position, Quaternion.identity);
 
         if (gameObject.CompareTag("Spawner"))
+        {
             Destroy(gameObject);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -32,5 +38,12 @@ public class EnemySpawner : MonoBehaviour
             SpawnRandomEnemy();
             gameObject.SetActive(false);
         }
+    }
+
+    private IEnumerator StartCollider()
+    {
+        yield return new WaitForSeconds(1f);
+
+        bc.enabled = true;
     }
 }

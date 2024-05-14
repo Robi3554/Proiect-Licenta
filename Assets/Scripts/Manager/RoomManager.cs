@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
+    private DoorManager doorManager;
+
     [SerializeField]
     private List<GameObject> enemies = new List<GameObject>();
 
@@ -13,19 +15,31 @@ public class RoomManager : MonoBehaviour
 
     public List<EnemySpawner> spawners = new List<EnemySpawner>();
 
-    public int timeBetweenWaves;
     public int nrOfWaves;
+
+    public float timeBetweenWaves;
+    public float waitForDoors;
 
     public bool canSpawn = true;
 
     void Awake()
     {
+        doorManager = FindObjectOfType<DoorManager>();
+    }
+
+    void Start()
+    {
+        StartCoroutine(CloseDoors());
+
         StartCoroutine(StartWave());
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        
+        if(count == nrOfWaves && enemies.Count == 0)
+        {
+            StartCoroutine(OpenDoors());
+        }
     }
 
     private void WaveSpawn()
@@ -72,5 +86,21 @@ public class RoomManager : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenWaves);
             WaveSpawn();
         }
+    }
+
+    private IEnumerator CloseDoors()
+    {
+        yield return new WaitForSeconds(waitForDoors);
+
+        doorManager.EnableTileMapRenderer();
+        doorManager.DisableTriggerCollider();
+    }
+
+    private IEnumerator OpenDoors()
+    {
+        yield return new WaitForSeconds(waitForDoors);
+
+        doorManager.DisableTileMapRenderer();
+        doorManager.EnableTriggerCollider();
     }
 }

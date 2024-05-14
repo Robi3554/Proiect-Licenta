@@ -11,11 +11,14 @@ public class EnemySpawner : MonoBehaviour
 
     void Awake()
     {
-        bc = GetComponent<BoxCollider2D>();
+        if (!gameObject.name.Contains("(NoCollider)"))
+        {
+            bc = GetComponent<BoxCollider2D>();
 
-        bc.enabled = false;
+            bc.enabled = false;
 
-        StartCoroutine(StartCollider());
+            StartCoroutine(StartCollider());
+        }
     }
 
     public void SpawnRandomEnemy()

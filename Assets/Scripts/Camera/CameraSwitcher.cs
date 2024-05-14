@@ -13,7 +13,8 @@ public class CameraSwitcher : MonoBehaviour
 
     private CinemachineVirtualCamera currentCamera;
 
-    private float cooldownTime = 10f;
+    [SerializeField]
+    private float cooldownTime = 5f;
 
     private bool canSwitch;
 

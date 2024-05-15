@@ -36,10 +36,7 @@ public class RoomManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(count == nrOfWaves && enemies.Count == 0)
-        {
-            StartCoroutine(OpenDoors());
-        }
+
     }
 
     private void WaveSpawn()
@@ -50,7 +47,6 @@ public class RoomManager : MonoBehaviour
         }
 
         canSpawn = false;
-        count++;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -79,12 +75,13 @@ public class RoomManager : MonoBehaviour
     {
         if(count >= nrOfWaves)
         {
-            Destroy(gameObject);
+            StartCoroutine(OpenDoors());
         }
         else if(canSpawn)
         {
             yield return new WaitForSeconds(timeBetweenWaves);
             WaveSpawn();
+            count++;
         }
     }
 

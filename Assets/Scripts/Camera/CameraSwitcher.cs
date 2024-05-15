@@ -10,8 +10,15 @@ public class CameraSwitcher : MonoBehaviour
     private CinemachineVirtualCamera firstCamera;
     [SerializeField]
     private CinemachineVirtualCamera secondCamera;
+    [SerializeField]
+    private Collider2D firstCollider;
+    [SerializeField]
+    private Collider2D secondCollider;
 
     private CinemachineVirtualCamera currentCamera;
+    private CinemachineConfiner2D confiner;
+    private Collider2D currentCollider;
+
 
     [SerializeField]
     private float cooldownTime = 5f;
@@ -21,6 +28,10 @@ public class CameraSwitcher : MonoBehaviour
     private void Awake()
     {
         currentCamera = firstCamera;
+
+        currentCollider = firstCollider;
+
+        confiner = firstCamera.GetComponent<CinemachineConfiner2D>();
 
         canSwitch = true;
     }
@@ -41,8 +52,19 @@ public class CameraSwitcher : MonoBehaviour
                 DisableCamera(secondCamera);
                 EnableCamera(firstCamera);
                 currentCamera = firstCamera;
+                SwitchBoundingShape();
                 StartCoroutine(CanSwitch());
             }
+
+            
+        }
+    }
+
+    public void SwitchBoundingShape()
+    {
+        if (confiner != null && currentCollider == firstCollider)
+        {
+            confiner.m_BoundingShape2D = secondCollider;
         }
     }
 

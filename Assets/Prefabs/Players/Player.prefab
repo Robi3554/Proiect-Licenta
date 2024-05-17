@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 8706217525216816457}
   m_Layer: 9
   m_Name: Death
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,6 +502,9 @@ MonoBehaviour:
   deathParticles:
   - {fileID: 8961022614382155364, guid: 5cb8bf789b007124e92572067353ee20, type: 3}
   - {fileID: 2060411815713593693, guid: dde5c1edfd6b8ce48b7317f02bbc4fea, type: 3}
+  data: {fileID: 0}
+  isSubscribed: 0
+  subscribedToHealth: 0
 --- !u!1 &8706217525562989827
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,9 +920,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 0227fbf112fabde448f0088c7f391f91, type: 2}
+  startPosition: {fileID: 0}
   canLightOnFire: 0
   canSlow: 0
   canCauseExplosions: 0
+  canStealLife: 0
+  canNegateHits: 0
   canShoot: 0
 --- !u!114 &8706217526112706000
 MonoBehaviour:

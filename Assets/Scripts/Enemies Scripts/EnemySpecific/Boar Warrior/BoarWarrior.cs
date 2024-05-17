@@ -59,6 +59,5 @@ public class BoarWarrior : Entity
     public void EnableRocks()
     {
         rockAttack.SetActive(true);
-        Debug.Log("Enabled!");
     }
 }

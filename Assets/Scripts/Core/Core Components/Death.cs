@@ -19,6 +19,8 @@ public class Death : CoreComponent
 
     public event Action IncreaseChance;
 
+    public event Action deathScreen;
+
     public delegate void IncreaseMaxHealth(float amount);
     public event IncreaseMaxHealth IncreaseHealth;
 
@@ -36,18 +38,19 @@ public class Death : CoreComponent
         }
 
         if(transform.parent.gameObject.CompareTag("Enemy"))
-        {
-            
+        {  
             GetComponentInParent<LootBag>().InstantiateLoot(transform.position);
-        }
 
-        if (gameObject.CompareTag("Enemy"))
-        {
             IncreaseChance?.Invoke();
 
             IncreaseHealth?.Invoke(1f);
 
             PointIncrease?.Invoke(data.pointsToIncrease);
+        }
+
+        if (gameObject.CompareTag("Player"))
+        {
+            deathScreen.Invoke();
         }
 
         core.transform.parent.gameObject.SetActive(false);

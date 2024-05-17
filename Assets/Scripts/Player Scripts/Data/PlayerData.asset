@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsWontGoDown: 0
   maxHealth: 150
-  currentHealth: 150
+  currentHealth: 50
   moveVelocity: 10
   jumpVelocity: 25
   ammountOfJumps: 1

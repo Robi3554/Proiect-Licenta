@@ -19,6 +19,8 @@ public class RockAttack : MonoBehaviour
 
     private LayerMask maskToHit;
 
+    private string layerToExclude = "Damageable";
+
     void Awake()
     {
         bw = GetComponentInParent<BoarWarrior>();
@@ -38,14 +40,16 @@ public class RockAttack : MonoBehaviour
 
             if (damageable != null)
             {
-                damageable.Damage(data.attackDamage);
+                if(col.gameObject.layer != LayerMask.NameToLayer(layerToExclude))
+                    damageable.Damage(data.attackDamage);
             }
 
             IKnockbackable knockbackable = col.GetComponent<IKnockbackable>();
 
             if (knockbackable != null)
             {
-                knockbackable.Knockback(data.knockbackAngle, data.knockbackStrength, bw.GetFacingDir());
+                if (col.gameObject.layer != LayerMask.NameToLayer(layerToExclude))
+                    knockbackable.Knockback(data.knockbackAngle, data.knockbackStrength, bw.GetFacingDir());
             }
         }
     }

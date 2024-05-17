@@ -46,9 +46,10 @@ public class PlayerCombat : Combat
         {
             Stats?.DecreaseHealth(amount);
 
-            count++;
-
-            Debug.Log(count);
+            if (pr.canNegateHits)
+            {
+                count++;
+            }
 
             ParticleManager?.StartParticlesWithRandomRotation(damageParticles);
 

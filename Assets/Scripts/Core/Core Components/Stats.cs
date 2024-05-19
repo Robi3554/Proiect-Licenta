@@ -18,7 +18,7 @@ public class Stats : CoreComponent
     [SerializeField]
     internal float maxHealth;
 
-    protected float currentHealth;
+    protected float curentHealth;
 
     [SerializeField]
     internal bool 
@@ -35,17 +35,17 @@ public class Stats : CoreComponent
     {
         base.Awake();
 
-        currentHealth = maxHealth;
+        curentHealth = maxHealth;
         sr = GetComponentInParent<SpriteRenderer>();
     }
 
     public virtual void DecreaseHealth(float amount)
     {
-        currentHealth -= amount;
+        curentHealth -= amount;
 
-        if(currentHealth <= 0)
+        if(curentHealth <= 0)
         {
-            currentHealth = 0;
+            curentHealth = 0;
 
             OnHealthZero?.Invoke();
         }
@@ -53,7 +53,7 @@ public class Stats : CoreComponent
 
     public virtual void IncreaseHealth(float amount)
     {
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        curentHealth = Mathf.Clamp(curentHealth + amount, 0, maxHealth);
     }
 
     public virtual void LightOnFire(float fireDuration, float timeBetweenBurn, float burnDamage)

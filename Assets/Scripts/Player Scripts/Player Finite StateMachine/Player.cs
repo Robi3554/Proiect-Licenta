@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDataPersistence
 {
     #region State Variables
     public PlayerStateMachine stateMachine {  get; private set; }
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Other Variables
-    private Vector2 workSpace;
+    //private Vector2 workSpace;
 
     [SerializeField]
     internal bool
@@ -118,6 +118,16 @@ public class Player : MonoBehaviour
         {
             return -1;
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+        transform.position = data.playerPos;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerPos = transform.position;
     }
 
     #endregion

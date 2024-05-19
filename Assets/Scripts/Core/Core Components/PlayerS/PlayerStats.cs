@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerStats : Stats
+public class PlayerStats : Stats, IDataPersistence
 {
     [Header("Health Bar")]
     [SerializeField]
@@ -24,12 +24,24 @@ public class PlayerStats : Stats
     {
         healtBar.SetMaxHealth(maxHealth);
 
-        healtBar.SetHealth(currentHealth);
+        healtBar.SetHealth(curentHealth);
 
-        text.text = $"{currentHealth}/{maxHealth}";
+        text.text = $"{curentHealth}/{maxHealth}";
 
-        if(currentHealth > maxHealth)
-            currentHealth = maxHealth;
+        if(curentHealth > maxHealth)
+            curentHealth = maxHealth;
+    }
+
+    public void LoadData(GameData data)
+    {
+        maxHealth = data.maxHealth;
+        curentHealth = data.curentHealth;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.maxHealth = maxHealth;
+        data.curentHealth = curentHealth;
     }
 
     public override void DecreaseHealth(float amount)
@@ -49,7 +61,7 @@ public class PlayerStats : Stats
         if (player.canStealLife)
         {
             maxHealth += amount;
-            currentHealth += amount;
+            curentHealth += amount;
         }
     }
 

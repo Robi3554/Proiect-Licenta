@@ -10,9 +10,6 @@ public class PlayerData : ScriptableObject
 {
     public bool statsWontGoDown;
 
-    public float maxHealth = 150f;
-    public float currentHealth = 150f;
-
     [Header("Move State")]
     public float moveVelocity = 10f;
 

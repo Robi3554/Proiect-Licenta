@@ -13,15 +13,9 @@ public class PlayerStats : Stats
     [SerializeField]
     private TextMeshProUGUI text;
 
-    [SerializeField]
-    private PlayerData playerData;
-
     protected override void Awake()
     {
         base.Awake();
-
-        maxHealth = playerData.maxHealth;
-        currentHealth = playerData.currentHealth;
 
         StartCoroutine(CheckEnemies());
     }
@@ -33,9 +27,6 @@ public class PlayerStats : Stats
         healtBar.SetHealth(currentHealth);
 
         text.text = $"{currentHealth}/{maxHealth}";
-
-        playerData.maxHealth = maxHealth;
-        playerData.currentHealth = currentHealth;
 
         if(currentHealth > maxHealth)
             currentHealth = maxHealth;

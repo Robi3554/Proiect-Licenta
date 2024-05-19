@@ -37,8 +37,6 @@ public class Player : MonoBehaviour
     public BoxCollider2D moveCollider { get; private set; }
 
     public PlayerInventory inventory { get; private set; }
-
-    public GameObject startPosition;
     #endregion
 
     #region Other Variables
@@ -86,10 +84,6 @@ public class Player : MonoBehaviour
         inventory = GetComponent<PlayerInventory>();
 
         dashDirectionIndicator = transform.Find("DashDirectionIndicator");
-
-        startPosition = GameObject.Find("Respawn Point");
-
-        transform.position = startPosition.transform.position;
 
         primaryAttackState.SetWeapon(inventory.weapons[(int)CombatInputs.primary]);
 

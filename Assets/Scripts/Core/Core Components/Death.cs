@@ -46,6 +46,20 @@ public class Death : CoreComponent
             IncreaseHealth?.Invoke(1f);
 
             PointIncrease?.Invoke(data.pointsToIncrease);
+
+            Entity enemy = GetComponentInParent<Entity>();
+
+            if(enemy.es != null)
+            {
+                Transform current = transform;
+
+                while(current.parent != null)
+                {
+                    current = current.parent;
+                }
+
+                enemy.es.EnemyDestroyed(current.gameObject);
+            }
         }
 
         if (gameObject.CompareTag("Player"))

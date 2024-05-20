@@ -28,6 +28,9 @@ public class Entity : MonoBehaviour
         ledgeCheck,
         playerCheck;
 
+    [SerializeField]
+    internal EnemySpawner es;
+
     private Vector2 velocityWorkspace;
 
     private float lastDamageTime;
@@ -107,6 +110,14 @@ public class Entity : MonoBehaviour
             Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.closeRangeActionDistance), 0.2f);
             Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.minAggroRange), 0.2f);
             Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.maxAggroRange), 0.2f);
+        }
+    }
+
+    public void OnDestroy()
+    {
+        if(es != null)
+        {
+            es.EnemyDestroyed(gameObject);
         }
     }
 }

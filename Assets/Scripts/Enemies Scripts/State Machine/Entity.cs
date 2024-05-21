@@ -112,12 +112,4 @@ public class Entity : MonoBehaviour
             Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.maxAggroRange), 0.2f);
         }
     }
-
-    public void OnDestroy()
-    {
-        if(es != null)
-        {
-            es.EnemyDestroyed(gameObject);
-        }
-    }
 }

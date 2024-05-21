@@ -2152,6 +2152,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6704141655442973883, guid: ff019e6b8df2cc247b394b7f51fe6468, type: 3}
+      propertyPath: id
+      value: a714a464-c0e7-493a-949d-66ba597576cf
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff019e6b8df2cc247b394b7f51fe6468, type: 3}
 --- !u!114 &1380859997 stripped
@@ -2638,9 +2642,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2795756375964527705, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
+      propertyPath: id
+      value: 66d626aa-8e26-4a1e-9020-b3ff4db23b3b
+      objectReference: {fileID: 0}
     - target: {fileID: 2795756375964527710, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
       propertyPath: m_Name
       value: PowerUpSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795756375964527710, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
+      propertyPath: m_TagString
+      value: Spawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
@@ -2738,13 +2750,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2795756375964527705, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
+      propertyPath: id
+      value: 07f9d8a9-d101-481e-b7b3-4d1192786981
+      objectReference: {fileID: 0}
     - target: {fileID: 2795756375964527710, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
       propertyPath: m_Name
       value: PowerUpSpawner (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2795756375964527710, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
       propertyPath: m_TagString
-      value: PowerUp
+      value: Spawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
@@ -3063,6 +3079,14 @@ PrefabInstance:
     - target: {fileID: 129867218968939746, guid: 509c38b6f1017ba45a390b7ce60d1328, type: 3}
       propertyPath: useEncryption
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129867218968939746, guid: 509c38b6f1017ba45a390b7ce60d1328, type: 3}
+      propertyPath: disableDataPersistence
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129867218968939746, guid: 509c38b6f1017ba45a390b7ce60d1328, type: 3}
+      propertyPath: overrideSelectedProfileID
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 129867218968939748, guid: 509c38b6f1017ba45a390b7ce60d1328, type: 3}
       propertyPath: m_Name

@@ -44,12 +44,16 @@ public class PowerUp : MonoBehaviour
 
     private InventoryManager inventoryManager;
 
-    public bool isSubscribed = false;
+    [SerializeField]
+    internal SpawnPowerUps sp;
 
     public PowerUpList list;
 
     public delegate void PowerUpPoints(int ammount);
     public event PowerUpPoints PowerUpIncrease;
+
+    public bool isSubscribed = false;
+
 
     private void Awake()
     {
@@ -90,9 +94,15 @@ public class PowerUp : MonoBehaviour
             Instantiate(pickupEffect, transform.position, transform.rotation);
             powerupEffect.ApplyEffect(col.gameObject);
             inventoryManager.AddPowerUp(powerUpName, sprite, powerUpDescription);
+
             if(isUnique)
                 RemoveFromList(gameObject);
+
             PowerUpIncrease?.Invoke(points);
+
+            if (sp != null)
+                sp.PowerUpTaken(gameObject);
+
             Destroy(gameObject);
             DestroyOtherPowerUps();
         }

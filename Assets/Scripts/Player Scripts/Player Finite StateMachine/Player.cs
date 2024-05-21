@@ -125,7 +125,7 @@ public class Player : MonoBehaviour, IDataPersistence
         transform.position = data.playerPos;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.playerPos = transform.position;
     }

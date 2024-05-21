@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SpawnPowerUps : MonoBehaviour
+public class SpawnPowerUps : AllSpawner, IDataPersistence
 {
     protected GameManager manager;
 
@@ -15,6 +15,11 @@ public class SpawnPowerUps : MonoBehaviour
     public PowerUpList rareList;
     public PowerUpList legendaryList;
 
+    [Header("For SaveData")]
+    [SerializeField]
+    private List<GameObject> spawnedPowerups = new List<GameObject>();
+    private bool isTaken;
+
     void Awake()
     {
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -22,31 +27,55 @@ public class SpawnPowerUps : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
     }
 
-    protected virtual void SpawnCommonPowerUp(int index, int n)
+    protected virtual void SpawnPowerUp(int index, int n, PowerUpList  list)
     {
-        if (index >= 0 && index < commonList.powerUps.Length)
+        if (index >= 0 && index <= legendaryList.powerUps.Length)
         {
-            GameObject prefab = commonList.powerUps[index];
-            Instantiate(prefab, positions[n].transform.position, Quaternion.identity);
+            GameObject prefab = list.powerUps[index];
+            GameObject powerup = Instantiate(prefab, positions[n].transform.position, Quaternion.identity);
+            PowerUp power = powerup.GetComponent<PowerUp>();
+
+            if (power != null)
+            {
+                power.sp = this;
+                spawnedPowerups.Add(powerup);
+                Debug.Log($"Spawned object added: {powerup.name}, InstanceID: {powerup.GetInstanceID()}");
+            }
         }
     }
 
-    protected virtual void SpawnRarePowerUp(int index, int n)
+    public virtual void PowerUpTaken(GameObject takenPower)
     {
-        if (index >= 0 && index < rareList.powerUps.Length)
+        if (spawnedPowerups.Contains(takenPower))
         {
-            GameObject prefab = rareList.powerUps[index];
-            Instantiate(prefab, positions[n].transform.position, Quaternion.identity);
+            spawnedPowerups.Remove(takenPower);
+            isTaken = true;
+            Debug.Log($"Spawned object destroyed and removed from the list: {takenPower.name}, InstanceID: {takenPower.GetInstanceID()}");
+        }
+        
+        else
+        {
+            Debug.Log($"Failed to find the destroyed object in the list: {takenPower.name}, InstanceID: {takenPower.GetInstanceID()}");
         }
     }
 
-    protected virtual void SpawnLegendaryPowerUp(int index, int n)
+    public void LoadData(GameData data)
     {
-        if (index >= 0 && index < legendaryList.powerUps.Length)
+        data.powerupsTaken.TryGetValue(id, out isTaken);
+        if(isTaken)
         {
-            GameObject prefab = legendaryList.powerUps[index];
-            Instantiate(prefab, positions[n].transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
         }
+    }
+
+    public void SaveData(GameData data)
+    {
+        if (data.powerupsTaken.ContainsKey(id))
+        {
+            data.powerupsTaken.Remove(id);
+        }
+
+        data.powerupsTaken.Add(id, isTaken);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D col)
@@ -71,8 +100,7 @@ public class SpawnPowerUps : MonoBehaviour
                     alreadyChosen[i] = randInt;
 
                     Debug.Log("Common");
-                    SpawnCommonPowerUp(randInt, i);
-
+                    SpawnPowerUp(randInt, i, commonList);
                 }
                 else if (chance <= 80)
                 {
@@ -84,8 +112,7 @@ public class SpawnPowerUps : MonoBehaviour
                     alreadyChosen[i] = randInt;
 
                     Debug.Log("Rare");
-                    SpawnRarePowerUp(randInt, i);
-
+                    SpawnPowerUp(randInt, i, rareList);
                 }
                 else if (chance <= 100)
                 {
@@ -97,10 +124,8 @@ public class SpawnPowerUps : MonoBehaviour
                     alreadyChosen[i] = randInt;
 
                     Debug.Log("Legendary");
-                    SpawnLegendaryPowerUp(randInt, i);
-
+                    SpawnPowerUp(randInt, i, legendaryList);
                 }
-
             }
 
             bc.enabled = false;

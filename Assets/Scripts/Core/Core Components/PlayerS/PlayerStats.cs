@@ -38,7 +38,7 @@ public class PlayerStats : Stats, IDataPersistence
         curentHealth = data.curentHealth;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.maxHealth = maxHealth;
         data.curentHealth = curentHealth;

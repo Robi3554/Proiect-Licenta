@@ -2,17 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour, IDataPersistence
+public class EnemySpawner : AllSpawner, IDataPersistence
 {
-    [SerializeField]
-    private string id;
-
-    [ContextMenu("Generate id")]
-    private void GenerateId()
-    {
-        id = System.Guid.NewGuid().ToString();
-    }
-
     private BoxCollider2D bc;
 
     [SerializeField]
@@ -55,7 +46,6 @@ public class EnemySpawner : MonoBehaviour, IDataPersistence
 
     public void EnemyDestroyed(GameObject destroyedEnemy)
     {
-        Debug.Log("EnemyIsSomewhere");
         if(spawnedEnemies.Contains(destroyedEnemy))
         {
             spawnedEnemies.Remove(destroyedEnemy);
@@ -77,7 +67,7 @@ public class EnemySpawner : MonoBehaviour, IDataPersistence
         }
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         if (data.enemiesDefeated.ContainsKey(id))
         {
@@ -92,7 +82,6 @@ public class EnemySpawner : MonoBehaviour, IDataPersistence
         if (col.CompareTag("Player"))
         {
             SpawnRandomEnemy();
-            //gameObject.SetActive(false);
         }
     }
 

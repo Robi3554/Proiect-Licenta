@@ -102,7 +102,7 @@ public class DataPersistenceManager : MonoBehaviour
 
         foreach (IDataPersistence dataPersistence in dataPersistances)
         {
-            dataPersistence.SaveData(ref gameData);
+            dataPersistence.SaveData(gameData);
         }
 
         gameData.lastUpdated = System.DateTime.Now.ToBinary();

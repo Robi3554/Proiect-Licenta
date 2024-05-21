@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4516622555982625181}
   m_Layer: 0
   m_Name: PowerUpSpawner
-  m_TagString: PowerUp
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd4a57d9753870498439f2b9ed545d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   positions:
   - {fileID: 2795756375948781710}
   - {fileID: 2795756377358328590}
@@ -86,6 +87,7 @@ MonoBehaviour:
   commonList: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
   rareList: {fileID: 11400000, guid: 91770742b13431c44a7e42cfae562ebe, type: 2}
   legendaryList: {fileID: 11400000, guid: a5c85f2a1a69ba04ca0d39c54ece1231, type: 2}
+  spawnedPowerups: []
 --- !u!61 &4516622555982625181
 BoxCollider2D:
   m_ObjectHideFlags: 0

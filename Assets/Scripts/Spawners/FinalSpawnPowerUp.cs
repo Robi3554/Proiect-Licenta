@@ -30,7 +30,7 @@ public class FinalSpawnPowerUp : SpawnPowerUps
 
                     count++;
                     Debug.Log("Legendary");
-                    SpawnLegendaryPowerUp(randInt, i);
+                    SpawnPowerUp(randInt, i, legendaryList);
                 }
                 else if (chance <= 40)
                 {
@@ -42,7 +42,7 @@ public class FinalSpawnPowerUp : SpawnPowerUps
                     alreadyChosen[i] = randInt;
 
                     Debug.Log("Common");
-                    SpawnCommonPowerUp(randInt, i);
+                    SpawnPowerUp(randInt, i, commonList);
                 }
                 else if (chance <= 80)
                 {
@@ -54,7 +54,7 @@ public class FinalSpawnPowerUp : SpawnPowerUps
                     alreadyChosen[i] = randInt;
 
                     Debug.Log("Rare");
-                    SpawnRarePowerUp(randInt, i);
+                    SpawnPowerUp(randInt, i, rareList);
                 }
                 else if (chance <= 100)
                 {
@@ -66,7 +66,7 @@ public class FinalSpawnPowerUp : SpawnPowerUps
                     alreadyChosen[i] = randInt;
 
                     Debug.Log("Legendary");
-                    SpawnLegendaryPowerUp(randInt, i);
+                    SpawnPowerUp(randInt, i, legendaryList);
                 }
             }
 

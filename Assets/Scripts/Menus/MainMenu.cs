@@ -3,25 +3,70 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : Menu
 {
-    public void StartGame()
+    [SerializeField]
+    private Button 
+        newGame,
+        continueGame,
+        loadGame,
+        options,
+        quit;
+
+    [SerializeField]
+    private SaveSlotsMenu saveSlotsMenu;
+
+    private void Start()
     {
-        SceneManager.LoadScene("GameScene");
+        if (!DataPersistenceManager.Instance.HasGameData())
+        {
+            continueGame.interactable = false;
+            loadGame.interactable = false;
+        }
+    }
+
+    public void NewGame()
+    {
+        saveSlotsMenu.ActivateMenu(false);
+        DeactivateMenu();
+    }
+
+    public void LoadGame()
+    {
+        saveSlotsMenu.ActivateMenu(true);
+        DeactivateMenu();
+    }
+
+    public void Continue()
+    {
+        DisableButtons();
+        SceneManager.LoadSceneAsync("Level1");
+    }
+
+    private void DisableButtons()
+    {
+        newGame.interactable = false;
+        continueGame.interactable = false;
+        loadGame.interactable = false;
+        options.interactable = false;
+        quit.interactable = false;
+    }
+
+    public void ActivateMenu()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void DeactivateMenu()
+    {
+        gameObject.SetActive(false);
     }
 
     public void QuitToDesktop()
     {
-        //if (Application.isEditor)
-        //{
-        //    UnityEditor.EditorApplication.isPlaying = false;
-        //}
-        //else
-        //{
-        //    Application.Quit();
-        //}
-
+        DisableButtons();
         Application.Quit();
     }
 }

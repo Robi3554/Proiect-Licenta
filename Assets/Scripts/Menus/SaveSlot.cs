@@ -15,13 +15,17 @@ public class SaveSlot : MonoBehaviour
     private GameObject noDataContent;
     [SerializeField]
     private GameObject hasDataContent;
-
     [SerializeField]
     private TextMeshProUGUI percentageText;
     [SerializeField]
     private TextMeshProUGUI currentHealthText;
 
+    [SerializeField]
+    private Button clearButton;
+
     private Button saveSlotButton;
+
+    public bool HasData { get; private set; } = false; 
 
     private void Awake()
     {
@@ -32,20 +36,24 @@ public class SaveSlot : MonoBehaviour
     {
         if(data == null)
         {
+            HasData = false;
             noDataContent.SetActive(true);
             hasDataContent.SetActive(false);
+            clearButton.gameObject.SetActive(false);
         }
         else
         {
+            HasData = true;
             noDataContent.SetActive(false);
             hasDataContent.SetActive(true);
+            clearButton.gameObject.SetActive(true);
 
             percentageText.text = data.GetPercentageComplete() + "% COMPLETE";
             currentHealthText.text = "Current Health : " + data.curentHealth;
         }
     }
 
-    public string GetProfileId()
+    public string GetProfileID()
     {
         return profileID;
     }
@@ -53,5 +61,6 @@ public class SaveSlot : MonoBehaviour
     public void SetInteractable(bool interactable)
     {
         saveSlotButton.interactable = interactable;
+        clearButton.interactable = interactable;
     }
 }

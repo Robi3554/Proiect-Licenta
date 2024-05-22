@@ -132,6 +132,30 @@ public class FileDataHandler
         return profileDictionary;
     }
 
+    public void Delete(string profileID)
+    {
+        if (profileID == null)
+            return;
+
+        string fullpath = Path.Combine(dataDirPath, profileID, dataFilePath);
+
+        try
+        {
+            if (File.Exists(fullpath))
+            {
+                Directory.Delete(Path.GetDirectoryName(fullpath), true);
+            }
+            else
+            {
+                Debug.LogWarning("Data to delete wasn't found in " + fullpath);
+            }
+        }
+        catch(Exception e)
+        {
+            Debug.LogError("Failed to delete data for ID : " + profileID + " in : " + fullpath + "\n" + e);
+        }
+    }
+
     private string EncryptDecrypt(string data)
     {
         string modifiedData = "";

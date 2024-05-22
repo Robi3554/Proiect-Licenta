@@ -50,30 +50,18 @@ public class DataPersistenceManager : MonoBehaviour
 
         fileDataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
 
-        selectedProfileID = fileDataHandler.GetMostRecentlyUpdatedProfileID();
-
-        if (overrideSelectedProfileID)
-        {
-            selectedProfileID = testSelectedID;
-            Debug.LogWarning("ID is overriden");
-        }
+        InitializeSelectedProfileID();
     }
 
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         dataPersistances = FindAllDataPersistences();
         LoadGame();
-    }
-
-    public void OnSceneUnloaded(Scene scene)
-    {
-        SaveGame();
     }
 
     public void ChangeSelectedProfileID(string newProfileID)
@@ -136,9 +124,29 @@ public class DataPersistenceManager : MonoBehaviour
         }
     }
 
+    public void DeleteProfileData(string profileID)
+    {
+        fileDataHandler.Delete(profileID);
+
+        InitializeSelectedProfileID();
+
+        LoadGame();
+    }
+
+    public void InitializeSelectedProfileID()
+    {
+        selectedProfileID = fileDataHandler.GetMostRecentlyUpdatedProfileID();
+
+        if (overrideSelectedProfileID)
+        {
+            selectedProfileID = testSelectedID;
+            Debug.LogWarning("ID is overriden");
+        }
+    }
+
     private List<IDataPersistence> FindAllDataPersistences()
     {
-        IEnumerable<IDataPersistence> dataPersistences = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
+        IEnumerable<IDataPersistence> dataPersistences = FindObjectsOfType<MonoBehaviour>(true).OfType<IDataPersistence>();
 
         return new List<IDataPersistence>(dataPersistences);
     }
@@ -148,10 +156,7 @@ public class DataPersistenceManager : MonoBehaviour
         return fileDataHandler.LoadAllProfiles();
     }
 
-    public bool HasGameData()
-    {
-        return gameData != null;
-    }
+    public bool HasGameData() => gameData != null;
 
     private void OnApplicationQuit()
     {
@@ -161,6 +166,5 @@ public class DataPersistenceManager : MonoBehaviour
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 }

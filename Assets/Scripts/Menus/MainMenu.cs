@@ -20,6 +20,11 @@ public class MainMenu : Menu
 
     private void Start()
     {
+        DisableButtonsDependingOnData();
+    }
+
+    private void DisableButtonsDependingOnData()
+    {
         if (!DataPersistenceManager.Instance.HasGameData())
         {
             continueGame.interactable = false;
@@ -42,6 +47,9 @@ public class MainMenu : Menu
     public void Continue()
     {
         DisableButtons();
+
+        DataPersistenceManager.Instance.SaveGame();
+
         SceneManager.LoadSceneAsync("Level1");
     }
 
@@ -57,6 +65,7 @@ public class MainMenu : Menu
     public void ActivateMenu()
     {
         gameObject.SetActive(true);
+        DisableButtonsDependingOnData();
     }
 
     public void DeactivateMenu()

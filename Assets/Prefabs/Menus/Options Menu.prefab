@@ -2544,6 +2544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cbd809fe11e494eaa62da49a49e96d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstSelected: {fileID: 5364319033869685439}
   am: {fileID: 24100000, guid: b8f84e0d07972e642989aecbe6f9ea5d, type: 2}
   resDD: {fileID: 5364319032552032582}
 --- !u!1 &5364319032812607237

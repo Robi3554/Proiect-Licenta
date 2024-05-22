@@ -16,6 +16,8 @@ public class GameData
 
     public SerializableDictionary<string, bool> powerupsTaken;
 
+    public PlayerSOData soData;
+
     public GameData()
     {
         maxHealth = 150f;
@@ -26,6 +28,8 @@ public class GameData
         enemiesDefeated = new SerializableDictionary<string, bool>();
 
         powerupsTaken = new SerializableDictionary<string, bool>();
+
+        soData = new PlayerSOData();
     }
 
     public int GetPercentageComplete()

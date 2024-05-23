@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 2795756375964527704}
   - component: {fileID: 2795756375964527705}
   - component: {fileID: 4516622555982625181}
+  - component: {fileID: 1752448931}
   m_Layer: 0
   m_Name: PowerUpSpawner
   m_TagString: Spawner
@@ -79,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd4a57d9753870498439f2b9ed545d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 
+  id: 07f9d8a9-d101-481e-b7b3-4d1192786981
   positions:
   - {fileID: 2795756375948781710}
   - {fileID: 2795756377358328590}
@@ -114,6 +115,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 30.90387, y: 7.471347}
   m_EdgeRadius: 0
+--- !u!114 &1752448931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795756375964527710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -330107561
+      Data2: 1086874581
+      Data3: -366878569
+      Data4: -910210083
+    Path: event:/SFX/Powerup/PowerupApproach
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 7
+  OverrideMaxDistance: 22
 --- !u!1 &2795756377197270840
 GameObject:
   m_ObjectHideFlags: 0

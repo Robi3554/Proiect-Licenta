@@ -12,6 +12,8 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Powerup Pickup")]
     [field: SerializeField]
     public EventReference pickup { get; private set; }
+    [field: SerializeField]
+    public EventReference approach { get; private set; }
 
     public static FMODEvents Instance { get; private set; }
 

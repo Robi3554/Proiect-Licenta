@@ -1220,14 +1220,21 @@ MonoBehaviour:
       Data2: 1229593414
       Data3: 203503519
       Data4: -2101543450
-    Path: event:/PlayerFootsteps
+    Path: event:/SFX/Player/PlayerFootsteps
   <pickup>k__BackingField:
     Guid:
       Data1: 513621058
       Data2: 1226757549
       Data3: 409087375
       Data4: 1918227484
-    Path: event:/PowerupTaken
+    Path: event:/SFX/Powerup/PowerupTaken
+  <approach>k__BackingField:
+    Guid:
+      Data1: -330107561
+      Data2: 1086874581
+      Data3: -366878569
+      Data4: -910210083
+    Path: event:/SFX/Powerup/PowerupApproach
 --- !u!1 &786980898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8706217526112706001, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
@@ -2854,17 +2861,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2795756375964527705, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
-      propertyPath: id
-      value: 07f9d8a9-d101-481e-b7b3-4d1192786981
-      objectReference: {fileID: 0}
     - target: {fileID: 2795756375964527710, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
       propertyPath: m_Name
       value: PowerUpSpawner (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2795756375964527710, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}
-      propertyPath: m_TagString
-      value: Spawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbe30678da2a2ed47bec9dfb07e4e691, type: 3}

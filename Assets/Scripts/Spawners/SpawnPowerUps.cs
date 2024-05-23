@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using FMODUnity;
 
+[RequireComponent(typeof(StudioEventEmitter))]
 public class SpawnPowerUps : AllSpawner, IDataPersistence
 {
+    private StudioEventEmitter emitter;
+
     protected GameManager manager;
 
     protected BoxCollider2D bc;
@@ -25,6 +29,12 @@ public class SpawnPowerUps : AllSpawner, IDataPersistence
         manager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         bc = GetComponent<BoxCollider2D>();
+    }
+
+    private void Start()
+    {
+        emitter = AudioManager.Instance.InitializeEventEmitter(FMODEvents.Instance.approach, gameObject);
+        emitter.Play();
     }
 
     protected virtual void SpawnPowerUp(int index, int n, PowerUpList  list)
@@ -51,6 +61,7 @@ public class SpawnPowerUps : AllSpawner, IDataPersistence
             spawnedPowerups.Remove(takenPower);
             isTaken = true;
             Debug.Log($"Spawned object destroyed and removed from the list: {takenPower.name}, InstanceID: {takenPower.GetInstanceID()}");
+            emitter.Stop();
         }
         
         else

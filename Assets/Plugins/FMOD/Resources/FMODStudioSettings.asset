@@ -405,6 +405,8 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Ambience
+  - Level1
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264

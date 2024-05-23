@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2276494923198982460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2276494923198982461}
+  - component: {fileID: 2276494923198982458}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2276494923198982461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276494923198982460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2276494923715437419}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2276494923198982458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276494923198982460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a294b6ce12fd9e4d8ac1cb5a1048345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterVolume: 1
+  sfxVolume: 1
+  musicVolume: 1
+  ambienceVolume: 1
+--- !u!1 &2276494923715437418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2276494923715437419}
+  - component: {fileID: 2276494923715437416}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2276494923715437419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276494923715437418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2276494923198982461}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2276494923715437416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276494923715437418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955c77cf9fed45c41bd5dab2838beed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <wind>k__BackingField:
+    Guid:
+      Data1: -2087050423
+      Data2: 1100792956
+      Data3: -1004496759
+      Data4: -903938178
+    Path: event:/Ambience/Wind
+  <music>k__BackingField:
+    Guid:
+      Data1: -1600808927
+      Data2: 1199622840
+      Data3: 2126232968
+      Data4: -1111161509
+    Path: event:/Music/Level1Music
+  <playerWalk>k__BackingField:
+    Guid:
+      Data1: 276828979
+      Data2: 1229593414
+      Data3: 203503519
+      Data4: -2101543450
+    Path: event:/SFX/Player/PlayerFootsteps
+  <pickup>k__BackingField:
+    Guid:
+      Data1: 513621058
+      Data2: 1226757549
+      Data3: 409087375
+      Data4: 1918227484
+    Path: event:/SFX/Powerup/PowerupTaken
+  <approach>k__BackingField:
+    Guid:
+      Data1: -330107561
+      Data2: 1086874581
+      Data3: -366878569
+      Data4: -910210083
+    Path: event:/SFX/Powerup/PowerupApproach

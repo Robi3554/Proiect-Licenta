@@ -15,6 +15,8 @@ public class FileDataHandler
 
     private readonly string encryptionCode = "etniefntmoleiaiBrPnaToownlCep";
 
+    private readonly string backupExtension = ".bak";
+
     public FileDataHandler(string dataDirPath, string dataFilePath, bool useEncryption)
     {
         this.dataDirPath = dataDirPath;
@@ -22,7 +24,7 @@ public class FileDataHandler
         this.useEncryption = useEncryption;
     }
 
-    public GameData Load(string profileID)
+    public GameData Load(string profileID, bool allowRestoreFromBackup = true)
     {
         if(profileID == null)
         {
@@ -56,8 +58,19 @@ public class FileDataHandler
             }
             catch (Exception e)
             {
-
-                Debug.LogError("Error when loading from file : " + fullPath + "\n" + e);
+                if (allowRestoreFromBackup)
+                {
+                    Debug.LogWarning("Failde to load data! Attempting rool back! \n" + e);
+                    bool rollBackSuccess = AttemptRollback(fullPath);
+                    if (rollBackSuccess)
+                    {
+                        loadedData = Load(profileID, false);
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Tried to load file and backup did not work!\n" + e);
+                }
             }
         }
 
@@ -72,6 +85,7 @@ public class FileDataHandler
         }
 
         string fullPath = Path.Combine(dataDirPath, profileID, dataFilePath);
+        string backupFilePath = fullPath + backupExtension;
 
         try
         {
@@ -91,6 +105,18 @@ public class FileDataHandler
                     writer.Write(dataToStore);
                 }
             }
+
+            GameData verifiedGameData = Load(profileID);
+
+            if(verifiedGameData != null)
+            {
+                File.Copy(fullPath, backupFilePath, true);
+            }
+            else
+            {
+                throw new Exception("Save file could not be verified! Backup wasn't created!");
+            }
+
         }
         catch (Exception e)
         {
@@ -201,5 +227,32 @@ public class FileDataHandler
         }
 
         return mostRecentProfileID;
+    }
+
+    private bool AttemptRollback(string fullPath)
+    {
+        bool success = false;
+        string backupFilePath = fullPath + backupExtension;
+
+        try
+        {
+            if (File.Exists(backupFilePath))
+            {
+                File.Copy(backupFilePath, fullPath, true);
+                success = true;
+                Debug.LogWarning("Had to roll back backup data!");
+            }
+            else
+            {
+                throw new Exception("Tried to roll back, but no backup data found!");
+            }
+        }
+        catch (Exception e) 
+        {
+            Debug.LogError("Error occured when trying to roll back backup at : " + backupFilePath + "\n" + e);
+        }
+
+
+        return success;
     }
 }

@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using FMOD.Studio;
 
 public class Movement : CoreComponent
 {
+    protected CollisionSenses CollisionSenses { get => collisionSenses ??= core.GetCoreComponent<CollisionSenses>(); }
+
+    private CollisionSenses collisionSenses;
+
     public Rigidbody2D rb { get; private set; }
 
     private Vector2 workSpace;
@@ -14,6 +19,8 @@ public class Movement : CoreComponent
     public Vector2 currentVelocity { get; private set; }
 
     public bool canSetVelocity { get; set; }
+
+    private EventInstance playerWalk;
 
     protected override void Awake()
     {
@@ -26,6 +33,11 @@ public class Movement : CoreComponent
         canSetVelocity = true;
     }
 
+    protected void Start()
+    {
+        playerWalk = AudioManager.Instance.CreateEventInstance(FMODEvents.Instance.playerWalk);
+    }
+
     public override void LogicUpdate()
     {
         currentVelocity = rb.velocity;
@@ -35,6 +47,7 @@ public class Movement : CoreComponent
     public void SetVelocityZero()
     {
         workSpace = Vector2.zero;
+        UpdateSound();
         SetFinalVelocity();
     }
 
@@ -75,6 +88,8 @@ public class Movement : CoreComponent
         {
             rb.velocity = workSpace;
             currentVelocity = workSpace;
+
+            UpdateSound();
         }
     }
 
@@ -94,4 +109,25 @@ public class Movement : CoreComponent
     }
     #endregion
 
+    private void UpdateSound()
+    {
+        if (gameObject.CompareTag("Player"))
+        {
+            if (rb.velocity.x != 0 && CollisionSenses.Ground)
+            {
+                PLAYBACK_STATE playback_state;
+
+                playerWalk.getPlaybackState(out playback_state);
+
+                if (playback_state.Equals(PLAYBACK_STATE.STOPPED))
+                {
+                    playerWalk.start();
+                }
+            }
+            else
+            {
+                playerWalk.stop(STOP_MODE.ALLOWFADEOUT);
+            }
+        }   
+    }
 }

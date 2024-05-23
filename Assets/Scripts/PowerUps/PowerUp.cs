@@ -1,10 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
 public class PowerUp : MonoBehaviour
@@ -94,6 +90,8 @@ public class PowerUp : MonoBehaviour
             Instantiate(pickupEffect, transform.position, transform.rotation);
             powerupEffect.ApplyEffect(col.gameObject);
             inventoryManager.AddPowerUp(powerUpName, sprite, powerUpDescription);
+
+            AudioManager.Instance.OneShotSound(FMODEvents.Instance.pickup, transform.position);
 
             if(isUnique)
                 RemoveFromList(gameObject);

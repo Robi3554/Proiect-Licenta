@@ -99,6 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9593696879a1db246a065419ed1bb20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickup:
+    Guid:
+      Data1: 513621058
+      Data2: 1226757549
+      Data3: 409087375
+      Data4: 1918227484
+    Path: event:/PowerupTaken
   pickupEffect: {fileID: 2279182899409804110, guid: c7ae2e4a0e569d049a6d6f48e39c7fa0, type: 3}
   powerupEffect: {fileID: 11400000, guid: 3b40c4ebf4f31ef45ab81ea0ca80074a, type: 2}
   infoBox: {fileID: 1700054940907397647}
@@ -110,8 +117,9 @@ MonoBehaviour:
   isFireElement: 0
   isIceElement: 0
   points: 0
-  isSubscribed: 0
+  sp: {fileID: 0}
   list: {fileID: 11400000, guid: 91770742b13431c44a7e42cfae562ebe, type: 2}
+  isSubscribed: 0
 --- !u!61 &1700054940851777504
 BoxCollider2D:
   m_ObjectHideFlags: 0

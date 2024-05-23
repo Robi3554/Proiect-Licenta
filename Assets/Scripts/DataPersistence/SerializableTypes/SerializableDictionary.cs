@@ -24,14 +24,14 @@ public class SerializableDictionary<Tkey, TValue> : Dictionary<Tkey, TValue>, IS
 
     public void OnAfterDeserialize()
     {
-        this.Clear();
+        Clear();
 
         if(keys.Count != values.Count)
             Debug.Log("Number of keys : " + keys.Count + "isn't equal to number of values : " + values.Count);
 
         for(int i = 0; i < keys.Count; i++)
         {
-            this.Add(keys[i], values[i]);
+            Add(keys[i], values[i]);
         }
     }
 }

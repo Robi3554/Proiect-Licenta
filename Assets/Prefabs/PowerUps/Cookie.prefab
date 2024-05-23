@@ -395,6 +395,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9593696879a1db246a065419ed1bb20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickup:
+    Guid:
+      Data1: 513621058
+      Data2: 1226757549
+      Data3: 409087375
+      Data4: 1918227484
+    Path: event:/PowerupTaken
   pickupEffect: {fileID: 2279182899409804110, guid: c7ae2e4a0e569d049a6d6f48e39c7fa0, type: 3}
   powerupEffect: {fileID: 11400000, guid: d4608f56abb96494e9a191e0440c032d, type: 2}
   infoBox: {fileID: 6946499665223713360}
@@ -406,5 +413,6 @@ MonoBehaviour:
   isFireElement: 0
   isIceElement: 0
   points: 0
-  isSubscribed: 0
+  sp: {fileID: 0}
   list: {fileID: 11400000, guid: 10736829d534ad245a250f2437363ec4, type: 2}
+  isSubscribed: 0

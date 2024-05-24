@@ -50,7 +50,9 @@ public class MainMenu : Menu
 
         DataPersistenceManager.Instance.SaveGame();
 
-        SceneManager.LoadSceneAsync("Level1");
+        //SceneManager.LoadSceneAsync("Level1");
+
+        LevelManager.Instance.LoadScene("Level1", "CircleWipe");
     }
 
     private void DisableButtons()

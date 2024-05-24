@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: BW_PlayerDetectedData
   m_EditorClassIdentifier: 
   longRangeActionTime: 1.5
+  timeInState: 0.5

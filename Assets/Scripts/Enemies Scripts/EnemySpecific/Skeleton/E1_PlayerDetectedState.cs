@@ -6,6 +6,8 @@ public class E1_PlayerDetectedState : PlayerDetectedState
 {
     private Skeleton skele;
 
+    private SkeleCombat combat;
+
     public E1_PlayerDetectedState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_PlayerDetected stateData, Skeleton skele) : base(stateMachine, entity, animBoolName, stateData)
     {
         this.skele = skele;
@@ -19,22 +21,26 @@ public class E1_PlayerDetectedState : PlayerDetectedState
     public override void Enter()
     {
         base.Enter();
+
+        combat = skele.GetComponentInChildren<SkeleCombat>();
+        combat.shieldUp = true;
     }
 
     public override void Exit()
     {
         base.Exit();
+        combat.shieldUp = false;
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
 
-        if (performCloseRangeAction)
+        if (performCloseRangeAction && isShieldUpOver)
         {
             stateMachine.ChangeState(skele.meleeAttackState);
         }
-        else if (performLongRangeAction)
+        else if (performLongRangeAction && isShieldUpOver)
         {
             stateMachine.ChangeState(skele.chargeState);
         }

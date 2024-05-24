@@ -4,29 +4,34 @@ using UnityEngine;
 
 public class SkeleCombat : Combat
 {
-    [SerializeField]
-    private Skeleton skele;
+    internal bool shieldUp = false;
 
     protected override void Awake()
     {
-        skele = GetComponentInParent<Skeleton>();
-
-        if(skele != null)
-        {
-            Debug.Log("Skeleton Component Present");
-        }
+        base.Awake();
     }
 
     public override void Damage(float amount)
     {
-        if(skele.stateMachine.GetCurrentStateAsString().CompareTo("playerDetectedState") != 0)
+        if(!shieldUp)
         {
             base.Damage(amount);
         }
         else
         {
-            Debug.Log("Player Hit Blocked!");
-            Stats?.DecreaseHealth(0);
+            Debug.Log("No Damage!");
+        }
+    }
+
+    public override void Knockback(Vector2 angle, float strength, int direction)
+    {
+        if (!shieldUp)
+        {
+            base.Knockback(angle, strength, direction);
+        }
+        else
+        {
+            Debug.Log("No Knockback!");
         }
     }
 }

@@ -18,6 +18,7 @@ public class PlayerDetectedState : State
     protected bool performCloseRangeAction;
     protected bool isDetectingLedge;
     protected bool isDetectingLedgeP;
+    protected bool isShieldUpOver;
 
     public PlayerDetectedState(FiniteStateMachine stateMachine, Entity entity, string animBoolName, D_PlayerDetected stateData) : base(stateMachine, entity, animBoolName)
     {
@@ -41,6 +42,7 @@ public class PlayerDetectedState : State
         base.Enter();
 
         performLongRangeAction = false;
+        isShieldUpOver = false;
 
         Movement?.SetVelocityX(0f);
     }
@@ -59,6 +61,11 @@ public class PlayerDetectedState : State
         if (Time.time >= startTime + stateData.longRangeActionTime)
         {
             performLongRangeAction = true;
+        }
+
+        if (Time.time >= startTime + stateData.timeInState)
+        {
+            isShieldUpOver = true;
         }
     }
 

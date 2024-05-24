@@ -461,7 +461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6580390149310666636}
   - component: {fileID: 6580390149310666637}
-  - component: {fileID: 9054690626214782717}
+  - component: {fileID: 7411404753476726089}
   m_Layer: 7
   m_Name: Combat
   m_TagString: Enemy
@@ -510,7 +510,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4062934, y: 0.92188084}
   m_EdgeRadius: 0
---- !u!114 &9054690626214782717
+--- !u!114 &7411404753476726089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6580390149310666639}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1ea00bab8100648b881871216a52ee, type: 3}
+  m_Script: {fileID: 11500000, guid: b887258490974864399f89534a503882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageParticles: {fileID: 4864720342384672610, guid: 7c97a36c1b2206f45934c3dc3a97736f, type: 3}
@@ -714,6 +714,7 @@ MonoBehaviour:
   wallCheck: {fileID: 6580390148647059042}
   ledgeCheck: {fileID: 6580390147678873499}
   playerCheck: {fileID: 6580390149383263645}
+  es: {fileID: 0}
   idleStateData: {fileID: 11400000, guid: a857d1ddb6d98e7439b91bd178f75926, type: 2}
   moveStateData: {fileID: 11400000, guid: 87b3a589aaf7e0344b4fab5da585a337, type: 2}
   playerDetectedData: {fileID: 11400000, guid: b461aa601e662e74283dc4cc97f63a60, type: 2}

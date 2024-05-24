@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: E2_PlayerDetectedStateData
   m_EditorClassIdentifier: 
   longRangeActionTime: 1
+  timeInState: 0

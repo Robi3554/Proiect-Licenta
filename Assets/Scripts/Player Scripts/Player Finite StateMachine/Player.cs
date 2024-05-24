@@ -120,7 +120,7 @@ public class Player : MonoBehaviour, IDataPersistence
         }
     }
 
-    public void LoadData(GameData data)
+    public virtual void LoadData(GameData data)
     {
         transform.position = data.playerPos;
 
@@ -139,7 +139,7 @@ public class Player : MonoBehaviour, IDataPersistence
         playerData.slowAmmount = data.soData.slowAmmount;
     }
 
-    public void SaveData(GameData data)
+    public virtual void SaveData(GameData data)
     {
         data.playerPos = transform.position;
 

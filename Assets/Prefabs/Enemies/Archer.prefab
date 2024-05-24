@@ -314,6 +314,7 @@ MonoBehaviour:
   wallCheck: {fileID: 3895333817886704155}
   ledgeCheck: {fileID: 3895333819147681794}
   playerCheck: {fileID: 3895333818966273343}
+  es: {fileID: 0}
   moveStateData: {fileID: 11400000, guid: ce6100151266515499d211831dde360a, type: 2}
   idleStateData: {fileID: 11400000, guid: 01bb3668196a9f3428678020aa12bda4, type: 2}
   playerDetectedData: {fileID: 11400000, guid: 20a7fc5297369124ab43b9dca71e3320, type: 2}
@@ -389,7 +390,7 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: 01be5ed47eec44c4dbd7753d48024972, type: 2}
   moveData: {fileID: 11400000, guid: ce6100151266515499d211831dde360a, type: 2}
   maxHealth: 100
-  canBurn: 0
+  canBurn: 1
   canBeSlowed: 1
 --- !u!1 &3895333818495057114
 GameObject:

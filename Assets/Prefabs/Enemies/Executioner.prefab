@@ -203,6 +203,7 @@ MonoBehaviour:
   wallCheck: {fileID: 6685853113652901305}
   ledgeCheck: {fileID: 6685853113865158042}
   playerCheck: {fileID: 6685853112571429405}
+  es: {fileID: 0}
   idleStateData: {fileID: 11400000, guid: 26b1444d8184c974aae2a33a8c83d225, type: 2}
   spawnStateData: {fileID: 11400000, guid: 1b15144d3c32df24ea714c14af8f1d8a, type: 2}
   attackStateData: {fileID: 11400000, guid: a10b6961e6a158b4aa59106097b59116, type: 2}
@@ -813,5 +814,5 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: 7c2a0a63349507040ada5bc4faf5e026, type: 2}
   moveData: {fileID: 11400000, guid: ed3f92e780789fd4ab616267ee47b7ae, type: 2}
   maxHealth: 300
-  canBurn: 0
+  canBurn: 1
   canBeSlowed: 1

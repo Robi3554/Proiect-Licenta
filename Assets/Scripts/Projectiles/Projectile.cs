@@ -14,6 +14,7 @@ public class Projectile : MonoBehaviour
 
     private bool isGravityOn;
     private bool hasHitGround;
+    private bool hasHitPlatform;
 
     private Rigidbody2D rb;
 
@@ -25,6 +26,7 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private LayerMask
         whatIsGround,
+        whatIsPlatform,
         whatIsPlayer;
     [SerializeField]
     private Transform damagePos;
@@ -43,7 +45,7 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        if (!hasHitGround)
+        if (!hasHitGround || !hasHitPlatform)
         {
 
             if (isGravityOn)
@@ -56,16 +58,19 @@ public class Projectile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!hasHitGround)
+        if (!hasHitGround || !hasHitPlatform)
         {
             Collider2D[] damageHit = Physics2D.OverlapCircleAll(damagePos.position, damageRadius, whatIsPlayer);
             Collider2D groundHit = Physics2D.OverlapCircle(damagePos.position, damageRadius, whatIsGround);
+            Collider2D platformHit = Physics2D.OverlapCircle(damagePos.position, damageRadius, whatIsPlatform);
 
-            if (groundHit)
+            if (groundHit || platformHit)
             {
                 hasHitGround = true;
+                hasHitPlatform = true;
                 rb.gravityScale = 0.0f;
                 rb.velocity = Vector2.zero;
+                Destroy(gameObject, 5);
             }
             else if (Mathf.Abs(xStartPos - transform.position.x) >= travelDistance && !isGravityOn)
             {

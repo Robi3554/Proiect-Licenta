@@ -10,16 +10,12 @@ public class CursedSword : PowerupEffect
 
     public PlayerData pData;
 
-    private int attackCounter = 0;
-
     public override void ApplyEffect(GameObject obj)
     {
         for (int i = 0; i < 3; i++)
         {
-            data.AttackDetails[attackCounter].damageAmount *= 2;
-            attackCounter++;
+            data.AttackDetails[i].damageAmount *= 2;
         }
-        attackCounter = 0;
 
         if(!pData.statsWontGoDown)
             obj.GetComponentInChildren<PlayerStats>().maxHealth = Mathf.Ceil(obj.GetComponentInChildren<PlayerStats>().maxHealth / 2); 

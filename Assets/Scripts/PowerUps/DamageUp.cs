@@ -11,15 +11,11 @@ public class DamageUp : PowerupEffect
     [SerializeField]
     private float ammount;
 
-    private int attackCounter = 0;
-
     public override void ApplyEffect(GameObject obj)
     {
         for (int i = 0; i < 3; i++)
         {
-            data.AttackDetails[attackCounter].damageAmount += ammount;
-            attackCounter++;
+            data.AttackDetails[i].damageAmount += ammount;
         }
-        attackCounter = 0;
     }
 }

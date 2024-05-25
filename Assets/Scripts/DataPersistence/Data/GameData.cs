@@ -10,6 +10,10 @@ public class GameData
     public float maxHealth;
     public float curentHealth;
 
+    public float[] damage = new float[3];
+    public float[] knockbackStrength = new float[3];
+    public Vector2[] knockbackAngle = new Vector2[3];
+
     public Vector3 playerPos;
 
     public bool canLightOnFire;
@@ -36,6 +40,18 @@ public class GameData
         canStealLife = false;
         canNegateHits = false;
         canShoot = false;
+
+        damage[0] = 10;
+        damage[1] = 15;
+        damage[2] = 20;
+
+        knockbackStrength[0] = 10;
+        knockbackStrength[1] = 15;
+        knockbackStrength[2] = 20;
+
+        knockbackAngle[0] = new Vector2(1, 2);
+        knockbackAngle[1] = new Vector2(1, 1);
+        knockbackAngle[2] = new Vector2(2, 2);
 
         playerPos = new Vector3(-227.58f, 9.16f, 0f);
 

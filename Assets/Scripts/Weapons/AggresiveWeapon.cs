@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using System.Linq;
 
-public class AggresiveWeapon : Weapon
+public class AggresiveWeapon : Weapon, IDataPersistence
 {
     protected AggresiveWeaponData agrresiveWeaponData;
     protected Movement Movement => movement ? movement : core.GetCoreComponent<Movement>();
@@ -29,7 +29,7 @@ public class AggresiveWeapon : Weapon
     {
         base.Awake();
 
-        if(weaponData.GetType() == typeof(AggresiveWeaponData))
+        if (weaponData.GetType() == typeof(AggresiveWeaponData))
         {
             agrresiveWeaponData = (AggresiveWeaponData)weaponData;
         }
@@ -132,5 +132,15 @@ public class AggresiveWeapon : Weapon
     private void OnTriggerExit2D(Collider2D collision)
     {
         RemoveFromDetected(collision);
+    }
+
+    public void LoadData(GameData data)
+    {
+        
+    }
+
+    public void SaveData(GameData data)
+    {
+        
     }
 }

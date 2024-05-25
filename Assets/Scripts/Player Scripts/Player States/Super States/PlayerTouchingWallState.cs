@@ -43,11 +43,6 @@ public class PlayerTouchingWallState : PlayerState
             isTouchingWall = CollisionSenses.WallFront;
             isTouchingLedge = CollisionSenses.LedgeHorizontal;
         }
-
-        //if(isTouchingLedge && !isTouchingLedge)
-        //{
-        //    player.ledgeClimbState.SetDetectedPosition(player.transform.position);
-        //}
     }
 
     public override void Enter()

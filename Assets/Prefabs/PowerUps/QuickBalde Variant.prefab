@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4064050762262583939
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1700054940851777505, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_Name
+      value: QuickBalde Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -150.83965
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.298925
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777509, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777510, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 587051915, guid: 61ae4aad8c13d0740b14c00b9468fc99, type: 3}
+    - target: {fileID: 1700054940851777511, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 587051915, guid: 61ae4aad8c13d0740b14c00b9468fc99, type: 3}
+    - target: {fileID: 1700054940851777511, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: powerUpName
+      value: Quick Blade
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054940851777511, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: powerupEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: 94d4ec08732b0444190c0bdd46d4db4e, type: 2}
+    - target: {fileID: 1700054940851777511, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: powerUpDescription
+      value: A quick blade that raises your attack speed, but lowers your damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054942123197021, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_fontSize
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700054942123197021, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.75
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 256bae9e58aa2a24488aba18e008047f, type: 3}

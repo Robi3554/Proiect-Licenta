@@ -39,6 +39,7 @@ public class PowerUp : MonoBehaviour
     private int points;
 
     private InventoryManager inventoryManager;
+    private GameManager gameManager;
 
     [SerializeField]
     internal SpawnPowerUps sp;
@@ -50,10 +51,11 @@ public class PowerUp : MonoBehaviour
 
     public bool isSubscribed = false;
 
-
     private void Awake()
     {
         inventoryManager = GameObject.Find("Inventory Canvas").GetComponent<InventoryManager>();
+
+        gameManager = FindObjectOfType<GameManager>();
 
         PlayerInputHandler playerInput = FindObjectOfType<PlayerInputHandler>();
 
@@ -98,11 +100,16 @@ public class PowerUp : MonoBehaviour
 
             PowerUpIncrease?.Invoke(points);
 
-            if (sp != null)
-                sp.PowerUpTaken(gameObject);
+            if (!gameManager.extraPowerup)
+            {
+                if (sp != null)
+                    sp.PowerUpTaken(gameObject);
+
+                DestroyOtherPowerUps();
+            }
+            gameManager.extraPowerup = false;
 
             Destroy(gameObject);
-            DestroyOtherPowerUps();
         }
     }
 

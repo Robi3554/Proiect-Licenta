@@ -31,13 +31,13 @@ public class GameManager : MonoBehaviour
     internal float maxChance;
 
     public bool noMoreEnemies;
+    public bool extraPowerup = true;
 
     public List<GameObject> spawners = new List<GameObject>();
 
     public List<GameObject> enemies = new List<GameObject>();
 
     public int count;
-
 
     private void Awake()
     {

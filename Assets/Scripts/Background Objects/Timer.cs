@@ -10,8 +10,8 @@ public class Timer : MonoBehaviour
 
     private GameManager manager;
 
-    private int seconds;
-    private int minutes;
+    internal int seconds;
+    internal int minutes;
 
     void Start()
     {

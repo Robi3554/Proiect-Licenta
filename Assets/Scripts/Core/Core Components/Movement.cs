@@ -113,7 +113,7 @@ public class Movement : CoreComponent
     {
         if (gameObject.CompareTag("Player"))
         {
-            if (rb.velocity.x != 0 && CollisionSenses.Ground)
+            if (rb.velocity.x != 0 && (CollisionSenses.Ground || CollisionSenses.Platform))
             {
                 PLAYBACK_STATE playback_state;
 

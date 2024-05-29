@@ -46,6 +46,9 @@ public class EnemySpawner : AllSpawner, IDataPersistence
 
     public void EnemyDestroyed(GameObject destroyedEnemy)
     {
+        if (gameObject.name.Contains("(NoCollider)"))
+            return;
+
         if(spawnedEnemies.Contains(destroyedEnemy))
         {
             spawnedEnemies.Remove(destroyedEnemy);

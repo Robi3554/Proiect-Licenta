@@ -6,42 +6,32 @@ using UnityEngine.InputSystem;
 
 public class InventoryManager : MonoBehaviour
 {
+    private PauseMenu pauseMenu;
+
     internal Description description;
 
     public GameObject inventoryMenu;
-    private bool isOpen = false;
+    public bool isOpen = false;
     public ItemSlot[] slots;
 
     [Header("Player Action")]
     [SerializeField]
     private PlayerInput playerInput;
 
-    public InputAction inventoryAction;
-
-    private void OnEnable()
-    {
-        inventoryAction.Enable();
-    }
-
-    private void OnDisable()
-    {
-        inventoryAction.Disable();
-    }
-
     private void Awake()
     {
         description = GetComponent<Description>();
+
+        pauseMenu = GetComponentInParent<PauseMenu>();
     }
 
-    private void Update()
+    public  void ToggleInventoryMenu()
     {
-        if (inventoryAction.triggered)
+        if (pauseMenu.isPaused)
         {
-            ToggleInventoryMenu();
+            return;
         }
-    }
-    private void ToggleInventoryMenu()
-    {
+
         if (!isOpen)
         {
             Open();

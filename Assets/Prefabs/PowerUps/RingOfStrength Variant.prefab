@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 369007075320029251, guid: 6af303fc745d3724993c013c8ea7b787, type: 3}
       propertyPath: m_Name
-      value: RingOfStrength
+      value: RingOfStrength Variant
       objectReference: {fileID: 0}
     - target: {fileID: 369007075320029252, guid: 6af303fc745d3724993c013c8ea7b787, type: 3}
       propertyPath: m_Sprite
@@ -75,6 +75,10 @@ PrefabInstance:
       propertyPath: powerUpName
       value: Ring of Strength
       objectReference: {fileID: 0}
+    - target: {fileID: 369007075320029254, guid: 6af303fc745d3724993c013c8ea7b787, type: 3}
+      propertyPath: powerupEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: c50723f9bcdad8a4e9597daf57faf786, type: 2}
     - target: {fileID: 369007075320029254, guid: 6af303fc745d3724993c013c8ea7b787, type: 3}
       propertyPath: powerUpDescription
       value: A ring that increases damage and knockback

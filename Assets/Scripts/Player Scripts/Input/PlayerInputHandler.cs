@@ -15,6 +15,11 @@ public class PlayerInputHandler : MonoBehaviour
     private GameObject currentOneWayPlatform;
 
     [SerializeField]
+    private PauseMenu pauseMenu;
+    [SerializeField]
+    private InventoryManager inventoryManager;
+
+    [SerializeField]
     private BoxCollider2D bc;
 
     public delegate void PowerUpHandler(Collider2D col);
@@ -167,6 +172,22 @@ public class PlayerInputHandler : MonoBehaviour
             {
                 PowerUp?.Invoke(bc);
             }
+        }
+    }
+
+    public void OnPauseInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            pauseMenu.TogglePauseMenu();
+        }
+    }
+
+    public void OnInventoryPressedInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            inventoryManager.ToggleInventoryMenu();
         }
     }
 

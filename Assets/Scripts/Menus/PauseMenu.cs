@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    private InventoryManager inventoryManager;
+
     [SerializeField]
     private PlayerInput playerInput;
 
-    public static bool isPaused = false;
+    public bool isPaused = false;
 
     public GameObject pauseMenuUI;
 
@@ -15,28 +17,18 @@ public class PauseMenu : MonoBehaviour
         time,
         points;
 
-    public InputAction pauseAction;
-
-    private void OnEnable()
+    private void Awake()
     {
-        pauseAction.Enable();
+        inventoryManager = GetComponentInChildren<InventoryManager>();
     }
 
-    private void OnDisable()
+    public void TogglePauseMenu()
     {
-        pauseAction.Disable();
-    }
-
-    private void Update()
-    {
-        if (pauseAction.triggered)
+        if(inventoryManager.isOpen)
         {
-            TogglePauseMenu();
+            return;
         }
-    }
 
-    void TogglePauseMenu()
-    {
         if(isPaused)
         {
             Resume();

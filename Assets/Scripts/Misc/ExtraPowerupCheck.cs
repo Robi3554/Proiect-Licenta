@@ -10,6 +10,11 @@ public class ExtraPowerupCheck : MonoBehaviour
 
     private BoxCollider2D bc;
 
+    public int mLimit;
+    public int sLimit;
+
+    public bool useSeconds;
+
     private void Start()
     {
         timer = FindObjectOfType<Timer>();
@@ -21,7 +26,7 @@ public class ExtraPowerupCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player") && timer.seconds <= 35)
+        if (col.CompareTag("Player") && ((useSeconds && timer.seconds <= sLimit) || timer.minutes <= mLimit))
         {
             gameManager.extraPowerup = true;
 

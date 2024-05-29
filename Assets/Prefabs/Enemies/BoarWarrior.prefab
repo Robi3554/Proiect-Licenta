@@ -684,6 +684,7 @@ MonoBehaviour:
   wallCheck: {fileID: 4962330424475450796}
   ledgeCheck: {fileID: 4962330423399982905}
   playerCheck: {fileID: 4962330423559395192}
+  es: {fileID: 0}
   idleStateData: {fileID: 11400000, guid: d7e8eb5c7d1f1444d82c79bd67db1d17, type: 2}
   moveStateData: {fileID: 11400000, guid: 6bc8101a05a996a47afe5ad84ed1023c, type: 2}
   lookForPlayerStateData: {fileID: 11400000, guid: 7a854a18807896349aa2438b2ce7f9c7, type: 2}
@@ -706,8 +707,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7541499582618765950, guid: 98e4abb1ea02f084596f115b9f3d045d, type: 3}
   lootList:
-  - {fileID: 11400000, guid: 5ffd0510a5c80ad4286cf1989d567308, type: 2}
-  - {fileID: 11400000, guid: 9cd337c9e8c8b76418af56336b454056, type: 2}
+  - {fileID: 11400000, guid: 54e43c7686ea24a48861826634b7a93f, type: 2}
+  - {fileID: 11400000, guid: 71ec0aafe07f95f4ea925d1d2c38ac91, type: 2}
   dropForce: 50
   spinSpeed: 200
 --- !u!1 &4962330425464680106

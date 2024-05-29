@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7541499582618765948}
   - component: {fileID: 7541499582618765951}
   - component: {fileID: 7627407006308135044}
-  - component: {fileID: 4104929397026996538}
+  - component: {fileID: -3351149573336908213}
   m_Layer: 7
   m_Name: LootPrefab
   m_TagString: Untagged
@@ -124,19 +124,17 @@ CircleCollider2D:
   m_Offset: {x: -0.00000023841858, y: 0.02251333}
   serializedVersion: 2
   m_Radius: 0.32270837
---- !u!58 &4104929397026996538
-CircleCollider2D:
+--- !u!114 &-3351149573336908213
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7541499582618765950}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.02392006}
-  serializedVersion: 2
-  m_Radius: 0.32411575
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dff817ed6c447e4bb3929cabddc2b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootSO: {fileID: 0}
+  speed: 0.25

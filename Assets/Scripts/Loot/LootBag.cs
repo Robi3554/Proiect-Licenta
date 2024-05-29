@@ -31,11 +31,9 @@ public class LootBag : MonoBehaviour
         if(possibleItems.Count > 0)
         {
             Loot droppedItem = possibleItems[Random.Range(0, possibleItems.Count)];
-            Debug.Log("We have loot");
             return droppedItem;
         }
 
-        Debug.Log("No loot dropped!");
         return null;
     }
 
@@ -46,7 +44,7 @@ public class LootBag : MonoBehaviour
         {
             GameObject lootObject = Instantiate(itemPrefab, spawnPos, Quaternion.identity);
             lootObject.GetComponent<SpriteRenderer>().sprite = droppedItem.lootSprite;
-            Debug.Log("Loot Instantiated!");
+            lootObject.GetComponent<Drops>().lootSO = droppedItem;
 
             Vector2 dropDir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             lootObject.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f) * spinSpeed);

@@ -37,7 +37,7 @@ public class Drops : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player") && isFollowing)
+        if (col.CompareTag("ParticleContainer") && isFollowing)
         {
             lootSO.TouchPlayer(playerBc.gameObject);
             IncreasePoints(lootSO.points);

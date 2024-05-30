@@ -13,6 +13,7 @@ public class EnemySpawner : AllSpawner, IDataPersistence
     private List<GameObject> spawnedEnemies;
 
     private bool enemyDestroyed = false;
+    private bool canSpawnEnemies = true;
 
     void Awake()
     {
@@ -82,8 +83,9 @@ public class EnemySpawner : AllSpawner, IDataPersistence
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") && canSpawnEnemies)
         {
+            canSpawnEnemies = false;
             SpawnRandomEnemy();
         }
     }

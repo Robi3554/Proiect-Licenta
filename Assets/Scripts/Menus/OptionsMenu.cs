@@ -2,13 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.UI;
 
 public class OptionsMenu : Menu
 {
-    public AudioMixer am;
-
     public TMP_Dropdown resDD;
 
     Resolution[] resolutions;
@@ -47,21 +43,6 @@ public class OptionsMenu : Menu
         resDD.AddOptions(opt);
         resDD.value = index;
         resDD.RefreshShownValue();
-    }
-
-    public void SetVolumeMaster(float volume)
-    {
-        am.SetFloat("masterVolume", Mathf.Log10(volume) * 20);
-    }
-
-    public void SetVolumeSFX(float volume)
-    {
-        am.SetFloat("sfxVolume", Mathf.Log10(volume) * 20);
-    }
-
-    public void SetVolumeMusic(float volume)
-    {
-        am.SetFloat("musicVolume", Mathf.Log10(volume) * 20);
     }
 
     public void SetQuality(int qualityIndex)

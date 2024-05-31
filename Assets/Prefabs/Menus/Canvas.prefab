@@ -594,8 +594,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2036243296497289255}
-  - {fileID: 4250123564702083777}
   - {fileID: 4250123564173698911}
+  - {fileID: 4250123564702083777}
   - {fileID: 4250123565326114045}
   - {fileID: 4250123565715618260}
   - {fileID: 4250123565252463434}
@@ -681,34 +681,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 0}
+  isPaused: 0
   pauseMenuUI: {fileID: 4250123564173698910}
   time: {fileID: 4250123565715618266}
   points: {fileID: 4250123565252463435}
-  pauseAction:
-    m_Name: Pause
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 02ae297d-720b-47fe-a8c8-4cf256df111f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: edca1f44-c234-4884-9d9f-d19463eaf1fc
-      m_Path: <Keyboard>/escape
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Pause
-      m_Flags: 0
-    - m_Name: 
-      m_Id: bf189d31-96bc-479c-a79d-3b08b0333dff
-      m_Path: <Gamepad>/start
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Pause
-      m_Flags: 0
-    m_Flags: 0
 --- !u!114 &8961106242617315262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,7 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3955324237205905170, guid: 4723567ed08d76e419851f44b6f21174, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3955324237205905170, guid: 4723567ed08d76e419851f44b6f21174, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1101,7 +1077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2742600937690166373, guid: 200a37d0bd72d3144bafc62d7a987bcd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2742600937690166373, guid: 200a37d0bd72d3144bafc62d7a987bcd, type: 3}
       propertyPath: m_AnchorMax.x

@@ -2751,7 +2751,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstSelected: {fileID: 5364319033869685439}
-  am: {fileID: 24100000, guid: b8f84e0d07972e642989aecbe6f9ea5d, type: 2}
   resDD: {fileID: 5364319032552032582}
 --- !u!1 &5364319032812607237
 GameObject:
@@ -2763,6 +2762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5364319032812607236}
   - component: {fileID: 7733154062235650198}
+  - component: {fileID: 8699286131819922613}
   m_Layer: 5
   m_Name: SFX
   m_TagString: Untagged
@@ -2805,6 +2805,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeType: 1
+--- !u!114 &8699286131819922613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5364319032812607237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7ef21a2876db347ab988f4e19dd72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeKey: SFX
 --- !u!1 &5364319032846721266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5405,6 +5418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5364319033834910927}
   - component: {fileID: 2185885770750717391}
+  - component: {fileID: 3866691181992845105}
   m_Layer: 5
   m_Name: Master
   m_TagString: Untagged
@@ -5447,6 +5461,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeType: 0
+--- !u!114 &3866691181992845105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5364319033834910920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7ef21a2876db347ab988f4e19dd72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeKey: Master
 --- !u!1 &5364319033858794188
 GameObject:
   m_ObjectHideFlags: 0
@@ -5775,7 +5802,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Controls
+  m_text: Gameplay
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81f74d16c44d04043a12f3d41bbeb98f, type: 2}
   m_sharedMaterial: {fileID: -3099415312876747097, guid: 81f74d16c44d04043a12f3d41bbeb98f, type: 2}
@@ -6219,6 +6246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5364319034076098303}
   - component: {fileID: 5359400579816325687}
+  - component: {fileID: 6853952231201251113}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -6261,6 +6289,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeType: 2
+--- !u!114 &6853952231201251113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5364319034076098296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7ef21a2876db347ab988f4e19dd72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeKey: Music
 --- !u!1 &5364319034093561927
 GameObject:
   m_ObjectHideFlags: 0
@@ -6628,6 +6669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6373533743648707769}
   - component: {fileID: 1664953892122844823}
+  - component: {fileID: 7592816524332842084}
   m_Layer: 5
   m_Name: Ambience
   m_TagString: Untagged
@@ -6670,6 +6712,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeType: 3
+--- !u!114 &7592816524332842084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5924367913287752923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7ef21a2876db347ab988f4e19dd72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeKey: Ambience
 --- !u!1 &6418881308152837052
 GameObject:
   m_ObjectHideFlags: 0

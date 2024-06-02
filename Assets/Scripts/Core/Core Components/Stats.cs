@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Stats : CoreComponent
@@ -31,12 +30,25 @@ public class Stats : CoreComponent
 
     internal SpriteRenderer sr;
 
+    internal GameManager gameManager;
+
     protected override void Awake()
     {
         base.Awake();
 
         curentHealth = maxHealth;
         sr = GetComponentInParent<SpriteRenderer>();
+
+        gameManager = FindObjectOfType<GameManager>();
+    }
+
+    public virtual void Update()
+    {
+        if (gameManager.is1Health)
+        {
+            maxHealth = 1f;
+            curentHealth = 1f;
+        }
     }
 
     public virtual void DecreaseHealth(float amount)

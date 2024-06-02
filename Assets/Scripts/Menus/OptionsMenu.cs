@@ -7,7 +7,14 @@ public class OptionsMenu : Menu
 {
     public TMP_Dropdown resDD;
 
+    public Auxiliary aux;
+
     Resolution[] resolutions;
+
+    private void Awake()
+    {
+        aux = FindObjectOfType<Auxiliary>();
+    }
 
     void Start()
     {
@@ -59,5 +66,29 @@ public class OptionsMenu : Menu
     {
         Resolution resolution = resolutions[resIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    public void Set2XSpeed()
+    {
+        if (aux.isFastForward)
+        {
+            aux.isFastForward = false;
+        }
+        else
+        {
+            aux.isFastForward = true;
+        }
+    }
+
+    public void Set1HP()
+    {
+        if (aux.is1Health)
+        {
+            aux.is1Health = false;
+        }
+        else
+        {
+            aux.is1Health = true;
+        }
     }
 }

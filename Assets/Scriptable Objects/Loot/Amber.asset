@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootName: Amber
   lootSprite: {fileID: 1274068180, guid: 5ff31cd2f631626469ea695427d971db, type: 3}
-  dropChance: 100
+  dropChance: 65
   points: 25

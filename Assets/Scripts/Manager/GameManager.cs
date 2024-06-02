@@ -39,9 +39,15 @@ public class GameManager : MonoBehaviour
 
     public int count;
 
+    [Header("Modifiers")]
+    public Auxiliary aux;
+    public bool isDoubleSpeed;
+    public bool is1Health;
+
     private void Awake()
     {
         cvc = GameObject.Find("Player Camera").GetComponent<CinemachineVirtualCamera>();
+        aux = FindObjectOfType<Auxiliary>();
 
         points = 1000;
 
@@ -52,6 +58,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         count = spawners.Count;
+
+        SetGame2XSpeed();
+
+        SetGame1HP();
     }
 
     private void Update()
@@ -91,6 +101,24 @@ public class GameManager : MonoBehaviour
     private void IncreasePoints(int value)
     {
         points += value;
+    }
+
+    public void SetGame2XSpeed()
+    {
+        if (aux.isFastForward)
+        {
+            Time.timeScale = 2f;
+            Time.fixedDeltaTime = 0.01f;
+            isDoubleSpeed = true;
+        }
+    }
+
+    public void SetGame1HP()
+    {
+        if (aux.is1Health)
+        {
+            is1Health = true;
+        }
     }
 
     private IEnumerator CheckForEnemies()

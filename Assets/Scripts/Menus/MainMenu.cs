@@ -20,12 +20,12 @@ public class MainMenu : Menu
 
     private void Start()
     {
-        DisableButtonsDependingOnData();
+        //DisableButtonsDependingOnData();
     }
 
     private void DisableButtonsDependingOnData()
     {
-        if (!DataPersistenceManager.Instance.HasGameData())
+        if (DataPersistenceManager.Instance.HasGameData())
         {
             continueGame.interactable = false;
             loadGame.interactable = false;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7040460245418530969}
   - component: {fileID: 6000969333362223188}
   - component: {fileID: 3137836935353792873}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DeathChunkParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3843,7 +3843,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 64
+      m_Bits: 2112
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5

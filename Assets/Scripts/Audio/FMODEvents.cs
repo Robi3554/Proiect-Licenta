@@ -23,6 +23,10 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField]
     public EventReference approach { get; private set; }
 
+    [field: Header("Loot Pickup")]
+    [field: SerializeField]
+    public EventReference lootPickup { get; private set; }
+
     public static FMODEvents Instance { get; private set; }
 
     private void Awake()

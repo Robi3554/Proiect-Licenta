@@ -14,6 +14,10 @@ public class PlayerDashState : PlayerAbilityState
 
     private float lastDashTime;
 
+    public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    {
+    }
+
     public override void Enter()
     {
         base.Enter();
@@ -65,7 +69,7 @@ public class PlayerDashState : PlayerAbilityState
                 if (dashInputStop || Time.unscaledTime >= startTime + playerData.maxHoldTime)
                 {
                     isHolding = false;
-                    Time.fixedDeltaTime = Time.timeScale * 0.02f;
+                    Time.fixedDeltaTime = 0.02f;
                     Time.timeScale = 1f;
                     startTime = Time.time;
                     Movement?.CheckIfShouldFlip(Mathf.RoundToInt(dashDirection.x));
@@ -102,10 +106,6 @@ public class PlayerDashState : PlayerAbilityState
         {
             PlaceAfterImage();
         }
-    }
-
-    public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
-    {
     }
 
     public bool CheckIfCanDash()

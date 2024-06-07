@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7513128361172124350}
   - component: {fileID: 6534998945732293235}
   - component: {fileID: 2485025110447186766}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DeathBoneParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3843,7 +3843,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 64
+      m_Bits: 2112
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5

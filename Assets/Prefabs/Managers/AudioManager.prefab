@@ -128,3 +128,10 @@ MonoBehaviour:
       Data3: -366878569
       Data4: -910210083
     Path: event:/SFX/Powerup/PowerupApproach
+  <lootPickup>k__BackingField:
+    Guid:
+      Data1: 957191531
+      Data2: 1236008248
+      Data3: -338129485
+      Data4: -2053551508
+    Path: event:/SFX/Loot/LootPickup

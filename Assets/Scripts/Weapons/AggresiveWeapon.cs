@@ -124,14 +124,14 @@ public class AggresiveWeapon : Weapon, IDataPersistence
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        AddToDetected(collision);
+        AddToDetected(col);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D col)
     {
-        RemoveFromDetected(collision);
+        RemoveFromDetected(col);
     }
 
     public void LoadData(GameData data)

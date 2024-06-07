@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Drops : MonoBehaviour
 {
+    [SerializeField]
+    private Transform hitPos;
+
     private GameManager gameManager;
 
     private Transform player;
@@ -12,7 +15,11 @@ public class Drops : MonoBehaviour
 
     public Loot lootSO;
 
+    public LayerMask whatIsPlayer;
+
     public float speed;
+
+    public float radius;
 
     private bool isFollowing = false;
 
@@ -28,21 +35,23 @@ public class Drops : MonoBehaviour
         StartCoroutine(StartFollowing());
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if(isFollowing)
-            transform.position = Vector3.Lerp(transform.position, player.position, speed);
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("ParticleContainer") && isFollowing)
+        if (isFollowing)
         {
-            lootSO.TouchPlayer(playerBc.gameObject);
-            IncreasePoints(lootSO.points);
-            Destroy(gameObject);
+            transform.position = Vector3.Lerp(transform.position, player.position, speed);
+
+            Collider2D hit = Physics2D.OverlapCircle(hitPos.position, radius, whatIsPlayer);
+
+            if (hit)
+            {
+                lootSO.TouchPlayer(playerBc.gameObject);
+                IncreasePoints(lootSO.points);
+                AudioManager.Instance.OneShotSound(FMODEvents.Instance.lootPickup, transform.position);
+                Destroy(gameObject);
+            }
         }
+
     }
 
     private void IncreasePoints(int points)
@@ -55,5 +64,10 @@ public class Drops : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         isFollowing = true;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(hitPos.position, radius);
     }
 }

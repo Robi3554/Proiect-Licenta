@@ -61,8 +61,6 @@ public class SaveSlotsMenu : Menu
     {
         DataPersistenceManager.Instance.SaveGame();
 
-        //SceneManager.LoadSceneAsync("Level1");
-
         LevelManager.Instance.LoadScene("Level1", "CircleWipe");
     }
 

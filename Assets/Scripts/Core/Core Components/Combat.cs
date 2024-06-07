@@ -68,7 +68,8 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
 
     protected virtual void CheckKnockback()
     {
-        if(isKnockbackActive && ((Movement?.currentVelocity.y <= 0.01f && CollisionSenses.Ground) || Time.time >= knockbackStartTime + maxKncockbackTime))
+        if(isKnockbackActive && ((Movement?.currentVelocity.y <= 0.01f && CollisionSenses.Ground) 
+            || Time.time >= knockbackStartTime + maxKncockbackTime))
         {
             isKnockbackActive = false;
             Movement.canSetVelocity = true;

@@ -100,3 +100,6 @@ MonoBehaviour:
   activetime: 0.1
   alphaSet: 0.8
   alphaDecay: 10
+  playerTr: {fileID: 0}
+  sr: {fileID: 5672388368657241823}
+  playerSr: {fileID: 0}

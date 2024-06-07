@@ -25,7 +25,7 @@ public class PlayerAfterImage : MonoBehaviour
     private void OnEnable()
     {
         sr = GetComponent<SpriteRenderer>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.Find("Player");
         playerTr = player.transform;
         playerSr = player.GetComponent<SpriteRenderer>();
 

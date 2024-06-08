@@ -351,6 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 103502846}
   - component: {fileID: 103502847}
+  - component: {fileID: 103502848}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -385,6 +386,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &103502848
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103502845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 5
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!114 &174409157 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4250123564120578407, guid: 9714c9fb220780f49bcb87e2bdbe357f, type: 3}
@@ -624,6 +642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315105410}
   - component: {fileID: 315105411}
+  - component: {fileID: 315105412}
   m_Layer: 0
   m_Name: Boss Camera
   m_TagString: Untagged
@@ -685,6 +704,19 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 103502846}
+--- !u!114 &315105412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315105409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ce74c58e36c204cab12f4f989a3c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
 --- !u!1 &330934597 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6474347510175698854, guid: ea9c6ed380d0d90499ce24a4f0c7e16c, type: 3}
@@ -1446,6 +1478,7 @@ GameObject:
   - component: {fileID: 823664101}
   - component: {fileID: 823664100}
   - component: {fileID: 823664099}
+  - component: {fileID: 823664102}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: Untagged
@@ -1574,6 +1607,19 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1597887236}
+--- !u!114 &823664102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823664097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ce74c58e36c204cab12f4f989a3c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
 --- !u!1001 &837605049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2617,6 +2663,7 @@ GameObject:
   - component: {fileID: 1597887236}
   - component: {fileID: 1597887238}
   - component: {fileID: 1597887237}
+  - component: {fileID: 1597887239}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -2694,6 +2741,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1597887239
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597887235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 5
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!114 &1606126556 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4250123564702083782, guid: 9714c9fb220780f49bcb87e2bdbe357f, type: 3}
@@ -4576,6 +4640,14 @@ PrefabInstance:
       propertyPath: chainLightning
       value: 
       objectReference: {fileID: 8479382044182643951, guid: a95c48f0673784b4e883fe5b777d29b7, type: 3}
+    - target: {fileID: 3081904062189951468, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
+      propertyPath: time
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081904062189951468, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
+      propertyPath: intensity
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4650588523587335304, guid: 9071e315133f63247af4898a7b490f8b, type: 3}
       propertyPath: text
       value: 

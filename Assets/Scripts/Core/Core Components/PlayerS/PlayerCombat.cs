@@ -23,6 +23,9 @@ public class PlayerCombat : Combat
 
     private int count;
 
+    public float intensity;
+    public float time;
+
     protected override void Awake()
     {
         base.Awake();
@@ -50,6 +53,8 @@ public class PlayerCombat : Combat
             {
                 count++;
             }
+
+            CameraShake.Instance.Shake(intensity, time);
 
             ParticleManager?.StartParticlesWithRandomRotation(damageParticles);
 

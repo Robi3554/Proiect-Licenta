@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
 
         points = 1000;
 
+        spawners = FindSpawners();
+
         StartCoroutine(CheckForEnemies());
         StartCoroutine(CheckPowerUps());
     }
@@ -85,6 +87,23 @@ public class GameManager : MonoBehaviour
             cvc.m_Follow = playerTemp.transform;
             respawn = false;
         }
+    }
+
+    private List<GameObject> FindSpawners()
+    {
+        List<GameObject> foundSpawners = new List<GameObject>();
+
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+
+        foreach(GameObject obj in allObjects)
+        {
+            if(obj.name.Contains("Spawner") && !obj.name.Contains("(NoCollider)") && !obj.name.Contains("PowerUp"))
+            {
+                foundSpawners.Add(obj);
+            }
+        }
+
+        return foundSpawners;
     }
 
     private void IncreaseChance()

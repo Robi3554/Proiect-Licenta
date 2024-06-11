@@ -57,8 +57,9 @@ public class LevelManager : MonoBehaviour
         loadingText.SetActive(false);
         loadingAnim.SetActive(false);
 
+        yield return transition.TransitionOut();
+
         canvas.sortingOrder = 0;
 
-        yield return transition.TransitionOut();
     }
 }

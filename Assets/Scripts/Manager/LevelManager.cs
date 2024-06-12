@@ -12,8 +12,8 @@ public class LevelManager : MonoBehaviour
 
     public GameObject transitionsContainer;
 
-    public GameObject loadingText;
-    public GameObject loadingAnim;
+    public TextMeshProUGUI loadingText;
+    public Image loadingAnim;
 
     public Canvas canvas;
 
@@ -50,12 +50,15 @@ public class LevelManager : MonoBehaviour
         AsyncOperation scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
 
+        loadingText.enabled = true;
+        loadingAnim.enabled = true;
+
         yield return transition.TransitionIn();
 
         scene.allowSceneActivation = true;
 
-        loadingText.SetActive(false);
-        loadingAnim.SetActive(false);
+        loadingText.enabled = false;
+        loadingAnim.enabled = false;
 
         yield return transition.TransitionOut();
 

@@ -9,7 +9,7 @@ public class NextScene : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Level2");
+            LevelManager.Instance.LoadScene("Level2", "CircleWipe");
         }
     }
 }

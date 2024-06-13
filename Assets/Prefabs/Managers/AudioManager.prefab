@@ -114,6 +114,13 @@ MonoBehaviour:
       Data3: 203503519
       Data4: -2101543450
     Path: event:/SFX/Player/PlayerFootsteps
+  <deathSound>k__BackingField:
+    Guid:
+      Data1: 1719668788
+      Data2: 1247558934
+      Data3: -790536004
+      Data4: 404244643
+    Path: event:/SFX/Player/DeathSound
   <pickup>k__BackingField:
     Guid:
       Data1: 513621058

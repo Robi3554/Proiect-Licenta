@@ -15,7 +15,9 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Player SFX")]
     [field: SerializeField]
-    public EventReference playerWalk {  get; private set; } 
+    public EventReference playerWalk {  get; private set; }
+    [field: SerializeField]
+    public EventReference deathSound { get; private set; }
 
     [field: Header("Powerup Pickup")]
     [field: SerializeField]

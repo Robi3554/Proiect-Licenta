@@ -32,13 +32,13 @@ public class Death : CoreComponent
 
     public void Die()
     {
-        foreach (var particle in deathParticles)
-        {
-            ParticleManager.StartParticles(particle);
-        }
-
         if(transform.parent.gameObject.CompareTag("Enemy"))
-        {  
+        {
+            foreach (var particle in deathParticles)
+            {
+                ParticleManager.StartParticles(particle);
+            }
+
             GetComponentInParent<LootBag>().InstantiateLoot(transform.position);
 
             IncreaseChance?.Invoke();
@@ -65,6 +65,9 @@ public class Death : CoreComponent
         if (gameObject.CompareTag("Player"))
         {
             deathScreen.Invoke();
+
+            AudioManager.Instance.OneShotSound(FMODEvents.Instance.deathSound, transform.position);
+            AudioManager.Instance.CleanUp();
         }
 
         core.transform.parent.gameObject.SetActive(false);

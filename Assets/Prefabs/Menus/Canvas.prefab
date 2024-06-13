@@ -31,7 +31,7 @@ RectTransform:
   m_Children:
   - {fileID: 6840910034096582375}
   m_Father: {fileID: 4250123565195123958}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -289,6 +289,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 604713922561921141}
+        m_TargetAssemblyTypeName: FadeToBlack, Assembly-CSharp
+        m_MethodName: TransitionOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3746476000533276223
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +426,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4250123565195123959}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ResetScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 604713922561921141}
+        m_TargetAssemblyTypeName: FadeToBlack, Assembly-CSharp
+        m_MethodName: TransitionOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -593,10 +617,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4250123565326114045}
   - {fileID: 2036243296497289255}
   - {fileID: 4250123564173698911}
   - {fileID: 4250123564702083777}
-  - {fileID: 4250123565326114045}
   - {fileID: 4250123565715618260}
   - {fileID: 4250123565252463434}
   m_Father: {fileID: 0}
@@ -850,7 +874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3955324237205905170, guid: 4723567ed08d76e419851f44b6f21174, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3955324237205905170, guid: 4723567ed08d76e419851f44b6f21174, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1077,7 +1101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2742600937690166373, guid: 200a37d0bd72d3144bafc62d7a987bcd, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2742600937690166373, guid: 200a37d0bd72d3144bafc62d7a987bcd, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1313,7 +1337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8666440395924518343, guid: 5245408ada7b85343be3cc2b1d1ef456, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8666440395924518343, guid: 5245408ada7b85343be3cc2b1d1ef456, type: 3}
       propertyPath: m_AnchorMax.x

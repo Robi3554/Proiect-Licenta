@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class LevelManager : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator LoadSceneAsync(string sceneName, string transitionName)
     {
         SceneTransition transition = sceneTransitions.First(t => t.name  == transitionName);
-        canvas.sortingOrder = 100;
+        canvas.sortingOrder = 20;
 
         AsyncOperation scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
@@ -60,9 +61,8 @@ public class LevelManager : MonoBehaviour
         loadingText.enabled = false;
         loadingAnim.enabled = false;
 
-        yield return transition.TransitionOut();
-
         canvas.sortingOrder = 0;
 
+        yield return transition.TransitionOut();
     }
 }

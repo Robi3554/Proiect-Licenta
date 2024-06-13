@@ -3599,9 +3599,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2073333530874926197, guid: 9714c9fb220780f49bcb87e2bdbe357f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResetScene
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 786980898}
     - target: {fileID: 3610458225537328403, guid: 9714c9fb220780f49bcb87e2bdbe357f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -505

@@ -22,6 +22,8 @@ public class SpawnPowerUps : AllSpawner, IDataPersistence
     [Header("For SaveData")]
     [SerializeField]
     private List<GameObject> spawnedPowerups = new List<GameObject>();
+
+    protected bool hasEntered;
     private bool isTaken;
 
     void Awake()
@@ -91,8 +93,10 @@ public class SpawnPowerUps : AllSpawner, IDataPersistence
 
     protected virtual void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") && !hasEntered)
         {
+            hasEntered = true;
+
             int randInt;
 
             int[] alreadyChosen = new int[positions.Length];

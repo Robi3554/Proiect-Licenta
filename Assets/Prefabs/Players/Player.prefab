@@ -79,6 +79,8 @@ MonoBehaviour:
   flashDuration: 0.1
   numberOfFlashes: 6
   col: {fileID: 8706217524488752150}
+  intensity: 1.5
+  time: 0.25
 --- !u!1 &8706217524610909990
 GameObject:
   m_ObjectHideFlags: 0

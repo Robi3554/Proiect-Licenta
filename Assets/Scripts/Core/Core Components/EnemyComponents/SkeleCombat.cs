@@ -20,6 +20,7 @@ public class SkeleCombat : Combat
         else
         {
             Debug.Log("No Damage!");
+            AudioManager.Instance.OneShotSound(FMODEvents.Instance.shieldHit, transform.position);
         }
     }
 

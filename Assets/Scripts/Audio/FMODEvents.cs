@@ -29,6 +29,12 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField]
     public EventReference lootPickup { get; private set; }
 
+    [field: Header("Enemy Hits")]
+    [field: SerializeField]
+    public EventReference boarHit { get; private set; }
+    [field: SerializeField]
+    public EventReference shieldHit { get; private set; }
+
     public static FMODEvents Instance { get; private set; }
 
     private void Awake()

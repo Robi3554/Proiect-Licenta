@@ -142,3 +142,17 @@ MonoBehaviour:
       Data3: -338129485
       Data4: -2053551508
     Path: event:/SFX/Loot/LootPickup
+  <boarHit>k__BackingField:
+    Guid:
+      Data1: 319745867
+      Data2: 1315189833
+      Data3: 1131831206
+      Data4: -588970781
+    Path: event:/SFX/EnemyHits/BoarHit
+  <shieldHit>k__BackingField:
+    Guid:
+      Data1: 1790065087
+      Data2: 1159281459
+      Data3: -1580036185
+      Data4: 310124862
+    Path: event:/SFX/EnemyHits/ShieldHit

@@ -100,13 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9593696879a1db246a065419ed1bb20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickup:
-    Guid:
-      Data1: 513621058
-      Data2: 1226757549
-      Data3: 409087375
-      Data4: 1918227484
-    Path: event:/PowerupTaken
   pickupEffect: {fileID: 2279182899409804110, guid: c7ae2e4a0e569d049a6d6f48e39c7fa0, type: 3}
   powerupEffect: {fileID: 11400000, guid: c56dc5676805cf147b034b57200398a3, type: 2}
   infoBox: {fileID: 1618793036093634490}
@@ -159,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0dbd32315564540a6b9f8609eb4b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pu: {fileID: 1618793036079344768}
   sr: {fileID: 6778792515677648056}
   regularColor: {r: 1, g: 0.93773586, b: 0.93773586, a: 1}
 --- !u!1 &1618793036093634490

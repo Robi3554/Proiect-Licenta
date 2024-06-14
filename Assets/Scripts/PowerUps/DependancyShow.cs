@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class DependancyShow : MonoBehaviour
 {
+    [SerializeField]
     private PowerUp pu;
-
     [SerializeField]
     private SpriteRenderer sr;
     [SerializeField]
     private Color regularColor;
-
-    void Start()
-    {
-        pu = GetComponent<PowerUp>();
-    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {

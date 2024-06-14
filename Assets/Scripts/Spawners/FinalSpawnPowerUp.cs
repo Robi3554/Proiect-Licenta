@@ -9,14 +9,17 @@ public class FinalSpawnPowerUp : SpawnPowerUps
 
     protected override void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") && !hasEntered)
         {
+            hasEntered = true;
+
             int randInt;
 
             int[] alreadyChosen = new int[positions.Length];
 
             for (int i = 0; i < positions.Length; i++)
             {
+
                 float chance = Random.Range(manager.minChance, manager.maxChance);
                 Debug.Log(chance);
                 if(manager.noMoreEnemies && count < 2)

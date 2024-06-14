@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using System.Linq;
 using Unity.VisualScripting;
+using System;
 
 public class LevelManager : MonoBehaviour
 {
@@ -31,6 +32,13 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
+
+    private void OnSceneUnloaded(Scene scene)
+    {
+        canvas.sortingOrder = 0;
     }
 
     private void Start()
@@ -60,8 +68,6 @@ public class LevelManager : MonoBehaviour
 
         loadingText.enabled = false;
         loadingAnim.enabled = false;
-
-        canvas.sortingOrder = 0;
 
         yield return transition.TransitionOut();
     }

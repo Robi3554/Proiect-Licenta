@@ -13,9 +13,9 @@ public class Drops : MonoBehaviour
 
     private BoxCollider2D playerBc;
 
-    public Loot lootSO;
+    private LayerMask whatIsPlayer;
 
-    public LayerMask whatIsPlayer;
+    public Loot lootSO;
 
     public float speed;
 
@@ -31,6 +31,8 @@ public class Drops : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
 
         playerBc = player.GetComponent<BoxCollider2D>();
+
+        whatIsPlayer = LayerMask.GetMask("Player");
 
         StartCoroutine(StartFollowing());
     }

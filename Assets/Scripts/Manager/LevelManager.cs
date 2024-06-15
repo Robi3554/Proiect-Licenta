@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI loadingText;
     public Image loadingAnim;
 
-    public Canvas canvas;
+    private Canvas canvas;
 
     private SceneTransition[] sceneTransitions;
 
@@ -34,11 +34,13 @@ public class LevelManager : MonoBehaviour
         }
 
         SceneManager.sceneUnloaded += OnSceneUnloaded;
+
+        canvas = GetComponent<Canvas>();
     }
 
     private void OnSceneUnloaded(Scene scene)
     {
-        canvas.sortingOrder = 0;
+        HandleSceneEnd();
     }
 
     private void Start()
@@ -49,6 +51,18 @@ public class LevelManager : MonoBehaviour
     public void LoadScene(string sceneName, string transitionName)
     {
         StartCoroutine(LoadSceneAsync(sceneName, transitionName));
+    }
+
+    private void HandleSceneEnd()
+    {
+        GameObject canvasObj = GameObject.Find("LevelManager");
+
+        if(canvasObj != null )
+        {
+            canvas = canvasObj.GetComponent<Canvas>();
+
+            canvas.sortingOrder = 0;
+        }
     }
 
     private IEnumerator LoadSceneAsync(string sceneName, string transitionName)

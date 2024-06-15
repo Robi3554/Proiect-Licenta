@@ -23,6 +23,9 @@ public class GameData
     public bool canNegateHits;
     public bool canShoot;
 
+    public float time;
+    public int points;
+
     public SerializableDictionary<string, bool> enemiesDefeated;
 
     public SerializableDictionary<string, bool> powerupsTaken;
@@ -54,6 +57,9 @@ public class GameData
         knockbackAngle[2] = new Vector2(2, 2);
 
         playerPos = new Vector3(-227.58f, 9.16f, 0f);
+
+        points = 1000;
+        time = 0f;
 
         enemiesDefeated = new SerializableDictionary<string, bool>();
 

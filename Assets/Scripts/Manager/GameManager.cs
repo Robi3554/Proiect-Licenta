@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, IDataPersistence
 {
     [SerializeField]
     private Transform respawnPoint;
@@ -196,5 +196,17 @@ public class GameManager : MonoBehaviour
             if (count == 0)
                 noMoreEnemies = true;
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+        points = data.points;
+        elapsedTime = data.time;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.points = points;
+        data.time = elapsedTime;
     }
 }

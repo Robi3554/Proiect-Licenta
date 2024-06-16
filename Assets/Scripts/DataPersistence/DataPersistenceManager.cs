@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class DataPersistenceManager : MonoBehaviour
 {
@@ -60,8 +61,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        dataPersistances = FindAllDataPersistences();
-        LoadGame();
+        StartCoroutine(DelayedFindDataPersistences());
     }
 
     public void ChangeSelectedProfileID(string newProfileID)
@@ -144,10 +144,18 @@ public class DataPersistenceManager : MonoBehaviour
         }
     }
 
+    private IEnumerator DelayedFindDataPersistences()
+    {
+        yield return null;
+
+        dataPersistances = FindAllDataPersistences();
+
+        LoadGame();
+    }
+
     private List<IDataPersistence> FindAllDataPersistences()
     {
         IEnumerable<IDataPersistence> dataPersistences = FindObjectsOfType<MonoBehaviour>(true).OfType<IDataPersistence>();
-
         return new List<IDataPersistence>(dataPersistences);
     }
 

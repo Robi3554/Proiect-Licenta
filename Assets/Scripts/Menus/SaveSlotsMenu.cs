@@ -61,7 +61,7 @@ public class SaveSlotsMenu : Menu
     {
         DataPersistenceManager.Instance.SaveGame();
 
-        LevelManager.Instance.LoadScene("Level1", "CircleWipe");
+        LevelManager.Instance.LoadScene(DataPersistenceManager.Instance.GetSavedSceneName(), "CircleWipe");
     }
 
     public void ActivateMenu(bool isLoadingGame)

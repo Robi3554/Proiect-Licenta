@@ -26,6 +26,8 @@ public class GameData
     public float time;
     public int points;
 
+    public string currentSceneName;
+
     public SerializableDictionary<string, bool> enemiesDefeated;
 
     public SerializableDictionary<string, bool> powerupsTaken;
@@ -60,6 +62,8 @@ public class GameData
 
         points = 1000;
         time = 0f;
+
+        currentSceneName = "Level1";
 
         enemiesDefeated = new SerializableDictionary<string, bool>();
 

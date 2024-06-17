@@ -88,6 +88,13 @@ public class DataPersistenceManager : MonoBehaviour
             return;
         }
 
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (!scene.name.Equals("StartScene"))
+        {
+            gameData.currentSceneName = scene.name;
+        }
+
         foreach (IDataPersistence dataPersistence in dataPersistances)
         {
             dataPersistence.SaveData(gameData);
@@ -169,6 +176,17 @@ public class DataPersistenceManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         SaveGame();
+    }
+
+    public string GetSavedSceneName()
+    {
+        if(gameData == null)
+        {
+            Debug.LogError("No scene name as data is null!");
+            return null;
+        }
+
+        return gameData.currentSceneName;
     }
 
     private void OnDisable()

@@ -62,7 +62,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        //SceneManager.LoadScene("StartScene");
+
         LevelManager.Instance.LoadScene("StartScene", "CircleWipe");
     }
 
@@ -70,7 +70,6 @@ public class PauseMenu : MonoBehaviour
     {
         DataPersistenceManager.Instance.NewGame();
 
-        //SceneManager.LoadScene("Level1");
         LevelManager.Instance.LoadScene("Level1", "CircleWipe");
     }
 

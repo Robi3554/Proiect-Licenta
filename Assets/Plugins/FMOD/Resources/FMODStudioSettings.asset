@@ -407,6 +407,7 @@ MonoBehaviour:
   Banks:
   - Ambience
   - Level1
+  - Music
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264

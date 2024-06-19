@@ -1683,6 +1683,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2276494923715437416, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
+      propertyPath: <wind>k__BackingField.Path
+      value: event:/Ambience/Empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276494923715437416, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
+      propertyPath: <music>k__BackingField.Path
+      value: event:/Music/MainMenuMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276494923715437416, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
+      propertyPath: <wind>k__BackingField.Guid.Data1
+      value: -1482254498
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276494923715437416, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
+      propertyPath: <wind>k__BackingField.Guid.Data2
+      value: 1116507878
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276494923715437416, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
+      propertyPath: <wind>k__BackingField.Guid.Data3
+      value: -719127637
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276494923715437416, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
+      propertyPath: <wind>k__BackingField.Guid.Data4
+      value: 1544709371
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276494923715437416, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data1
+      value: -989697736
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276494923715437416, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data2
+      value: 1341582585
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276494923715437416, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data3
+      value: -166954102
+      objectReference: {fileID: 0}
+    - target: {fileID: 2276494923715437416, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
+      propertyPath: <music>k__BackingField.Guid.Data4
+      value: -947621840
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f97cfb08b36d6a408f283b88ebd0b7b, type: 3}
 --- !u!1 &758382797
@@ -2935,7 +2975,6 @@ MonoBehaviour:
   transitionsContainer: {fileID: 1434200508}
   loadingText: {fileID: 476050591}
   loadingAnim: {fileID: 1321738107}
-  canvas: {fileID: 1425062374}
 --- !u!1 &1434200508
 GameObject:
   m_ObjectHideFlags: 0

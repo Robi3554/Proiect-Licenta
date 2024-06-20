@@ -540,7 +540,6 @@ GameObject:
   - component: {fileID: 6580390149347138173}
   - component: {fileID: 6580390149347138169}
   - component: {fileID: 6580390149347138150}
-  - component: {fileID: 8798177186304299508}
   m_Layer: 7
   m_Name: Skeleton
   m_TagString: Enemy
@@ -723,24 +722,6 @@ MonoBehaviour:
   meleeAttackData: {fileID: 11400000, guid: 5be749a439b39964e90311d9fefc5d03, type: 2}
   stunStateData: {fileID: 11400000, guid: f6dc67ff1c34238468ee5517d195fadd, type: 2}
   meleeAttackPos: {fileID: 6580390148214433880}
---- !u!114 &8798177186304299508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580390149347138175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46cd5ade5432db741909f3dc5b37c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 7541499582618765950, guid: 98e4abb1ea02f084596f115b9f3d045d, type: 3}
-  lootList:
-  - {fileID: 11400000, guid: 54e43c7686ea24a48861826634b7a93f, type: 2}
-  - {fileID: 11400000, guid: 71ec0aafe07f95f4ea925d1d2c38ac91, type: 2}
-  dropForce: 50
-  spinSpeed: 200
 --- !u!1 &6580390149383263644
 GameObject:
   m_ObjectHideFlags: 0

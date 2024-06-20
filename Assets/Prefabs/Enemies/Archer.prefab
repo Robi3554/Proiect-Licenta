@@ -140,7 +140,6 @@ GameObject:
   - component: {fileID: 3895333818057811589}
   - component: {fileID: 3895333818057811595}
   - component: {fileID: 3895333818057811594}
-  - component: {fileID: 2904411311728715905}
   m_Layer: 7
   m_Name: Archer
   m_TagString: Enemy
@@ -325,24 +324,6 @@ MonoBehaviour:
   rangedAttackStateData: {fileID: 11400000, guid: f21130aa8663c824ba5037f1f97a7e67, type: 2}
   meleeAttackPos: {fileID: 3895333819520268275}
   rangedAttackPos: {fileID: 3895333819249521826}
---- !u!114 &2904411311728715905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3895333818057811585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46cd5ade5432db741909f3dc5b37c812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 7541499582618765950, guid: 98e4abb1ea02f084596f115b9f3d045d, type: 3}
-  lootList:
-  - {fileID: 11400000, guid: 71ec0aafe07f95f4ea925d1d2c38ac91, type: 2}
-  - {fileID: 11400000, guid: 54e43c7686ea24a48861826634b7a93f, type: 2}
-  dropForce: 50
-  spinSpeed: 200
 --- !u!1 &3895333818117011982
 GameObject:
   m_ObjectHideFlags: 0

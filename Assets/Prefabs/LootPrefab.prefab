@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7787138405256860089}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: Hit Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7541499582618765951}
   - component: {fileID: 7627407006308135044}
   - component: {fileID: -3351149573336908213}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: LootPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

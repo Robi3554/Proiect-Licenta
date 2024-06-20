@@ -39,7 +39,7 @@ public class Death : CoreComponent
                 ParticleManager.StartParticles(particle);
             }
 
-            GetComponentInParent<LootBag>().InstantiateLoot(transform.position);
+            //GetComponentInParent<LootBag>().InstantiateLoot(transform.position);
 
             IncreaseChance?.Invoke();
 

@@ -157,6 +157,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  whatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 2048
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512

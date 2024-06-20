@@ -41,7 +41,7 @@ public class Exec_Teleport_State : TeleportState
 
         if (isTeleportFinished)
         {
-            stateMachine.ChangeState(exec.idleState);
+            stateMachine.ChangeState(exec.attackState);
         }
     }
 

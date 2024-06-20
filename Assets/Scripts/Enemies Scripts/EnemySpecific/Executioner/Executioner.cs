@@ -24,7 +24,7 @@ public class Executioner : Entity
         attackPos,
         teleportPos;
 
-    private Vector2 size = new Vector2(20f, 20f);
+    private Vector2 size = new Vector2(25f, 25f);
 
     protected bool playerDetect;
     protected bool isPlayerInMaxAggroRange;
@@ -42,6 +42,8 @@ public class Executioner : Entity
     private void Start()
     {
         stateMachine.Initialize(idleState);
+
+        teleportPos = GameObject.Find("Player").transform;
     }
 
     public override void OnDrawGizmos()
@@ -53,7 +55,7 @@ public class Executioner : Entity
         Gizmos.DrawWireSphere(transform.position, entityData.maxAggroRange);
         Gizmos.DrawWireSphere(transform.position, entityData.closeRangeActionDistance);
 
-        Gizmos.DrawWireCube(playerCheck.position, new Vector2(20f, 20f));
+        Gizmos.DrawWireCube(playerCheck.position, new Vector2(25f, 25f));
     }
 
     public override void FixedUpdate()

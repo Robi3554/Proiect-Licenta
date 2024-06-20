@@ -9,7 +9,7 @@ public class Drops : MonoBehaviour
 
     private GameManager gameManager;
 
-    private Transform player;
+    private GameObject player;
 
     private BoxCollider2D playerBc;
 
@@ -26,7 +26,7 @@ public class Drops : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
+        player = GameObject.FindWithTag("Player");
 
         gameManager = FindObjectOfType<GameManager>();
 
@@ -41,7 +41,7 @@ public class Drops : MonoBehaviour
     {
         if (isFollowing)
         {
-            transform.position = Vector3.Lerp(transform.position, player.position, speed);
+            transform.position = Vector3.Lerp(transform.position, player.transform.position, speed);
 
             Collider2D hit = Physics2D.OverlapCircle(hitPos.position, radius, whatIsPlayer);
 

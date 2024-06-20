@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageHopSpeed: 0.001
   ledgeCheckDistance: 0.4
-  minAggroRange: 10
-  maxAggroRange: 15
+  minAggroRange: 17
+  maxAggroRange: 22
   stunResistance: 999999
   stunRecoveryTime: 0.1
   closeRangeActionDistance: 3.5

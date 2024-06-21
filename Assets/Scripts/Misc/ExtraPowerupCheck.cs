@@ -26,7 +26,7 @@ public class ExtraPowerupCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player") && ((useSeconds && timer.seconds <= sLimit) || timer.minutes <= mLimit))
+        if (col.CompareTag("Player") && ((useSeconds && timer.seconds <= sLimit) || (timer.minutes <= mLimit && timer.seconds <= sLimit)))
         {
             gameManager.extraPowerup = true;
 

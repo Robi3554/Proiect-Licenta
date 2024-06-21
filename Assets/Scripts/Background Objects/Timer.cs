@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -39,13 +38,13 @@ public class Timer : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(1f);
-
-            if(seconds != previousSeconds)
+            if(seconds != previousSeconds && manager.activeScene.name != "EndScene")
             {
                 previousSeconds = seconds;
                 ChangePoints();
             }
+
+            yield return new WaitForSeconds(1f);
         }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour, IDataPersistence
 {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     private bool respawn;
 
     private CinemachineVirtualCamera cvc;
+
+    internal Scene activeScene;
 
     [Header("DropChances")]
     [SerializeField]
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     private void Awake()
     {
         cvc = GameObject.Find("Player Camera").GetComponent<CinemachineVirtualCamera>();
+
         aux = FindObjectOfType<Auxiliary>();
 
         points = 1000;
@@ -69,7 +73,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
     private void Update()
     {
         CheckRespawn();
-        elapsedTime += Time.deltaTime;
+
+        activeScene = SceneManager.GetActiveScene();
+
+        if(activeScene.name != "EndScene")
+            elapsedTime += Time.deltaTime;
     }
 
     public void Respawn()

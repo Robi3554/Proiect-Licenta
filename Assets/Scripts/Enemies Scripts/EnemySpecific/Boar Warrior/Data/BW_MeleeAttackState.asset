@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d337a8135e64dd64a86c2f7fea09b31d, type: 3}
   m_Name: BW_MeleeAttackState
   m_EditorClassIdentifier: 
+  canLightOnFire: 0
   attackRadius: 4
-  attackDamage: 35
+  attackDamage: 25
   knockbackAngle: {x: 5, y: 2}
   knockbackStrength: 20
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
+  burnDuration: 4
+  timeBetweenBurn: 1
+  burnDamage: 10
+  slowDuration: 5

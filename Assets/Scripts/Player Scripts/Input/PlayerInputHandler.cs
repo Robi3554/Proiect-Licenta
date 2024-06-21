@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -59,13 +60,23 @@ public class PlayerInputHandler : MonoBehaviour
         int count = Enum.GetValues(typeof(CombatInputs)).Length;
         attackInputs = new bool[count];
 
-        cam = Camera.main;
+        //cam = Camera.main;
     }
 
     private void Update()
     {
         CheckJumpInputTime();
         CheckDashInputTime();
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        cam = Camera.main;
     }
 
     public void OnPrimaryAttackInput(InputAction.CallbackContext context)

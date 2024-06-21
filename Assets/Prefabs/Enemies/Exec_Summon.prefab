@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 8961022614382155364, guid: 5cb8bf789b007124e92572067353ee20, type: 3}
   angle: {x: 2, y: 2}
-  damageAmount: 25
+  damageAmount: 20
   strength: 2
   damageRadius: 0.4
   whatIsPlayer:

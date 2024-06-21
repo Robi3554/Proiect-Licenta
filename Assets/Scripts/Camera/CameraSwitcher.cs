@@ -66,6 +66,10 @@ public class CameraSwitcher : MonoBehaviour
         {
             confiner.m_BoundingShape2D = secondCollider;
         }
+        else if(confiner != null && currentCollider == secondCollider)
+        {
+            confiner.m_BoundingShape2D = firstCollider;
+        }
     }
 
     private void EnableCamera(CinemachineVirtualCamera cam)

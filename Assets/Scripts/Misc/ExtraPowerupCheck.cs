@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class ExtraPowerupCheck : MonoBehaviour
 {
-    private Timer timer;
-
     private GameManager gameManager;
 
     private BoxCollider2D bc;
 
-    public int mLimit;
-    public int sLimit;
+    public int limit;
 
     public bool useSeconds;
 
     private void Start()
     {
-        timer = FindObjectOfType<Timer>();
 
         gameManager = FindObjectOfType<GameManager>();
 
@@ -26,7 +22,7 @@ public class ExtraPowerupCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player") && ((useSeconds && timer.seconds <= sLimit) || (timer.minutes <= mLimit && timer.seconds <= sLimit)))
+        if (col.CompareTag("Player") && gameManager.elapsedTime <= limit)
         {
             gameManager.extraPowerup = true;
 

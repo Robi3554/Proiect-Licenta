@@ -1,7 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IDataPersistence
 {
@@ -122,7 +122,19 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public virtual void LoadData(GameData data)
     {
-        transform.position = data.playerPos;
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (data.levelData.ContainsKey(scene.name))
+        {
+            Vector3 playerPositionForThisScene = data.levelData[scene.name].playerPos;
+            transform.position = playerPositionForThisScene;
+        }
+        else
+        {
+            Debug.LogError("Failed to get data for scene with name: " + scene.name
+              + ". it may need to be added to the GameData constructor.");
+        }
+        //transform.position = data.levelData[scene.name].playerPos;
 
         playerData.statsWontGoDown = data.soData.statsWontGoDown;
         playerData.moveVelocity = data.soData.moveVelocity;
@@ -141,7 +153,8 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public virtual void SaveData(GameData data)
     {
-        data.playerPos = transform.position;
+        Scene scene = SceneManager.GetActiveScene();
+        data.levelData[scene.name].playerPos = transform.position;
 
         data.soData.statsWontGoDown = playerData.statsWontGoDown;
         data.soData.moveVelocity = playerData.moveVelocity;

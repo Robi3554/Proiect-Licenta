@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: CommonList
   m_EditorClassIdentifier: 
   powerUps:
-  - {fileID: 877503212490619020, guid: ec03d011da3f20a4c8545399a6d75b15, type: 3}
+  - {fileID: 7006905507908359923, guid: 40ba43f164416cd438b5d159e3774823, type: 3}
   - {fileID: 7909363549208377483, guid: 5349e98299a25b84c9ca6b2cb896605a, type: 3}
   - {fileID: 2154906914436853324, guid: 27a78f4ca057df94987cdc9ae3f6f40b, type: 3}
   - {fileID: 6885100367530938875, guid: 7d72582c3261444429e92161115835eb, type: 3}
   - {fileID: 8078653827024784829, guid: 3d56cfe7cd75e474cbb9b33481a5c9a0, type: 3}
-  - {fileID: 7006905507908359923, guid: 40ba43f164416cd438b5d159e3774823, type: 3}
   - {fileID: 1190884559142373174, guid: 112cbf0f8fd01204e8f157c6f6179779, type: 3}
   - {fileID: 6946499666055286256, guid: 0d66022d48cd1c94d85e7e045c3937a0, type: 3}
+  - {fileID: 877503212490619020, guid: ec03d011da3f20a4c8545399a6d75b15, type: 3}
   _revert: 1

@@ -14,8 +14,6 @@ public class GameData
     public float[] knockbackStrength = new float[3];
     public Vector2[] knockbackAngle = new Vector2[3];
 
-    public Vector3 playerPos;
-
     public bool canLightOnFire;
     public bool canSlow;
     public bool canCauseExplosion;
@@ -28,6 +26,8 @@ public class GameData
 
     public string currentSceneName;
 
+    public SerializableDictionary<string, LevelData> levelData;
+
     public SerializableDictionary<string, bool> enemiesDefeated;
 
     public SerializableDictionary<string, bool> powerupsTaken;
@@ -36,6 +36,12 @@ public class GameData
 
     public GameData()
     {
+        levelData = new SerializableDictionary<string, LevelData>
+        {
+            { "Level1", new LevelData() },
+            { "Level2", new LevelData() }
+        };
+
         maxHealth = 150f;
         curentHealth = 150f;
 
@@ -57,8 +63,6 @@ public class GameData
         knockbackAngle[0] = new Vector2(1, 2);
         knockbackAngle[1] = new Vector2(1, 1);
         knockbackAngle[2] = new Vector2(2, 2);
-
-        playerPos = new Vector3(-227.58f, 9.16f, 0f);
 
         points = 1000;
         time = 0f;

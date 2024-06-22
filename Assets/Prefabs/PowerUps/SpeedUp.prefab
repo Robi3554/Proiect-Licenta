@@ -454,18 +454,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9593696879a1db246a065419ed1bb20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickup:
-    Guid:
-      Data1: 513621058
-      Data2: 1226757549
-      Data3: 409087375
-      Data4: 1918227484
-    Path: event:/PowerupTaken
   pickupEffect: {fileID: 2279182899409804110, guid: c7ae2e4a0e569d049a6d6f48e39c7fa0, type: 3}
   powerupEffect: {fileID: 11400000, guid: d0f446ee442e7f4429ecd176c011206a, type: 2}
   infoBox: {fileID: 896361539612634918}
   powerUpName: Speed Up
-  sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  sprite: {fileID: -1671083236, guid: f0897f9f2e8b7ad41b3c82c6dc71aa44, type: 3}
   powerUpDescription: Increases the players speed
   rarity: common
   isUnique: 0

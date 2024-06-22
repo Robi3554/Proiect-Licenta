@@ -369,18 +369,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9593696879a1db246a065419ed1bb20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickup:
-    Guid:
-      Data1: 513621058
-      Data2: 1226757549
-      Data3: 409087375
-      Data4: 1918227484
-    Path: event:/PowerupTaken
   pickupEffect: {fileID: 2279182899409804110, guid: c7ae2e4a0e569d049a6d6f48e39c7fa0, type: 3}
   powerupEffect: {fileID: 11400000, guid: 5bcbc0d912961c94caf8993256e9e969, type: 2}
   infoBox: {fileID: 2627992489653425547}
   powerUpName: Fire Sword
-  sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
+  sprite: {fileID: -1822568423, guid: 61ae4aad8c13d0740b14c00b9468fc99, type: 3}
   powerUpDescription: 'Allows the player to set enemies on fire
 
 '

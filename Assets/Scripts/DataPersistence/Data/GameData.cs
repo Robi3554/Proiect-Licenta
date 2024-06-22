@@ -38,8 +38,10 @@ public class GameData
     {
         levelData = new SerializableDictionary<string, LevelData>
         {
+            { "StartScene", new LevelData() },
             { "Level1", new LevelData() },
-            { "Level2", new LevelData() }
+            { "Level2", new LevelData() },
+            { "EndScene", new LevelData() }
         };
 
         maxHealth = 150f;

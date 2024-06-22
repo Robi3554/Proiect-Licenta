@@ -10,6 +10,8 @@ public class InventoryManager : MonoBehaviour
 
     internal Description description;
 
+    private float currentTimeScale;
+
     public GameObject inventoryMenu;
     public bool isOpen = false;
     public ItemSlot[] slots;
@@ -34,6 +36,7 @@ public class InventoryManager : MonoBehaviour
 
         if (!isOpen)
         {
+            currentTimeScale = Time.timeScale;
             Open();
         }
         else
@@ -53,7 +56,7 @@ public class InventoryManager : MonoBehaviour
     private void Close()
     {
         playerInput.SwitchCurrentActionMap("Gameplay");
-        Time.timeScale = 1f;
+        Time.timeScale = currentTimeScale;
         inventoryMenu.SetActive(false);
         isOpen = false;
     }

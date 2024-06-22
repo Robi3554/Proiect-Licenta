@@ -51,8 +51,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         cvc = GameObject.Find("Player Camera").GetComponent<CinemachineVirtualCamera>();
 
-        aux = FindObjectOfType<Auxiliary>();
-
         points = 1000;
 
         spawners = FindSpawners();
@@ -64,6 +62,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     private void Start()
     {
         count = spawners.Count;
+
+        aux = FindObjectOfType<Auxiliary>();
 
         SetGame2XSpeed();
 

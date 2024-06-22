@@ -17,9 +17,9 @@ public class Death : CoreComponent
     private ParticleManager particleManager;
     private Stats stats;
 
-    public event Action IncreaseChance;
+    private DeathScreenManager dsm;
 
-    public event Action deathScreen;
+    public event Action IncreaseChance;
 
     public delegate void IncreaseMaxHealth(float amount);
     public event IncreaseMaxHealth IncreaseHealth;
@@ -62,9 +62,9 @@ public class Death : CoreComponent
             }
         }
 
-        if (gameObject.CompareTag("Player"))
+        if (transform.parent.gameObject.CompareTag("Player"))
         {
-            deathScreen.Invoke();
+            dsm.StartDeathScreen();
 
             AudioManager.Instance.OneShotSound(FMODEvents.Instance.deathSound, transform.position);
             AudioManager.Instance.CleanUp();
@@ -76,6 +76,8 @@ public class Death : CoreComponent
     private void OnEnable()
     {
         Stats.OnHealthZero += Die;
+
+        dsm = FindObjectOfType<DeathScreenManager>();
     }
 
     private void OnDisable()

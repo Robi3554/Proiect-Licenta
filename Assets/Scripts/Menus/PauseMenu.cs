@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField]
     private PlayerInput playerInput;
+    [SerializeField]
+    private float currentTimeScale;
 
     public bool isPaused = false;
 
@@ -35,6 +37,7 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
+            currentTimeScale = Time.timeScale;
             Pause();
         }
     }
@@ -43,7 +46,7 @@ public class PauseMenu : MonoBehaviour
     {
         playerInput.SwitchCurrentActionMap("Gameplay");
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = currentTimeScale;
         time.DisableTexts();
         points.DisableTexts();
         isPaused = false;

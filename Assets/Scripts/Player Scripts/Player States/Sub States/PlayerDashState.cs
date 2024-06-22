@@ -13,6 +13,7 @@ public class PlayerDashState : PlayerAbilityState
     private bool dashInputStop;
 
     private float lastDashTime;
+    private float currentTimeScale;
 
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -21,6 +22,8 @@ public class PlayerDashState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
+
+        currentTimeScale = Time.timeScale;
 
         canDash = false;
         player.inputHandler.UseDashInput();
@@ -69,8 +72,8 @@ public class PlayerDashState : PlayerAbilityState
                 if (dashInputStop || Time.unscaledTime >= startTime + playerData.maxHoldTime)
                 {
                     isHolding = false;
-                    Time.fixedDeltaTime = 0.02f;
-                    Time.timeScale = 1f;
+                    Time.fixedDeltaTime = 0.02f / currentTimeScale;
+                    Time.timeScale = currentTimeScale;
                     startTime = Time.time;
                     Movement?.CheckIfShouldFlip(Mathf.RoundToInt(dashDirection.x));
                     player.rb.drag = playerData.drag;

@@ -35,7 +35,7 @@ public class Movement : CoreComponent
 
     protected void Start()
     {
-        playerWalk = AudioManager.Instance.CreateEventInstance(FMODEvents.Instance.playerWalk);
+        StartCoroutine(GetAudioManager());
     }
 
     public override void LogicUpdate()
@@ -108,6 +108,13 @@ public class Movement : CoreComponent
         }
     }
     #endregion
+
+    private IEnumerator GetAudioManager()
+    {
+        yield return null;
+
+        playerWalk = AudioManager.Instance.CreateEventInstance(FMODEvents.Instance.playerWalk);
+    }
 
     private void UpdateSound()
     {

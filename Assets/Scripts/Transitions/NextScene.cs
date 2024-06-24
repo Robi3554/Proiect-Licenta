@@ -12,8 +12,9 @@ public class NextScene : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            LevelManager.Instance.LoadScene(sceneName, "CircleWipe");
             col.GetComponentInChildren<PlayerStats>().IncreaseHealth(999);
+            DataPersistenceManager.Instance.SaveGame();
+            LevelManager.Instance.LoadScene(sceneName, "CircleWipe");
         }
     }
 }

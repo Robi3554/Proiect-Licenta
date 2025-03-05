@@ -380,8 +380,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../Desktop/FMOD Projects/PtLicenta/PtLicenta.fspro
-  sourceBankPath: ../Desktop/FMOD Projects/PtLicenta/Build
+  sourceProjectPath: ../../Unity/PtLicenta/PtLicenta.fspro
+  sourceBankPath: ../../Unity/PtLicenta/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -424,18 +424,18 @@ MonoBehaviour:
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131618
   Platforms:
-  - {fileID: 3376504529844740275}
-  - {fileID: 7165692694416747615}
-  - {fileID: -1127110786897070450}
-  - {fileID: -1162151408437194300}
-  - {fileID: 5442935976588135630}
-  - {fileID: -426732463408649985}
-  - {fileID: 5199868100616503591}
-  - {fileID: 4311926306817541715}
-  - {fileID: -1534010144096389075}
   - {fileID: -3662355632143235668}
-  - {fileID: 7170223630402965679}
+  - {fileID: -1534010144096389075}
+  - {fileID: -1162151408437194300}
+  - {fileID: -1127110786897070450}
+  - {fileID: -426732463408649985}
+  - {fileID: 3376504529844740275}
+  - {fileID: 4311926306817541715}
+  - {fileID: 5199868100616503591}
   - {fileID: 5335237696884752776}
+  - {fileID: 5442935976588135630}
+  - {fileID: 7165692694416747615}
+  - {fileID: 7170223630402965679}
   MigratedPlatforms: 0c000000150000000b0000000a0000000900000012000000000000000800000005000000060000000200000001000000
 --- !u!114 &3376504529844740275
 MonoBehaviour:
@@ -872,16 +872,16 @@ MonoBehaviour:
     HasValue: 0
   displaySortOrder: 0
   childIdentifiers:
-  - c88d16e5272a4e241b0ef0ac2e53b73d
-  - fd7c55dab0fce234b8c25f6ffca523c1
-  - 2c5177b11d81d824dbb064f9ac8527da
-  - de700ef3f37a49b58a57ae3addf01ad9
-  - e7a046c753c3c3d4aacc91f6597f310d
-  - 52eb9df5db46521439908db3a29a1bbb
-  - b7716510a1f36934c87976f3a81dbf3d
   - 0f8eb3f400726694eb47beb1a9f94ce8
-  - 46fbfdf3fc43db0458918377fd40293e
+  - b7716510a1f36934c87976f3a81dbf3d
+  - fd7c55dab0fce234b8c25f6ffca523c1
+  - c88d16e5272a4e241b0ef0ac2e53b73d
+  - de700ef3f37a49b58a57ae3addf01ad9
+  - 52eb9df5db46521439908db3a29a1bbb
+  - e7a046c753c3c3d4aacc91f6597f310d
   - 2fea114e74ecf3c4f920e1d5cc1c4c40
+  - 2c5177b11d81d824dbb064f9ac8527da
+  - 46fbfdf3fc43db0458918377fd40293e
   codecChannels:
     Value: []
     HasValue: 0

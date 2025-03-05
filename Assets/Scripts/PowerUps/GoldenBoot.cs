@@ -6,18 +6,16 @@ using UnityEngine;
 public class GoldenBoot : PowerupEffect
 {
     [SerializeField]
-    private PlayerData playerData;
-    [SerializeField]
     private float jumpIncrease;
     [SerializeField]
     private float speedIncrease;
 
     public override void ApplyEffect(GameObject obj)
     {
-        playerData.ammountOfJumps++;
+        PlayerStatsManager.Instance.amountOfJumps++;
 
-        playerData.jumpVelocity += jumpIncrease;
+        PlayerStatsManager.Instance.jumpVelocity += jumpIncrease;
 
-        playerData.moveVelocity += speedIncrease;
+        PlayerStatsManager.Instance.moveVelocity += speedIncrease;
     }
 }

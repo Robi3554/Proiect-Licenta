@@ -15,7 +15,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Jump State")]
     public float jumpVelocity = 15f;
-    public int ammountOfJumps = 1;
+    public int amountOfJumps = 1;
 
     [Header("Wall Jump State")]
     public float wallJumpVelocity = 20f;
@@ -43,7 +43,7 @@ public class PlayerData : ScriptableObject
     public float attackSpeed = 1f;
 
     [Header("Heal State")]
-    public float healAmmount = 35f;
+    public float healAmount = 35f;
     public float healsLeft = 3f;
     public float healCooldown = 10f;
 
@@ -54,7 +54,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Ice Element")]
     public float slowDuration = 4f;
-    public float slowAmmount = 2f;
+    public float slowAmount = 2f;
 
 #if UNITY_EDITOR
     [SerializeField] private bool _revert;

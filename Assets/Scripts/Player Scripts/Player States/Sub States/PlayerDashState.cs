@@ -77,14 +77,14 @@ public class PlayerDashState : PlayerAbilityState
                     startTime = Time.time;
                     Movement?.CheckIfShouldFlip(Mathf.RoundToInt(dashDirection.x));
                     player.rb.drag = playerData.drag;
-                    Movement?.SetVelocity(playerData.dashVelocity, dashDirection);
+                    Movement?.SetVelocity(PlayerStatsManager.Instance.dashVelocity, dashDirection);
                     player.dashDirectionIndicator.gameObject.SetActive(false);
                     PlaceAfterImage();
                 }
             }
             else
             {
-                Movement?.SetVelocity(playerData.dashVelocity, dashDirection);
+                Movement?.SetVelocity(PlayerStatsManager.Instance.dashVelocity, dashDirection);
                 CheckIfShoudPlaceAfterImage();
                 
                 if(Time.time >= startTime + playerData.dashTime)

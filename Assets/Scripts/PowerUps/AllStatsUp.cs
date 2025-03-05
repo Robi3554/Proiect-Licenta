@@ -8,8 +8,6 @@ public class AllStatsUp : PowerupEffect
 {
     [SerializeField]
     private AggresiveWeaponData data;
-    [SerializeField]
-    private PlayerData playerData;
 
     private int attackCounter = 0;
 
@@ -33,7 +31,7 @@ public class AllStatsUp : PowerupEffect
 
     public void ChangeAtkSpeed(float value)
     {
-        playerData.attackSpeed = playerData.attackSpeed + (playerData.attackSpeed * (value / 100));
+        PlayerStatsManager.Instance.attackSpeed = PlayerStatsManager.Instance.attackSpeed + (PlayerStatsManager.Instance.attackSpeed * (value / 100));
     }
 
     public void ChangeDamage(float value)
@@ -48,6 +46,6 @@ public class AllStatsUp : PowerupEffect
 
     public void ChangeSpeed(float value)
     {
-        playerData.moveVelocity += value;
+        PlayerStatsManager.Instance.moveVelocity += value;
     }
 }

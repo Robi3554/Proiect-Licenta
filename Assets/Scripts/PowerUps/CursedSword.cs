@@ -8,8 +8,6 @@ public class CursedSword : PowerupEffect
     [SerializeField]
     private AggresiveWeaponData data;
 
-    public PlayerData pData;
-
     public override void ApplyEffect(GameObject obj)
     {
         for (int i = 0; i < 3; i++)
@@ -17,7 +15,7 @@ public class CursedSword : PowerupEffect
             data.AttackDetails[i].damageAmount *= 2;
         }
 
-        if(!pData.statsWontGoDown)
+        if(!PlayerStatsManager.Instance.statsWontGoDown)
             obj.GetComponentInChildren<PlayerStats>().maxHealth = Mathf.Ceil(obj.GetComponentInChildren<PlayerStats>().maxHealth / 2); 
     }
 }

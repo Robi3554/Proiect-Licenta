@@ -6,12 +6,10 @@ using UnityEngine.Rendering;
 [CreateAssetMenu(fileName = "ColderWind", menuName = "PowerUps/Universal/ColderWind")]
 public class FreezeDurationIncrease : PowerupEffect
 {
-    public PlayerData data;
-
     public float ammount;
 
     public override void ApplyEffect(GameObject obj)
     {
-        data.slowDuration += ammount;
+        PlayerStatsManager.Instance.slowDuration += ammount;
     }
 }

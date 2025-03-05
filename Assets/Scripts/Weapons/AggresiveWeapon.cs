@@ -13,9 +13,6 @@ public class AggresiveWeapon : Weapon, IDataPersistence
     private Movement movement;
     private Combat combat;
 
-    [SerializeField]
-    private PlayerData data;
-
     private List<IDamageable> detectedDamageables = new List<IDamageable>();
 
     private List<IKnockbackable> detectedKnockbackables = new List<IKnockbackable>();
@@ -41,9 +38,9 @@ public class AggresiveWeapon : Weapon, IDataPersistence
 
     private void FixedUpdate()
     {
-        if (data != null)
+        if (PlayerStatsManager.Instance.attackSpeed != 0)
         {
-            anim.speed = data.attackSpeed;
+            anim.speed = PlayerStatsManager.Instance.attackSpeed;
         }
     }
 
@@ -91,11 +88,11 @@ public class AggresiveWeapon : Weapon, IDataPersistence
 
             if (player.canLightOnFire)
             {
-                debuff.StartsBurning(data.fireDuration, data.timeBetweenBurn, data.burnDamage);
+                debuff.StartsBurning(PlayerStatsManager.Instance.fireDuration, PlayerStatsManager.Instance.timeBetweenBurn, PlayerStatsManager.Instance.burnDamage);
             }
             else if (player.canSlow)
             {
-                debuff.StartSlowness(data.slowDuration, data.slowAmmount);
+                debuff.StartSlowness(PlayerStatsManager.Instance.slowDuration, PlayerStatsManager.Instance.slowAmount);
             }
         }
 

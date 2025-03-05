@@ -5,8 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FoodPowerUp", menuName = "PowerUps/Universal/FoodPowerUp")]
 public class FoodPowerUp : PowerupEffect
 {
-    public PlayerData data;
-
     public int healthAmount;
 
     public int speedAmount;
@@ -16,9 +14,9 @@ public class FoodPowerUp : PowerupEffect
         obj.GetComponentInChildren<PlayerStats>().maxHealth += healthAmount;
         obj.GetComponentInChildren<PlayerStats>().IncreaseHealth(healthAmount / 2);
 
-        if (!data.statsWontGoDown)
+        if (!PlayerStatsManager.Instance.statsWontGoDown)
         {
-            data.moveVelocity -= speedAmount;
+            PlayerStatsManager.Instance.moveVelocity -= speedAmount;
         }
     }
 }

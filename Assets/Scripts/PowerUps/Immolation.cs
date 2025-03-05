@@ -6,12 +6,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Immolation", menuName = "PowerUps/Universal/Immolation")]
 public class Immolation : PowerupEffect
 {
-    public PlayerData playerData;
-
     public override void ApplyEffect(GameObject obj)
     {
-        playerData.burnDamage += 2;
+        PlayerStatsManager.Instance.burnDamage += 2;
 
-        playerData.fireDuration += 1;
+        PlayerStatsManager.Instance.fireDuration += 1;
     }
 }

@@ -7,15 +7,13 @@ public class QuickBlade : PowerupEffect
 {
     public AggresiveWeaponData data;
 
-    public PlayerData pData;
-
     public float ammount;
 
     public float percentage;
 
     public override void ApplyEffect(GameObject obj)
     {
-        if (!pData.statsWontGoDown)
+        if (!PlayerStatsManager.Instance.statsWontGoDown)
         {
             for (int i = 0; i < 3; i++)
             {
@@ -28,6 +26,6 @@ public class QuickBlade : PowerupEffect
 
     public void ChangeAtkSpeed(float value)
     {
-        pData.attackSpeed = pData.attackSpeed + (pData.attackSpeed * (value / 100));
+        PlayerStatsManager.Instance.attackSpeed = PlayerStatsManager.Instance.attackSpeed + (PlayerStatsManager.Instance.attackSpeed * (value / 100));
     }
 }

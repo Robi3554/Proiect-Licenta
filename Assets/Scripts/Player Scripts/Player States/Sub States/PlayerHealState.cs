@@ -33,9 +33,9 @@ public class PlayerHealState : PlayerAbilityState
     {
         base.LogicUpdate();
 
-        if(playerData.healsLeft > 0)
+        if(PlayerStatsManager.Instance.healsLeft > 0)
         {
-            PlayerStats?.IncreaseHealth(playerData.healAmmount);
+            PlayerStats?.IncreaseHealth(PlayerStatsManager.Instance.healAmount);
 
             isAbilityDone = true;
         }

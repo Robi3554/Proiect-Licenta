@@ -6,13 +6,10 @@ using UnityEngine;
 public class SpeedUp : PowerupEffect
 {
     [SerializeField]
-    private PlayerData data;
-
-    [SerializeField]
     private float ammount;
 
     public override void ApplyEffect(GameObject obj)
     {
-        data.moveVelocity += ammount;
+        PlayerStatsManager.Instance.moveVelocity += ammount;
     }
 }

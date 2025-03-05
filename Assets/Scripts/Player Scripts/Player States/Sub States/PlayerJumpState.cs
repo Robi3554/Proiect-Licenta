@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerJumpState : PlayerAbilityState
 {
-    private int ammountOfJumpsLeft;
+    private int amountOfJumpsLeft;
 
     public PlayerJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
-        ammountOfJumpsLeft = playerData.ammountOfJumps;
+        amountOfJumpsLeft = PlayerStatsManager.Instance.amountOfJumps;
     }
 
     public override void Enter()
@@ -16,15 +16,15 @@ public class PlayerJumpState : PlayerAbilityState
         base.Enter();
 
         player.inputHandler.UseJumpInput();
-        Movement?.SetVelocityY(playerData.jumpVelocity);
+        Movement?.SetVelocityY(PlayerStatsManager.Instance.jumpVelocity);
         isAbilityDone = true;
-        ammountOfJumpsLeft--;
+        amountOfJumpsLeft--;
         player.inAirState.SetIsJumping();
     }
 
     public bool CanJump()
     {
-        if(ammountOfJumpsLeft > 0)
+        if(amountOfJumpsLeft > 0)
         {
             return true;
         }
@@ -34,7 +34,7 @@ public class PlayerJumpState : PlayerAbilityState
         }
     }
 
-    public void ResetAmmountOfJumpsLeft() => ammountOfJumpsLeft = playerData.ammountOfJumps;
+    public void ResetAmmountOfJumpsLeft() => amountOfJumpsLeft = PlayerStatsManager.Instance.amountOfJumps;
 
-    public void DecreaseAmmountOfJumpsLeft() => ammountOfJumpsLeft--;
+    public void DecreaseAmmountOfJumpsLeft() => amountOfJumpsLeft--;
 }

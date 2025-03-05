@@ -5,9 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newAttackSpeedUp", menuName = "PowerUps/Universal/Attack Speed Up")]
 public class AttackSpeedUp : PowerupEffect
 {
-    [SerializeField]
-    private PlayerData data;
-
     public float percentage;
 
     public override void ApplyEffect(GameObject obj)
@@ -17,6 +14,6 @@ public class AttackSpeedUp : PowerupEffect
 
     public void ChangeAtkSpeed(float value)
     {
-        data.attackSpeed = data.attackSpeed + (data.attackSpeed * (value / 100));
+        PlayerStatsManager.Instance.attackSpeed = PlayerStatsManager.Instance.attackSpeed + (PlayerStatsManager.Instance.attackSpeed * (value / 100));
     }
 }

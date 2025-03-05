@@ -139,16 +139,16 @@ public class Player : MonoBehaviour, IDataPersistence
         playerData.statsWontGoDown = data.soData.statsWontGoDown;
         playerData.moveVelocity = data.soData.moveVelocity;
         playerData.jumpVelocity = data.soData.jumpVelocity;
-        playerData.ammountOfJumps = data.soData.ammountOfJumps;
+        playerData.amountOfJumps = data.soData.ammountOfJumps;
         playerData.attackSpeed = data.soData.attackSpeed;
-        playerData.healAmmount = data.soData.healAmmount;
+        playerData.healAmount = data.soData.healAmmount;
         playerData.healsLeft = data.soData.healsLeft;
         playerData.healCooldown = data.soData.healCooldown;
         playerData.fireDuration = data.soData.fireDuration;
         playerData.timeBetweenBurn = data.soData.timeBetweenBurn;
         playerData.burnDamage = data.soData.burnDamage;
         playerData.slowDuration = data.soData.slowDuration;
-        playerData.slowAmmount = data.soData.slowAmmount;
+        playerData.slowAmount = data.soData.slowAmmount;
     }
 
     public virtual void SaveData(GameData data)
@@ -159,16 +159,16 @@ public class Player : MonoBehaviour, IDataPersistence
         data.soData.statsWontGoDown = playerData.statsWontGoDown;
         data.soData.moveVelocity = playerData.moveVelocity;
         data.soData.jumpVelocity = playerData.jumpVelocity;
-        data.soData.ammountOfJumps = playerData.ammountOfJumps;
+        data.soData.ammountOfJumps = playerData.amountOfJumps;
         data.soData.attackSpeed = playerData.attackSpeed;
-        data.soData.healAmmount = playerData.healAmmount;
+        data.soData.healAmmount = playerData.healAmount;
         data.soData.healsLeft = playerData.healsLeft;
         data.soData.healCooldown = playerData.healCooldown;
         data.soData.fireDuration = playerData.fireDuration;
         data.soData.timeBetweenBurn = playerData.timeBetweenBurn;
         data.soData.burnDamage = playerData.burnDamage;
         data.soData.slowDuration = playerData.slowDuration;
-        data.soData.slowAmmount = playerData.slowAmmount;
+        data.soData.slowAmmount = playerData.slowAmount;
     }
 
     #endregion
